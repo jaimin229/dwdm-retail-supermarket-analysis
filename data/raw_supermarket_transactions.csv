@@ -1,0 +1,235 @@
+Transaction_ID,Date,Time,Customer_ID,Customer_Age_Group,Customer_Gender,Product_Category,Product_Name,Unit_Price_INR,Quantity,Discount_Percent,Payment_Mode,Store_Counter
+TXN-1023,2026-08-22,18:08:00,CUST-549,Senior (51+),Female,Grocery & Staples,Catch Red Chilli Powder 200g,75.0,1,0.0,Credit Card,Counter 4 - Self-Service
+TXN-1068,2026-08-22,12:23:00,CUST-559,Young Adult (26-35),Female,Snacks & Beverages,Coca-Cola 750ml,40.0,1,0.0,Credit Card,Counter 1 - Express
+TXN-1059,2026/08/21,09:59:00,CUST-556,Middle-Aged (36-50),Female,Snacks & Beverages,Cadbury Dairy Milk Silk 60g,85.0,1,15.0,Cash,Counter 4 - Self-Service
+TXN-1004,2026-08-23,20:11:00,CUST-541,Young Adult (26-35),Male,Snacks & Beverages,Coca-Cola 750ml,40.0,1,10.0,UPI,Counter 4 - Self-Service
+TXN-1042,2026/08/18,17:20:00,CUST-522,Senior (51+),Male,Household Essentials,Surf Excel Easy Wash Detergent Powder 1kg,140.0,2,0.0,Credit Card,Counter 4 - Self-Service
+TXN-1036,2026/08/20,20:55:00,CUST-533,Senior (51+),Female,Grocery & Staples,Madhur Pure & Hygienic Sugar 1kg,48.0,1,10.0,UPI,Counter 1 - Express
+TXN-1064,24-08-2026,20:28:00,CUST-510,Middle-Aged (36-50),Male,Dairy & Bakery,Amul Butter 100g,58.0,5,15.0,Cash,Counter 2 - Regular
+TXN-1032,2026/08/18,21:04:00,CUST-545,Young Adult (26-35),Male,Snacks & Beverages,Lay's India's Magic Masala 50g,20.0,2,20.0,UPI,Counter 4 - Self-Service
+TXN-1071,21-08-2026,12:12:00,CUST-534,Middle-Aged (36-50),Male,Snacks & Beverages,Coca-Cola 750ml,40.0,2,0.0,Debit Card,Counter 1 - Express
+TXN-1005,2026/08/21,16:26:00,CUST-530,Young Adult (26-35),Female,Personal Care,Dove Deep Moisture Body Wash 190ml,135.0,1,5.0,UPI,Counter 3 - General
+TXN-1074,2026-08-21,19:22:00,CUST-519,Middle-Aged (36-50),Male,Snacks & Beverages,Kurkure Masala Munch 85g,20.0,1,20.0,UPI,Counter 3 - General
+TXN-1019,2026/08/20,16:08:00,CUST-508,Senior (51+),Male,Dairy & Bakery,Amul Gold Milk 500ml,33.0,2,10.0,UPI,Counter 4 - Self-Service
+TXN-1075,2026-08-18,20:10:00,CUST-533,Young Adult (26-35),Male,Snacks & Beverages,Tata Tea Gold 250g,150.0,1,10.0,UPI,Counter 4 - Self-Service
+TXN-1011,2026/08/24,09:35:00,CUST-555,Young Adult (26-35),Male,Dairy & Bakery,Amul Gold Milk 500ml,33.0,1,20.0,UPI,Counter 4 - Self-Service
+TXN-1066,24-08-2026,21:19:00,CUST-558,Young Adult (26-35),Female,Household Essentials,Vim Dishwash Gel 500ml,115.0,1,5.0,UPI,Counter 3 - General
+TXN-1049,2026-08-18,13:26:00,CUST-525,Senior (51+),Female,Household Essentials,Harpic Disinfectant Bathroom Cleaner 500ml,105.0,2,0.0,Cash,Counter 4 - Self-Service
+TXN-1007,2026-08-20,21:40:00,CUST-550,Youth (18-25),Female,Grocery & Staples,Aashirvaad Shudh Chakki Atta 5kg,245.0,2,10.0,UPI,Counter 1 - Express
+TXN-1037,2026-08-23,17:28:00,CUST-538,Senior (51+),Female,Snacks & Beverages,Kurkure Masala Munch 85g,20.0,2,5.0,Debit Card,Counter 4 - Self-Service
+TXN-1075,2026-08-18,20:10:00,CUST-533,Young Adult (26-35),Male,Dairy & Bakery,Amul Gold Milk 500ml,33.0,1,0.0,UPI,Counter 4 - Self-Service
+TXN-1008,2026/08/22,15:43:00,CUST-549,Young Adult (26-35),Female,Snacks & Beverages,Kurkure Masala Munch 85g,20.0,2,0.0,UPI,Counter 3 - General
+TXN-1069,24-08-2026,17:14:00,CUST-549,Senior (51+),Female,Dairy & Bakery,Amul Gold Milk 500ml,33.0,4,5.0,Cash,Counter 1 - Express
+TXN-1004,2026-08-23,20:11:00,CUST-541,Young Adult (26-35),Male,Snacks & Beverages,Kurkure Masala Munch 85g,20.0,1,0.0,UPI,Counter 4 - Self-Service
+TXN-1032,2026/08/18,21:04:00,CUST-545,Young Adult (26-35),Male,snacks & beverages,Kurkure Masala Munch 85g,20.0,2,0.0,UPI,Counter 4 - Self-Service
+TXN-1048,22-08-2026,16:22:00,CUST-524,Youth (18-25),Male,Personal Care,Lifebuoy Total Handwash 750ml Refill,119.0,4,0.0,UPI,Counter 3 - General
+TXN-1073,2026-08-24,19:42:00,CUST-556,Youth (18-25),Female,Snacks & Beverages,Coca-Cola 750ml,40.0,2,0.0,UPI,Counter 3 - General
+TXN-1009,2026-08-24,14:34:00,CUST-518,Senior (51+),Male,Dairy & Bakery,Amul Gold Milk 500ml,33.0,1,5.0,UPI,Counter 4 - Self-Service
+TXN-1030,2026-08-23,18:47:00,CUST-516,Youth (18-25),Female,Snacks & Beverages,Lay's India's Magic Masala 50g,20.0,2,0.0,Credit Card,Counter 2 - Regular
+TXN-1060,2026-08-19,15:19:00,CUST-533,Youth (18-25),Male,Snacks & Beverages,Kurkure Masala Munch 85g,20.0,1,20.0,Debit Card,Counter 3 - General
+TXN-1029,2026-08-22,19:51:00,CUST-527,Senior (51+),Male,Household Essentials,Vim Dishwash Gel 500ml,115.0,4,0.0,UPI,Counter 3 - General
+TXN-1006,23-08-2026,20:37:00,CUST-535,Middle-Aged (36-50),Female,Snacks & Beverages,Tata Tea Gold 250g,150.0,3,5.0,UPI,Counter 4 - Self-Service
+TXN-1049,2026-08-18,13:26:00,CUST-525,Senior (51+),Female,Household Essentials,Vim Dishwash Gel 500ml,115.0,2,15.0,Cash,Counter 4 - Self-Service
+TXN-1022,2026-08-24,21:34:00,CUST-557,Young Adult (26-35),Female,Dairy & Bakery,Amul Butter 100g,58.0,1,5.0,UPI,Counter 2 - Regular
+TXN-1015,20-08-2026,13:13:00,CUST-517,Senior (51+),Female,Dairy&Bakery,Amul Butter 100g,58.0,1,0.0,Debit Card,Counter 1 - Express
+TXN-1046,2026-08-18,20:11:00,CUST-551,Senior (51+),Male,Dairy & Bakery,Britannia Brown Bread 400g,45.0,5,5.0,Cash,Counter 2 - Regular
+TXN-1041,2026-08-24,17:54:00,CUST-521,,Male,personal care,Head & Shoulders Cool Menthol Shampoo 180ml,180.0,1,,Cash,Counter 2 - Regular
+TXN-1056,2026/08/23,21:49:00,CUST-523,Youth (18-25),Male,Dairy & Bakery,Amul Butter 100g,58.0,1,15.0,Credit Card,Counter 4 - Self-Service
+TXN-1054,2026/08/20,12:13:00,CUST-505,Youth (18-25),Male,Household Essentials,Good Knight Gold Flash Liquid Vaporizer Refill,88.0,2,20.0,UPI,Counter 1 - Express
+TXN-1006,23-08-2026,20:37:00,CUST-535,Middle-Aged (36-50),Female,Dairy & Bakery,Amul Gold Milk 500ml,33.0,2,20.0,UPI,Counter 4 - Self-Service
+TXN-1052,2026-08-22,10:58:00,CUST-540,Youth (18-25),Female,Dairy & Bakery,Britannia Brown Bread 400g,45.0,1,0.0,UPI,Counter 1 - Express
+TXN-1059,2026/08/21,09:59:00,CUST-556,Middle-Aged (36-50),Female,Snacks & Beverages,Lay's India's Magic Masala 50g,20.0,1,15.0,Cash,Counter 4 - Self-Service
+TXN-1053,2026-08-22,20:50:00,CUST-539,Middle-Aged (36-50),Female,Snacks & Beverages,Tata Tea Gold 250g,150.0,1,0.0,UPI,Counter 4 - Self-Service
+TXN-1067,2026/08/24,22:00:00,CUST-513,Middle-Aged (36-50),Female,Household Essentials,Vim Dishwash Gel 500ml,115.0,1,10.0,UPI,Counter 3 - General
+TXN-1041,2026-08-24,17:54:00,CUST-521,Young Adult (26-35),Male,Personal Care,Lifebuoy Total Handwash 750ml Refill,119.0,1,0.0,Cash,Counter 2 - Regular
+TXN-1020,2026-08-23,14:02:00,CUST-527,Middle-Aged (36-50),Female,Dairy & Bakery,Amul Butter 100g,58.0,1,10.0,Cash,Counter 2 - Regular
+TXN-1065,2026-08-23,16:02:00,CUST-524,Middle-Aged (36-50),Male,Dairy & Bakery,Amul Malai Paneer 200g,92.0,1,0.0,Debit Card,Counter 3 - General
+TXN-1054,2026/08/20,12:13:00,CUST-505,Youth (18-25),Male,Dairy & Bakery,Amul Malai Paneer 200g,92.0,2,10.0,UPI,Counter 1 - Express
+TXN-1028,2026-08-23,12:34:00,CUST-554,Young Adult (26-35),Male,Household Essentials,Surf Excel Easy Wash Detergent Powder 1kg,140.0,1,0.0,Cash,Counter 3 - General
+TXN-1039,2026-08-24,13:15:00,CUST-536,Youth (18-25),Female,Snacks & Beverages,Lay's India's Magic Masala 50g,20.0,1,10.0,UPI,Counter 1 - Express
+TXN-1052,2026-08-22,10:58:00,CUST-540,Youth (18-25),Female,Dairy & Bakery,Amul Gold Milk 500ml,33.0,2,5.0,UPI,Counter 1 - Express
+TXN-1050,2026/08/19,14:36:00,CUST-524,Middle-Aged (36-50),Male,Dairy & Bakery,Mother Dairy Curd 400g,35.0,1,20.0,UPI,Counter 2 - Regular
+TXN-1053,2026-08-22,20:50:00,CUST-539,Middle-Aged (36-50),Female,Dairy & Bakery,Amul Gold Milk 500ml,33.0,2,10.0,UPI,Counter 4 - Self-Service
+TXN-1002,2026-08-21,12:58:00,CUST-552,Youth (18-25),Male,Snacks & Beverages,Cadbury Dairy Milk Silk 60g,85.0,1,0.0,Cash,Counter 3 - General
+TXN-1054,2026/08/20,12:13:00,CUST-505,Youth (18-25),Male,Grocery & Staples,India Gate Basmati Rice 1kg,140.0,1,0.0,UPI,Counter 1 - Express
+TXN-1072,24-08-2026,19:41:00,CUST-544,Senior (51+),Female,Dairy & Bakery,Amul Butter 100g,58.0,5,5.0,Cash,Counter 2 - Regular
+TXN-1036,2026/08/20,20:55:00,CUST-533,Senior (51+),Female,Dairy & Bakery,Amul Taaza Milk 500ml,27.0,5,5.0,UPI,Counter 1 - Express
+TXN-1033,2026-08-23,22:01:00,CUST-501,Middle-Aged (36-50),Female,Dairy & Bakery,Amul Gold Milk 500ml,33.0,1,10.0,UPI,Counter 3 - General
+TXN-1056,2026/08/23,21:49:00,CUST-523,Youth (18-25),Male,Dairy & Bakery,Amul Gold Milk 500ml,33.0,1,5.0,Credit Card,Counter 4 - Self-Service
+TXN-1024,2026-08-20,17:59:00,CUST-514,Senior (51+),Female,Snacks & Beverages,Coca-Cola 750ml,40.0,1,0.0,Debit Card,Counter 1 - Express
+TXN-1013,2026-08-18,16:12:00,CUST-534,Middle-Aged (36-50),Female,Dairy & Bakery,Britannia Brown Bread 400g,45.0,1,5.0,UPI,Counter 3 - General
+TXN-1035,2026-08-22,10:40:00,CUST-529,Senior (51+),Female,Grocery & Staples,Tata Salt 1kg,28.0,1,0.0,UPI,Counter 3 - General
+TXN-1057,2026-08-18,19:35:00,CUST-543,Senior (51+),Female,Snacks & Beverages,Lay's India's Magic Masala 50g,20.0,1,0.0,Cash,Counter 4 - Self-Service
+TXN-1056,2026/08/23,21:49:00,CUST-523,Youth (18-25),Male,Snacks & Beverages,Tata Tea Gold 250g,150.0,3,0.0,Credit Card,Counter 4 - Self-Service
+TXN-1037,2026-08-23,17:28:00,CUST-538,Senior (51+),Female,Snacks & Beverages,Coca-Cola 750ml,40.0,1,15.0,Debit Card,Counter 4 - Self-Service
+TXN-1073,2026-08-24,19:42:00,CUST-556,Youth (18-25),Female,Snacks & Beverages,Kurkure Masala Munch 85g,20.0,1,0.0,UPI,Counter 3 - General
+TXN-1022,2026-08-24,21:34:00,CUST-557,Young Adult (26-35),Female,Snacks & Beverages,Tata Tea Gold 250g,150.0,1,0.0,UPI,Counter 2 - Regular
+TXN-1072,24-08-2026,19:41:00,CUST-544,Senior (51+),Female,Dairy & Bakery,Britannia Brown Bread 400g,45.0,1,15.0,Cash,Counter 2 - Regular
+TXN-1037,2026-08-23,17:28:00,CUST-538,Senior (51+),Female,Snacks & Beverages,Cadbury Dairy Milk Silk 60g,85.0,1,20.0,Debit Card,Counter 4 - Self-Service
+TXN-1023,2026-08-22,18:08:00,CUST-549,Senior (51+),Female,Personal Care,Colgate Strong Teeth Toothpaste 300g,145.0,1,0.0,Credit Card,Counter 4 - Self-Service
+TXN-1024,2026-08-20,17:59:00,CUST-514,Senior (51+),Female,Household Essentials,Origami Toilet Tissue Roll 4 in 1,120.0,2,10.0,Debit Card,Counter 1 - Express
+TXN-1010,2026/08/23,15:21:00,CUST-516,Young Adult (26-35),Male,Snacks & Beverages,Coca-Cola 750ml,40.0,2,0.0,UPI,Counter 2 - Regular
+TXN-1038,2026/08/22,10:12:00,CUST-530,Senior (51+),Male,Household Essentials,Surf Excel Easy Wash Detergent Powder 1kg,140.0,1,0.0,UPI,Counter 3 - General
+TXN-1041,2026-08-24,17:54:00,CUST-521,Young Adult (26-35),Male,Grocery & Staples,Tata Sampann Toor Dal 1kg,165.0,1,15.0,Cash,Counter 2 - Regular
+TXN-1027,2026-08-19,17:12:00,CUST-514,Senior (51+),Female,Household Essentials,Surf Excel Easy Wash Detergent Powder 1kg,140.0,2,10.0,Credit Card,Counter 2 - Regular
+TXN-1003,18-08-2026,17:48:00,CUST-540,Middle-Aged (36-50),Male,Household Essentials,Surf Excel Easy Wash Detergent Powder 1kg,140.0,5,15.0,Cash,Counter 1 - Express
+TXN-1019,2026/08/20,16:08:00,CUST-508,Senior (51+),Male,Dairy & Bakery,Britannia Brown Bread 400g,45.0,1,0.0,UPI,Counter 4 - Self-Service
+TXN-1040,2026/08/22,18:17:00,CUST-556,Youth (18-25),Female,Snacks & Beverages,Lay's India's Magic Masala 50g,20.0,1,10.0,Credit Card,Counter 4 - Self-Service
+TXN-1047,21-08-2026,21:48:00,CUST-522,Youth (18-25),Female,Personal Care,Nivea Men Dark Spot Reduction Creme 75ml,160.0,2,0.0,Debit Card,Counter 2 - Regular
+TXN-1051,2026-08-20,11:38:00,CUST-552,Young Adult (26-35),Male,Dairy & Bakery,Amul Gold Milk 500ml,33.0,2,0.0,Cash,Counter 1 - Express
+TXN-1022,2026-08-24,21:34:00,CUST-557,Young Adult (26-35),Female,Dairy & Bakery,Britannia Brown Bread 400g,45.0,1,10.0,UPI,Counter 2 - Regular
+TXN-1044,2026-08-20,20:04:00,CUST-529,,Female,household essentials,Harpic Disinfectant Bathroom Cleaner 500ml,105.0,1,,Cash,Counter 4 - Self-Service
+TXN-1065,2026-08-23,16:02:00,CUST-524,Middle-Aged (36-50),Male,Dairy & Bakery,Amul Butter 100g,58.0,1,0.0,Debit Card,Counter 3 - General
+TXN-1046,2026-08-18,20:11:00,CUST-551,Senior (51+),Male,Dairy & Bakery,Amul Gold Milk 500ml,33.0,1,0.0,Cash,Counter 2 - Regular
+TXN-1011,2026/08/24,09:35:00,CUST-555,Young Adult (26-35),Male,Dairy & Bakery,Britannia Brown Bread 400g,45.0,2,5.0,UPI,Counter 4 - Self-Service
+TXN-1005,2026/08/21,16:26:00,CUST-530,Young Adult (26-35),Female,Household Essentials,Lizol Surface Cleaner Citrus 500ml,110.0,2,15.0,UPI,Counter 3 - General
+TXN-1012,2026-08-23,16:39:00,CUST-514,Youth (18-25),Male,Dairy & Bakery,Amul Butter 100g,58.0,3,0.0,Cash,Counter 1 - Express
+TXN-1010,2026/08/23,15:21:00,CUST-516,Young Adult (26-35),Male,Snacks & Beverages,Lay's India's Magic Masala 50g,20.0,4,0.0,UPI,Counter 2 - Regular
+TXN-1014,2026-08-20,12:29:00,CUST-505,Young Adult (26-35),Female,Household Essentials,Harpic Disinfectant Bathroom Cleaner 500ml,105.0,1,0.0,UPI,Counter 4 - Self-Service
+TXN-1032,2026/08/18,21:04:00,CUST-545,Young Adult (26-35),Male,Snacks & Beverages,Cadbury Dairy Milk Silk 60g,85.0,1,0.0,UPI,Counter 4 - Self-Service
+TXN-1039,2026-08-24,13:15:00,CUST-536,Youth (18-25),Female,Snacks & Beverages,Cadbury Dairy Milk Silk 60g,85.0,1,5.0,UPI,Counter 1 - Express
+TXN-1069,24-08-2026,17:14:00,CUST-549,Senior (51+),Female,Dairy & Bakery,Britannia Brown Bread 400g,45.0,2,0.0,Cash,Counter 1 - Express
+TXN-1017,2026/08/24,21:41:00,CUST-502,Young Adult (26-35),Female,Dairy & Bakery,Britannia Brown Bread 400g,45.0,3,5.0,Credit Card,Counter 4 - Self-Service
+TXN-1060,2026-08-19,15:19:00,CUST-533,Youth (18-25),Male,Snacks & Beverages,Cadbury Dairy Milk Silk 60g,85.0,1,5.0,Debit Card,Counter 3 - General
+TXN-1061,23-08-2026,19:11:00,CUST-540,Middle-Aged (36-50),Female,Snacks & Bev.,Lay's India's Magic Masala 50g,20.0,2,0.0,UPI,Counter 1 - Express
+TXN-1025,2026/08/22,17:31:00,CUST-538,Youth (18-25),Male,Dairy & Bakery,Amul Butter 100g,58.0,1,0.0,Cash,Counter 2 - Regular
+TXN-1014,2026-08-20,12:29:00,CUST-505,Young Adult (26-35),Female,Household Essentials,Surf Excel Easy Wash Detergent Powder 1kg,140.0,1,15.0,UPI,Counter 4 - Self-Service
+TXN-1034,19-08-2026,11:05:00,CUST-539,Young Adult (26-35),Female,Snacks & Beverages,Coca-Cola 750ml,40.0,1,10.0,UPI,Counter 4 - Self-Service
+TXN-1047,21-08-2026,21:48:00,CUST-522,Youth (18-25),Female,Snacks & Beverages,Kurkure Masala Munch 85g,20.0,1,5.0,Debit Card,Counter 2 - Regular
+TXN-1026,2026-08-20,11:00:00,CUST-535,Youth (18-25),Female,Dairy & Bakery,Amul Gold Milk 500ml,33.0,1,0.0,UPI,Counter 1 - Express
+TXN-1045,2026-08-24,19:55:00,CUST-537,Youth (18-25),Female,Grocery & Staples,Madhur Pure & Hygienic Sugar 1kg,48.0,2,5.0,Credit Card,Counter 3 - General
+TXN-1009,2026-08-24,14:34:00,CUST-518,Senior (51+),Male,Dairy&Bakery,Britannia Brown Bread 400g,45.0,1,15.0,UPI,Counter 4 - Self-Service
+TXN-1051,2026-08-20,11:38:00,CUST-552,Young Adult (26-35),Male,Dairy & Bakery,Britannia Brown Bread 400g,45.0,1,0.0,Cash,Counter 1 - Express
+TXN-1063,2026-08-22,18:09:00,CUST-524,Middle-Aged (36-50),Female,Household Essentials,Surf Excel Easy Wash Detergent Powder 1kg,140.0,2,0.0,UPI,Counter 3 - General
+TXN-1061,23-08-2026,19:11:00,CUST-540,Middle-Aged (36-50),Female,Snacks & Beverages,Coca-Cola 750ml,40.0,1,0.0,UPI,Counter 1 - Express
+TXN-1001,23-08-2026,10:31:00,CUST-516,Young Adult (26-35),Male,Household Essentials,Surf Excel Easy Wash Detergent Powder 1kg,140.0,1,0.0,Cash,Counter 1 - Express
+TXN-1002,2026-08-21,12:58:00,CUST-552,Youth (18-25),Male,Snacks & Beverages,Lay's India's Magic Masala 50g,20.0,1,0.0,Cash,Counter 3 - General
+TXN-1025,2026/08/22,17:31:00,CUST-538,Youth (18-25),Male,Personal Care,Colgate Strong Teeth Toothpaste 300g,145.0,1,10.0,Cash,Counter 2 - Regular
+TXN-1016,2026-08-23,12:04:00,CUST-524,Young Adult (26-35),Female,Snacks & Beverages,Lay's India's Magic Masala 50g,20.0,1,0.0,UPI,Counter 3 - General
+TXN-1034,19-08-2026,11:05:00,CUST-539,Young Adult (26-35),Female,Snacks & Beverages,Lay's India's Magic Masala 50g,20.0,2,0.0,UPI,Counter 4 - Self-Service
+TXN-1038,2026/08/22,10:12:00,CUST-530,Senior (51+),Male,Household Essentials,Vim Dishwash Gel 500ml,115.0,1,0.0,UPI,Counter 3 - General
+TXN-1046,2026-08-18,20:11:00,CUST-551,Senior (51+),Male,Snacks & Beverages,Tata Tea Gold 250g,150.0,3,0.0,Cash,Counter 2 - Regular
+TXN-1055,2026-08-20,11:06:00,CUST-510,Senior (51+),Male,Personal Care,Nivea Men Dark Spot Reduction Creme 75ml,160.0,3,0.0,Credit Card,Counter 3 - General
+TXN-1031,2026-08-23,21:01:00,CUST-502,Youth (18-25),Female,Snacks & Beverages,Lay's India's Magic Masala 50g,20.0,1,0.0,UPI,Counter 2 - Regular
+TXN-1029,2026-08-22,19:51:00,CUST-527,Senior (51+),Male,Household Essentials,Harpic Disinfectant Bathroom Cleaner 500ml,105.0,1,5.0,UPI,Counter 3 - General
+TXN-1055,2026-08-20,11:06:00,CUST-510,Senior (51+),Male,Dairy & Bakery,Amul Cheese Slices 200g,140.0,5,10.0,Credit Card,Counter 3 - General
+TXN-1051,2026-08-20,11:38:00,CUST-552,Young Adult (26-35),Male,Snacks & Beverages,Tata Tea Gold 250g,150.0,1,0.0,Cash,Counter 1 - Express
+TXN-1033,2026-08-23,22:01:00,CUST-501,Middle-Aged (36-50),Female,Dairy&Bakery,Britannia Brown Bread 400g,45.0,1,5.0,UPI,Counter 3 - General
+TXN-1012,2026-08-23,16:39:00,CUST-514,,Male,snacks & beverages,Tata Tea Gold 250g,150.0,2,,Cash,Counter 1 - Express
+TXN-1045,2026-08-24,19:55:00,CUST-537,Youth (18-25),Female,Household Essentials,Harpic Disinfectant Bathroom Cleaner 500ml,105.0,1,0.0,Credit Card,Counter 3 - General
+TXN-1021,2026-08-20,16:58:00,CUST-514,Senior (51+),Male,Household Essentials,Surf Excel Easy Wash Detergent Powder 1kg,140.0,1,10.0,Cash,Counter 3 - General
+TXN-1008,2026/08/22,15:43:00,CUST-549,Young Adult (26-35),Female,Snacks & Beverages,Lay's India's Magic Masala 50g,20.0,1,0.0,UPI,Counter 3 - General
+TXN-1039,2026-08-24,13:15:00,CUST-536,Youth (18-25),Female,Snacks & Beverages,Coca-Cola 750ml,40.0,1,10.0,UPI,Counter 1 - Express
+TXN-1071,21-08-2026,12:12:00,CUST-534,Middle-Aged (36-50),Male,Snacks & Beverages,Cadbury Dairy Milk Silk 60g,85.0,1,0.0,Debit Card,Counter 1 - Express
+TXN-1043,2026-08-24,09:48:00,CUST-528,Young Adult (26-35),Male,Snacks & Beverages,Tata Tea Gold 250g,150.0,1,0.0,UPI,Counter 2 - Regular
+TXN-1012,2026-08-23,16:39:00,CUST-514,Youth (18-25),Male,Dairy & Bakery,Amul Gold Milk 500ml,33.0,1,0.0,Cash,Counter 1 - Express
+TXN-1004,2026-08-23,20:11:00,CUST-541,Young Adult (26-35),Male,Snacks & Beverages,Cadbury Dairy Milk Silk 60g,85.0,2,10.0,UPI,Counter 4 - Self-Service
+TXN-1012,2026-08-23,16:39:00,CUST-514,Youth (18-25),Male,Dairy&Bakery,Britannia Brown Bread 400g,45.0,3,0.0,Cash,Counter 1 - Express
+TXN-1060,2026-08-19,15:19:00,CUST-533,Youth (18-25),Male,Snacks & Beverages,Coca-Cola 750ml,40.0,1,0.0,Debit Card,Counter 3 - General
+TXN-1003,18-08-2026,17:48:00,CUST-540,Middle-Aged (36-50),Male,Household Essentials,Vim Dishwash Gel 500ml,115.0,1,5.0,Cash,Counter 1 - Express
+TXN-1009,2026-08-24,14:34:00,CUST-518,Senior (51+),Male,Dairy&Bakery,Amul Butter 100g,58.0,2,5.0,UPI,Counter 4 - Self-Service
+TXN-1048,22-08-2026,16:22:00,CUST-524,Youth (18-25),Male,Dairy & Bakery,Mother Dairy Curd 400g,35.0,1,0.0,UPI,Counter 3 - General
+TXN-1002,2026-08-21,12:58:00,CUST-552,Youth (18-25),Male,Snacks & Beverages,Cadbury Dairy Milk Silk 60g,85.0,1,0.0,Cash,Counter 3 - General
+TXN-1040,2026/08/22,18:17:00,CUST-556,Youth (18-25),Female,Snacks & Beverages,Kurkure Masala Munch 85g,20.0,1,5.0,Credit Card,Counter 4 - Self-Service
+TXN-1011,2026/08/24,09:35:00,CUST-555,Young Adult (26-35),Male,Dairy & Bakery,Amul Butter 100g,58.0,4,20.0,UPI,Counter 4 - Self-Service
+TXN-1060,2026-08-19,15:19:00,CUST-533,Youth (18-25),Male,Snacks & Beverages,Lay's India's Magic Masala 50g,20.0,1,0.0,Debit Card,Counter 3 - General
+TXN-1021,2026-08-20,16:58:00,CUST-514,Senior (51+),Male,Household Essentials,Vim Dishwash Gel 500ml,115.0,2,0.0,Cash,Counter 3 - General
+TXN-1042,2026/08/18,17:20:00,CUST-522,Senior (51+),Male,Grocery & Staples,Madhur Pure & Hygienic Sugar 1kg,48.0,2,15.0,Credit Card,Counter 4 - Self-Service
+TXN-1074,2026-08-21,19:22:00,CUST-519,Middle-Aged (36-50),Male,Snacks & Beverages,Coca-Cola 750ml,40.0,3,0.0,UPI,Counter 3 - General
+TXN-1058,2026-08-20,13:19:00,CUST-517,Middle-Aged (36-50),Female,Grocery & Staples,Tata Sampann Toor Dal 1kg,165.0,1,5.0,UPI,Counter 4 - Self-Service
+TXN-1023,2026-08-22,18:08:00,CUST-549,Senior (51+),Female,Snacks & Beverages,Cadbury Dairy Milk Silk 60g,85.0,1,0.0,Credit Card,Counter 4 - Self-Service
+TXN-1059,2026/08/21,09:59:00,CUST-556,Middle-Aged (36-50),Female,Snacks & Beverages,Coca-Cola 750ml,40.0,2,0.0,Cash,Counter 4 - Self-Service
+TXN-1022,2026-08-24,21:34:00,CUST-557,Young Adult (26-35),Female,Dairy & Bakery,Amul Gold Milk 500ml,33.0,3,15.0,UPI,Counter 2 - Regular
+TXN-1015,20-08-2026,13:13:00,CUST-517,Senior (51+),Female,Dairy & Bakery,Britannia Brown Bread 400g,45.0,1,10.0,Debit Card,Counter 1 - Express
+TXN-1050,2026/08/19,14:36:00,CUST-524,Middle-Aged (36-50),Male,Household Essentials,Surf Excel Easy Wash Detergent Powder 1kg,140.0,2,10.0,UPI,Counter 2 - Regular
+TXN-1014,2026-08-20,12:29:00,CUST-505,Young Adult (26-35),Female,Household Essentials,Origami Toilet Tissue Roll 4 in 1,120.0,4,0.0,UPI,Counter 4 - Self-Service
+TXN-1041,2026-08-24,17:54:00,CUST-521,Young Adult (26-35),Male,Dairy & Bakery,Amul Butter 100g,58.0,4,0.0,Cash,Counter 2 - Regular
+TXN-1008,2026/08/22,15:43:00,CUST-549,Young Adult (26-35),Female,Snacks & Bev.,Coca-Cola 750ml,40.0,1,0.0,UPI,Counter 3 - General
+TXN-1057,2026-08-18,19:35:00,CUST-543,Senior (51+),Female,snacks & beverages,Coca-Cola 750ml,40.0,1,5.0,Cash,Counter 4 - Self-Service
+TXN-1065,2026-08-23,16:02:00,CUST-524,Middle-Aged (36-50),Male,Grocery & Staples,Fortune Sunlite Sunflower Oil 1L,135.0,2,10.0,Debit Card,Counter 3 - General
+TXN-1027,2026-08-19,17:12:00,CUST-514,Senior (51+),Female,Household Essentials,Harpic Disinfectant Bathroom Cleaner 500ml,105.0,2,15.0,Credit Card,Counter 2 - Regular
+TXN-1013,2026-08-18,16:12:00,CUST-534,Middle-Aged (36-50),Female,Snacks & Beverages,Tata Tea Gold 250g,150.0,5,0.0,UPI,Counter 3 - General
+TXN-1064,24-08-2026,20:28:00,CUST-510,Middle-Aged (36-50),Male,Household Essentials,Origami Toilet Tissue Roll 4 in 1,120.0,1,10.0,Cash,Counter 2 - Regular
+TXN-1016,2026-08-23,12:04:00,CUST-524,Young Adult (26-35),Female,Snacks & Beverages,Coca-Cola 750ml,40.0,2,0.0,UPI,Counter 3 - General
+TXN-1032,2026/08/18,21:04:00,CUST-545,Young Adult (26-35),Male,Snacks & Beverages,Coca-Cola 750ml,40.0,1,0.0,UPI,Counter 4 - Self-Service
+TXN-1058,2026-08-20,13:19:00,CUST-517,Middle-Aged (36-50),Female,Household Essentials,Origami Toilet Tissue Roll 4 in 1,120.0,1,0.0,UPI,Counter 4 - Self-Service
+TXN-1015,20-08-2026,13:13:00,CUST-517,Senior (51+),Female,Dairy & Bakery,Amul Gold Milk 500ml,33.0,1,10.0,Debit Card,Counter 1 - Express
+TXN-1049,2026-08-18,13:26:00,CUST-525,Senior (51+),Female,Household Essentials,Surf Excel Easy Wash Detergent Powder 1kg,140.0,50,5.0,Cash,Counter 4 - Self-Service
+TXN-1053,2026-08-22,20:50:00,CUST-539,Middle-Aged (36-50),Female,Dairy & Bakery,Britannia Brown Bread 400g,45.0,1,5.0,UPI,Counter 4 - Self-Service
+TXN-1002,2026-08-21,12:58:00,CUST-552,Youth (18-25),Male,snacks & beverages,Coca-Cola 750ml,40.0,1,0.0,Cash,Counter 3 - General
+TXN-1035,2026-08-22,10:40:00,CUST-529,Senior (51+),Female,Household Essentials,Origami Toilet Tissue Roll 4 in 1,120.0,2,5.0,UPI,Counter 3 - General
+TXN-1018,2026-08-24,12:44:00,CUST-513,Senior (51+),Female,Personal Care,Lifebuoy Total Handwash 750ml Refill,119.0,1,20.0,UPI,Counter 1 - Express
+TXN-1044,2026-08-20,20:04:00,CUST-529,Middle-Aged (36-50),Female,Household Essentials,Surf Excel Easy Wash Detergent Powder 1kg,140.0,1,20.0,Cash,Counter 4 - Self-Service
+TXN-1070,19-08-2026,16:10:00,CUST-530,Youth (18-25),Male,Household Essentials,Vim Dishwash Gel 500ml,115.0,1,5.0,Credit Card,Counter 4 - Self-Service
+TXN-1012,2026-08-23,16:39:00,CUST-514,Youth (18-25),Male,Dairy & Bakery,Amul Butter 100g,58.0,3,0.0,Cash,Counter 1 - Express
+TXN-1072,24-08-2026,19:41:00,CUST-544,Senior (51+),Female,Dairy & Bakery,Amul Gold Milk 500ml,33.0,1,0.0,Cash,Counter 2 - Regular
+TXN-1016,2026-08-23,12:04:00,CUST-524,Young Adult (26-35),Female,Snacks & Beverages,Cadbury Dairy Milk Silk 60g,85.0,4,0.0,UPI,Counter 3 - General
+TXN-1054,2026/08/20,12:13:00,CUST-505,Youth (18-25),Male,Dairy & Bakery,Amul Malai Paneer 200g,92.0,2,10.0,UPI,Counter 1 - Express
+TXN-1027,2026-08-19,17:12:00,CUST-514,Senior (51+),Female,Household Essentials,Vim Dishwash Gel 500ml,115.0,1,5.0,Credit Card,Counter 2 - Regular
+TXN-1012,2026-08-23,16:39:00,CUST-514,Youth (18-25),Male,Dairy&Bakery,Britannia Brown Bread 400g,45.0,3,0.0,Cash,Counter 1 - Express
+TXN-1003,18-08-2026,17:48:00,CUST-540,Middle-Aged (36-50),Male,Household Essentials,Harpic Disinfectant Bathroom Cleaner 500ml,105.0,1,0.0,Cash,Counter 1 - Express
+TXN-1037,2026-08-23,17:28:00,CUST-538,Senior (51+),Female,Snacks & Beverages,Lay's India's Magic Masala 50g,20.0,3,0.0,Debit Card,Counter 4 - Self-Service
+TXN-1031,2026-08-23,21:01:00,CUST-502,Youth (18-25),Female,Snacks & Beverages,Coca-Cola 750ml,40.0,1,10.0,UPI,Counter 2 - Regular
+TXN-1029,2026-08-22,19:51:00,CUST-527,Senior (51+),Male,Household Essentials,Surf Excel Easy Wash Detergent Powder 1kg,140.0,2,0.0,UPI,Counter 3 - General
+TXN-1068,2026-08-22,12:23:00,CUST-559,,Female,snacks & beverages,Kurkure Masala Munch 85g,20.0,1,,Credit Card,Counter 1 - Express
+TXN-1071,21-08-2026,12:12:00,CUST-534,,Male,snacks & beverages,Lay's India's Magic Masala 50g,20.0,5,,Debit Card,Counter 1 - Express
+TXN-1030,2026-08-23,18:47:00,CUST-516,Youth (18-25),Female,Grocery & Staples,Tata Salt 1kg,28.0,1,10.0,Credit Card,Counter 2 - Regular
+TXN-1004,2026-08-23,20:11:00,CUST-541,Young Adult (26-35),Male,Snacks & Beverages,Lay's India's Magic Masala 50g,20.0,1,0.0,UPI,Counter 4 - Self-Service
+TXN-1005,2026/08/21,16:26:00,CUST-530,Young Adult (26-35),Female,Snacks & Beverages,Parle-G Gold Biscuits 250g,30.0,1,5.0,UPI,Counter 3 - General
+TXN-1020,2026-08-23,14:02:00,CUST-527,Middle-Aged (36-50),Female,Dairy & Bakery,Britannia Brown Bread 400g,45.0,1,10.0,Cash,Counter 2 - Regular
+TXN-1066,24-08-2026,21:19:00,CUST-558,Young Adult (26-35),Female,Household Essentials,Surf Excel Easy Wash Detergent Powder 1kg,140.0,1,0.0,UPI,Counter 3 - General
+TXN-1043,2026-08-24,09:48:00,CUST-528,Young Adult (26-35),Male,Dairy & Bakery,Britannia Brown Bread 400g,45.0,1,5.0,UPI,Counter 2 - Regular
+TXN-1006,23-08-2026,20:37:00,CUST-535,Middle-Aged (36-50),Female,Dairy & Bakery,Britannia Brown Bread 400g,45.0,1,0.0,UPI,Counter 4 - Self-Service
+TXN-1055,2026-08-20,11:06:00,CUST-510,Senior (51+),Male,Snacks & Beverages,Parle-G Gold Biscuits 250g,30.0,2,0.0,Credit Card,Counter 3 - General
+TXN-1024,2026-08-20,17:59:00,CUST-514,Senior (51+),Female,Personal Care,Dove Deep Moisture Body Wash 190ml,135.0,2,10.0,Debit Card,Counter 1 - Express
+TXN-1067,2026/08/24,22:00:00,CUST-513,Middle-Aged (36-50),Female,Snacks & Beverages,Lay's India's Magic Masala 50g,20.0,1,10.0,UPI,Counter 3 - General
+TXN-1044,2026-08-20,20:04:00,CUST-529,Middle-Aged (36-50),Female,Household Essentials,Vim Dishwash Gel 500ml,115.0,1,0.0,Cash,Counter 4 - Self-Service
+TXN-1062,22-08-2026,18:20:00,CUST-503,Senior (51+),Male,Household Essentials,Vim Dishwash Gel 500ml,115.0,5,0.0,UPI,Counter 4 - Self-Service
+TXN-1074,2026-08-21,19:22:00,CUST-519,Middle-Aged (36-50),Male,snacks & beverages,Lay's India's Magic Masala 50g,20.0,2,0.0,UPI,Counter 3 - General
+TXN-1021,2026-08-20,16:58:00,CUST-514,Senior (51+),Male,Household Essentials,Harpic Disinfectant Bathroom Cleaner 500ml,105.0,1,0.0,Cash,Counter 3 - General
+TXN-1018,2026-08-24,12:44:00,CUST-513,Senior (51+),Female,Household Essentials,Harpic Disinfectant Bathroom Cleaner 500ml,105.0,1,0.0,UPI,Counter 1 - Express
+TXN-1036,2026/08/20,20:55:00,CUST-533,Senior (51+),Female,Household Essentials,Harpic Disinfectant Bathroom Cleaner 500ml,105.0,3,5.0,UPI,Counter 1 - Express
+TXN-1017,2026/08/24,21:41:00,CUST-502,Young Adult (26-35),Female,Snacks & Beverages,Britannia Good Day Butter Cookies 120g,30.0,3,15.0,Credit Card,Counter 4 - Self-Service
+TXN-1063,2026-08-22,18:09:00,CUST-524,Middle-Aged (36-50),Female,Household Essentials,Vim Dishwash Gel 500ml,115.0,2,0.0,UPI,Counter 3 - General
+TXN-1057,2026-08-18,19:35:00,CUST-543,,Female,snacks & beverages,Kurkure Masala Munch 85g,20.0,1,,Cash,Counter 4 - Self-Service
+TXN-1064,24-08-2026,20:28:00,CUST-510,Middle-Aged (36-50),Male,Personal Care,Dettol Original Bathing Soap 75g (Buy 3 Get 1),115.0,2,5.0,Cash,Counter 2 - Regular
+TXN-1062,22-08-2026,18:20:00,CUST-503,Senior (51+),Male,Household Essentials,Surf Excel Easy Wash Detergent Powder 1kg,140.0,1,10.0,UPI,Counter 4 - Self-Service
+TXN-1065,2026-08-23,16:02:00,CUST-524,Middle-Aged (36-50),Male,Dairy & Bakery,Amul Butter 100g,58.0,1,0.0,Debit Card,Counter 3 - General
+TXN-1068,2026-08-22,12:23:00,CUST-559,Young Adult (26-35),Female,Snacks & Beverages,Lay's India's Magic Masala 50g,20.0,1,0.0,Credit Card,Counter 1 - Express
+TXN-1056,2026/08/23,21:49:00,CUST-523,Youth (18-25),Male,Dairy & Bakery,Britannia Brown Bread 400g,45.0,1,0.0,Credit Card,Counter 4 - Self-Service
+TXN-1020,2026-08-23,14:02:00,CUST-527,Middle-Aged (36-50),Female,Dairy & Bakery,Amul Gold Milk 500ml,33.0,2,0.0,Cash,Counter 2 - Regular
+TXN-1016,2026-08-23,12:04:00,CUST-524,Young Adult (26-35),Female,Snacks & Beverages,Kurkure Masala Munch 85g,20.0,3,20.0,UPI,Counter 3 - General
+TXN-1030,2026-08-23,18:47:00,CUST-516,Youth (18-25),Female,Grocery & Staples,Tata Sampann Toor Dal 1kg,165.0,4,0.0,Credit Card,Counter 2 - Regular
+TXN-1007,2026-08-20,21:40:00,CUST-550,Youth (18-25),Female,Dairy & Bakery,Amul Taaza Milk 500ml,27.0,4,0.0,UPI,Counter 1 - Express
+TXN-1019,2026/08/20,16:08:00,CUST-508,Senior (51+),Male,Dairy & Bakery,Amul Butter 100g,58.0,1,0.0,UPI,Counter 4 - Self-Service
+TXN-1053,2026-08-22,20:50:00,CUST-539,Middle-Aged (36-50),Female,Dairy & Bakery,Amul Butter 100g,58.0,1,5.0,UPI,Counter 4 - Self-Service
+TXN-1075,2026-08-18,20:10:00,CUST-533,Young Adult (26-35),Male,Dairy & Bakery,Britannia Brown Bread 400g,45.0,2,5.0,UPI,Counter 4 - Self-Service
+TXN-1061,23-08-2026,19:11:00,CUST-540,Middle-Aged (36-50),Female,Snacks & Beverages,Kurkure Masala Munch 85g,20.0,1,5.0,UPI,Counter 1 - Express
+TXN-1062,22-08-2026,18:20:00,CUST-503,Senior (51+),Male,Household Essentials,Harpic Disinfectant Bathroom Cleaner 500ml,105.0,1,10.0,UPI,Counter 4 - Self-Service
+TXN-1042,2026/08/18,17:20:00,CUST-522,Senior (51+),Male,snacks & beverages,Parle-G Gold Biscuits 250g,30.0,2,15.0,Credit Card,Counter 4 - Self-Service
+TXN-1013,2026-08-18,16:12:00,CUST-534,Middle-Aged (36-50),Female,Dairy & Bakery,Amul Gold Milk 500ml,33.0,1,0.0,UPI,Counter 3 - General
+TXN-1052,2026-08-22,10:58:00,CUST-540,Youth (18-25),Female,Dairy & Bakery,Amul Butter 100g,58.0,1,0.0,UPI,Counter 1 - Express
+TXN-1073,2026-08-24,19:42:00,CUST-556,Youth (18-25),Female,Snacks & Beverages,Lay's India's Magic Masala 50g,20.0,4,0.0,UPI,Counter 3 - General
+TXN-1001,23-08-2026,10:31:00,CUST-516,Young Adult (26-35),Male,Household Essentials,Vim Dishwash Gel 500ml,115.0,2,10.0,Cash,Counter 1 - Express
+TXN-1018,2026-08-24,12:44:00,CUST-513,Senior (51+),Female,Snacks & Beverages,Cadbury Dairy Milk Silk 60g,85.0,4,0.0,UPI,Counter 1 - Express
+TXN-1050,2026/08/19,14:36:00,CUST-524,Middle-Aged (36-50),Male,Grocery & Staples,Madhur Pure & Hygienic Sugar 1kg,48.0,1,10.0,UPI,Counter 2 - Regular
+TXN-1043,2026-08-24,09:48:00,CUST-528,Young Adult (26-35),Male,Dairy & Bakery,Amul Gold Milk 500ml,33.0,2,0.0,UPI,Counter 2 - Regular
+TXN-1050,2026/08/19,14:36:00,CUST-524,Middle-Aged (36-50),Male,Dairy & Bakery,Amul Cheese Slices 200g,140.0,2,10.0,UPI,Counter 2 - Regular
+TXN-1035,2026-08-22,10:40:00,CUST-529,Senior (51+),Female,Dairy & Bakery,Mother Dairy Curd 400g,35.0,1,0.0,UPI,Counter 3 - General
+TXN-1033,2026-08-23,22:01:00,CUST-501,Middle-Aged (36-50),Female,Snacks & Beverages,Tata Tea Gold 250g,150.0,1,5.0,UPI,Counter 3 - General
+TXN-1038,2026/08/22,10:12:00,CUST-530,Senior (51+),Male,Household Essentials,Harpic Disinfectant Bathroom Cleaner 500ml,105.0,1,0.0,UPI,Counter 3 - General
+TXN-1030,2026-08-23,18:47:00,CUST-516,,Female,personal care,Colgate Strong Teeth Toothpaste 300g,145.0,2,,Credit Card,Counter 2 - Regular
+TXN-1067,2026/08/24,22:00:00,CUST-513,Middle-Aged (36-50),Female,Grocery & Staples,Catch Red Chilli Powder 200g,75.0,2,15.0,UPI,Counter 3 - General
+TXN-1024,2026-08-20,17:59:00,CUST-514,Senior (51+),Female,Personal Care,Head & Shoulders Cool Menthol Shampoo 180ml,180.0,1,5.0,Debit Card,Counter 1 - Express
+TXN-1071,21-08-2026,12:12:00,CUST-534,Middle-Aged (36-50),Male,Snacks & Beverages,Kurkure Masala Munch 85g,20.0,2,10.0,Debit Card,Counter 1 - Express
+TXN-1070,19-08-2026,16:10:00,CUST-530,Youth (18-25),Male,Household Essentials,Surf Excel Easy Wash Detergent Powder 1kg,140.0,1,0.0,Credit Card,Counter 4 - Self-Service
+TXN-1040,2026/08/22,18:17:00,CUST-556,Youth (18-25),Female,Snacks & Beverages,Coca-Cola 750ml,40.0,2,5.0,Credit Card,Counter 4 - Self-Service
+TXN-1057,2026-08-18,19:35:00,CUST-543,Senior (51+),Female,snacks & beverages,Coca-Cola 750ml,40.0,1,5.0,Cash,Counter 4 - Self-Service
+TXN-1007,2026-08-20,21:40:00,CUST-550,Youth (18-25),Female,Grocery & Staples,India Gate Basmati Rice 1kg,140.0,1,0.0,UPI,Counter 1 - Express
+TXN-1061,23-08-2026,19:11:00,CUST-540,Middle-Aged (36-50),Female,Snacks & Beverages,Cadbury Dairy Milk Silk 60g,85.0,1,5.0,UPI,Counter 1 - Express
+TXN-1023,2026-08-22,18:08:00,CUST-549,Senior (51+),Female,Personal Care,Lifebuoy Total Handwash 750ml Refill,119.0,1,0.0,Credit Card,Counter 4 - Self-Service
+TXN-1035,2026-08-22,10:40:00,CUST-529,Senior (51+),Female,Grocery & Staples,Tata Sampann Toor Dal 1kg,165.0,4,0.0,UPI,Counter 3 - General
+TXN-1005,2026/08/21,16:26:00,CUST-530,Young Adult (26-35),Female,Grocery & Staples,India Gate Basmati Rice 1kg,140.0,1,5.0,UPI,Counter 3 - General
+TXN-1031,2026-08-23,21:01:00,CUST-502,Youth (18-25),Female,Snacks & Beverages,Kurkure Masala Munch 85g,20.0,1,0.0,UPI,Counter 2 - Regular
+TXN-1059,2026/08/21,09:59:00,CUST-556,Middle-Aged (36-50),Female,Snacks & Beverages,Kurkure Masala Munch 85g,20.0,1,0.0,Cash,Counter 4 - Self-Service
+TXN-1034,19-08-2026,11:05:00,CUST-539,Young Adult (26-35),Female,Snacks & Beverages,Kurkure Masala Munch 85g,20.0,1,0.0,UPI,Counter 4 - Self-Service
