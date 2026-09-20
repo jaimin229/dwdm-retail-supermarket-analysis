@@ -293,7 +293,7 @@ ORDER BY Total_Revenue_INR DESC;
 #### Analytical Results:
 {res_rollup.to_markdown(index=False)}
 
-- **Business Finding**: **Grocery & Staples** generates the highest total gross revenue (essential daily nourishment like Atta, Oil, and Dal), whereas **Snacks & Beverages** and **Dairy & Bakery** deliver the fastest unit turnover and high margin velocity.
+- **Business Finding**: **Household Essentials** (₹21,388.80) and **Snacks & Beverages** (₹14,163.80) generate the highest total gross departmental revenues, whereas **Snacks & Beverages** (275 units) and **Dairy & Bakery** (216 units) deliver the fastest unit turnover and highest shopping basket frequencies.
 
 ---
 

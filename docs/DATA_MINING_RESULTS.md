@@ -86,14 +86,14 @@ To discover latent customer typologies without preconceived labels, **K-Means Cl
 
 The **Elbow Method** (tracking Within-Cluster Sum of Squares / Inertia) alongside the **Silhouette Score** confirmed that **$K = 4$** represents the optimal structural inflection point.
 
-### 4.2 Discovered Customer Personas
+### 4.2 Discovered Customer Personas (Data-Driven K-Means Profiles)
 
 | Cluster ID | Persona Name | Avg. Total Spend | Avg. Units | Category Breadth | Behavioral Characteristics & Strategic Action |
 | :---: | :--- | :---: | :---: | :---: | :--- |
-| **0** | **Budget Quick Shoppers** | Lower (₹200–₹450) | 1–3 units | Focused (1–2) | Walk-in emergency buyers purchasing milk or bread. Fast billing needed at Counter 1. |
-| **1** | **Premium Bulk Grocery Buyers**| Highest (> ₹1,500) | 8–15 units | Broad (4–5) | Monthly family grocery stocking (Atta, Oil, Ghee, Household). Target with loyalty rewards & home delivery. |
-| **2** | **Impulse Snackers & Youth** | Moderate (₹150–₹350) | 2–4 units | Snacks & Bev | College students / young adults buying cold drinks & chips. Target with digital coupons & UPI cashback. |
-| **3** | **Routine Staples Restockers** | High (₹800–₹1,400) | 5–8 units | Staples & Dairy | Weekly replenishment buyers. Maintain high stock availability on essential FMCG brands. |
+| **3** | **Budget Quick Shoppers** | ₹282.07 | 5.6 units | 1.5 Categories | Walk-in emergency buyers purchasing milk or bread. Fast billing needed at Counter 1. |
+| **0** | **Routine Staples Restockers** | ₹812.94 | 8.0 units | 1.5 Categories | Weekly staple & dairy replenishment buyers. Maintain high on-shelf FMCG availability. |
+| **1** | **Impulse Snackers & Diverse Shoppers** | ₹966.52 | 12.1 units | 3.3 Categories | College students & young adults buying cold drinks & snacks. Target with UPI coupons. |
+| **2** | **Premium Bulk Grocery Buyers** | ₹2013.79 | 22.2 units | 4.2 Categories | Monthly family grocery stocking (Atta, Oil, Cleaning). Target with free home delivery & loyalty tier. |
 
 ---
 

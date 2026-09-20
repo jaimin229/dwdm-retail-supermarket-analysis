@@ -258,19 +258,23 @@ optimal_k = 4
 kmeans_final = KMeans(n_clusters=optimal_k, init='k-means++', random_state=42, n_init=15)
 cust_profile['Cluster'] = kmeans_final.fit_predict(X_scaled)
 
-# Assign descriptive Retail Persona names
-cluster_personas = {
-    0: "Budget Quick Shoppers",
-    1: "Premium Bulk Grocery Buyers",
-    2: "Impulse Snackers & Youth",
-    3: "Routine Staples Restockers"
-}
-
-# Map clusters based on relative spend and units
+# Dynamically determine cluster personas based on sorted centroid spend:
 cluster_means = cust_profile.groupby('Cluster')[['Total_Spend_INR', 'Total_Units', 'Category_Diversity']].mean()
-print("Cluster Centroid Means:\n", cluster_means)
+sorted_clusters_by_spend = cluster_means['Total_Spend_INR'].sort_values().index.tolist()
 
+persona_names_ordered = [
+    "Budget Quick Shoppers",              # Rank 0 (Lowest Spend)
+    "Routine Staples Restockers",        # Rank 1 (Moderate-Low Spend)
+    "Impulse Snackers & Diverse Shoppers",# Rank 2 (Moderate-High Spend)
+    "Premium Bulk Grocery Buyers"        # Rank 3 (Highest Spend)
+]
+
+cluster_personas = {cluster_id: persona_name for cluster_id, persona_name in zip(sorted_clusters_by_spend, persona_names_ordered)}
 cust_profile['Persona'] = cust_profile['Cluster'].map(cluster_personas)
+
+print("Cluster Centroid Means (with dynamic persona mapping):")
+for cid in sorted_clusters_by_spend:
+    print(f"  Cluster {cid} ({cluster_personas[cid]}): Spend=INR {cluster_means.loc[cid, 'Total_Spend_INR']:.2f}, Units={cluster_means.loc[cid, 'Total_Units']:.2f}, Categories={cluster_means.loc[cid, 'Category_Diversity']:.2f}")
 
 # Figure 6: 2D Customer Segmentation Visualization
 plt.figure(figsize=(9, 6), dpi=300)
@@ -383,15 +387,30 @@ To discover latent customer typologies without preconceived labels, **K-Means Cl
 
 The **Elbow Method** (tracking Within-Cluster Sum of Squares / Inertia) alongside the **Silhouette Score** confirmed that **$K = 4$** represents the optimal structural inflection point.
 
-### 4.2 Discovered Customer Personas
+### 4.2 Discovered Customer Personas (Data-Driven K-Means Profiles)
 
 | Cluster ID | Persona Name | Avg. Total Spend | Avg. Units | Category Breadth | Behavioral Characteristics & Strategic Action |
 | :---: | :--- | :---: | :---: | :---: | :--- |
-| **0** | **Budget Quick Shoppers** | Lower (₹200–₹450) | 1–3 units | Focused (1–2) | Walk-in emergency buyers purchasing milk or bread. Fast billing needed at Counter 1. |
-| **1** | **Premium Bulk Grocery Buyers**| Highest (> ₹1,500) | 8–15 units | Broad (4–5) | Monthly family grocery stocking (Atta, Oil, Ghee, Household). Target with loyalty rewards & home delivery. |
-| **2** | **Impulse Snackers & Youth** | Moderate (₹150–₹350) | 2–4 units | Snacks & Bev | College students / young adults buying cold drinks & chips. Target with digital coupons & UPI cashback. |
-| **3** | **Routine Staples Restockers** | High (₹800–₹1,400) | 5–8 units | Staples & Dairy | Weekly replenishment buyers. Maintain high stock availability on essential FMCG brands. |
+"""
 
+for cid in sorted_clusters_by_spend:
+    pname = cluster_personas[cid]
+    spend_val = cluster_means.loc[cid, 'Total_Spend_INR']
+    units_val = cluster_means.loc[cid, 'Total_Units']
+    cat_val = cluster_means.loc[cid, 'Category_Diversity']
+    
+    if "Budget" in pname:
+        action = "Walk-in emergency buyers purchasing milk or bread. Fast billing needed at Counter 1."
+    elif "Routine" in pname:
+        action = "Weekly staple & dairy replenishment buyers. Maintain high on-shelf FMCG availability."
+    elif "Impulse" in pname:
+        action = "College students & young adults buying cold drinks & snacks. Target with UPI coupons."
+    else:
+        action = "Monthly family grocery stocking (Atta, Oil, Cleaning). Target with free home delivery & loyalty tier."
+        
+    mining_md += f"| **{cid}** | **{pname}** | ₹{spend_val:.2f} | {units_val:.1f} units | {cat_val:.1f} Categories | {action} |\n"
+
+mining_md += """
 ---
 
 ## 5. Artifact Verification & Visualization Reference

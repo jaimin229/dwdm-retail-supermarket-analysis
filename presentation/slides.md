@@ -69,11 +69,14 @@
 - **Step 1: Choose Business Process**: Retail Point-of-Sale (POS) Checkout Transactions.
 - **Step 2: Declare the Grain**: Exactly one row per scanned line item on a retail receipt.
 - **Step 3: Identify Dimensions**:
-  - `Dim_Date`, `Dim_Product`, `Dim_Customer`, `Dim_Store`, `Dim_Payment`.
+  - `Dim_Date` (When), `Dim_Product` (What), `Dim_Customer` (Who), `Dim_Store` (Where), `Dim_Payment` (How).
 - **Step 4: Identify Facts / Measures**:
   - Fully Additive: `Quantity_Sold`, `Discount_Amount_INR`, `Line_Total_INR`, `Estimated_Cost_INR`, `Net_Profit_INR`.
+- **Slowly Changing Dimensions (SCD) Policy**:
+  - **SCD Type 1 (Overwrite)**: Applied to non-historical demographic corrections.
+  - **SCD Type 2 (History Preservation)**: Applied to `Dim_Product` using `Row_Effective_Date`, `Row_Expiration_Date`, and `Is_Current` flags for retail price changes.
 - **Speaker Note (Student 3)**:  
-  *"Following Ralph Kimball's methodology, our atomic line-item grain enables both high-level executive rollups and granular itemset association mining."*
+  *"Following Ralph Kimball's methodology, our atomic line-item grain enables both high-level executive rollups and granular itemset association mining. SCD Type 2 ensures historical price changes don't distort past reports."*
 
 ---
 
@@ -91,22 +94,10 @@
 
 ---
 
-### Slide 7: Slowly Changing Dimensions (SCD) Strategy
-- **SCD Type 1 (Overwrite)**:
-  - Applied to non-historical corrections like customer phone numbers or typographical updates.
-- **SCD Type 2 (Add New Row with Versioning)**:
-  - Applied to `Dim_Product` for retail price changes and packaging updates.
-  - Implements `Row_Effective_Date`, `Row_Expiration_Date`, and `Is_Current` flag.
-  - Ensures past sales reports are calculated against historical price points rather than new prices.
-- **Speaker Note (Student 3)**:  
-  *"By leveraging SCD Type 2 for products, if the price of Amul Butter increases from ₹58 to ₹62, historical sales from last week remain accurate without altering previous financial records."*
-
----
-
-### Slide 8: Multi-Dimensional OLAP Operations: Roll-Up & Drill-Down
+### Slide 7: OLAP Operations: Roll-Up & Drill-Down
 - **Operation 1: Roll-Up (Summarization)**:
   - Climbs from daily line items to Monthly Category Totals.
-  - **Finding**: *Household Essentials* (₹21,388) and *Snacks & Beverages* (₹14,163) generate the largest departmental revenues.
+  - **Finding**: *Household Essentials* (₹21,388.80) and *Snacks & Beverages* (₹14,163.80) generate the largest departmental revenues.
 - **Operation 2: Drill-Down (De-Aggregation)**:
   - Descends into *Snacks & Beverages* down to SKU level.
   - **Finding**: *Tata Tea Gold* (₹5,602.50) and *Cadbury Silk* (₹3,633.75) generate the highest ticket sizes, while *Lay's* (73 units) dominates unit turnover.
@@ -115,53 +106,68 @@
 
 ---
 
-### Slide 9: Multi-Dimensional OLAP Operations: Slice, Dice & Pivot
+### Slide 8: OLAP Operations: Slice, Dice & Pivot
 - **Operation 3: Slice**: 2D slice on `Category = 'Dairy & Bakery'` shows daily recurring sales for fresh milk and bread.
 - **Operation 4: Dice**: Multi-criteria sub-cube (`Category IN ('Snacks', 'Groceries')` AND `Age = 'Young Adult'` AND `Payment = 'UPI'`) reveals peak weekday evening shopping.
 - **Operation 5: Pivot**: Cross-tabulates Category Revenue against Payment Modes.
-  - **Finding**: UPI accounts for over 50% of revenue in every category; Credit Cards concentrate in bulk household and grocery shopping.
+  - **Exact Finding**: UPI accounts for ₹30,590.45 (50.95% of total revenue) dominating all aisles; Cash represents ₹13,559.70 (22.59%); Credit Cards represent ₹9,897.95 (16.49%) concentrated in bulk household orders; Debit Cards represent ₹5,988.65 (9.97%).
 - **Speaker Note (Student 4)**:  
-  *"Slicing, Dicing, and Pivoting provide 360-degree visibility. Our pivot table demonstrated that UPI is the undisputed payment preference across all retail aisles."*
+  *"Slicing, Dicing, and Pivoting provide 360-degree visibility. Our pivot table proved that UPI is the undisputed payment preference across all retail aisles."*
 
 ---
 
-### Slide 10: Data Mining: Association Rule Mining (Apriori)
+### Slide 9: Data Mining: Market Basket Analysis (Apriori)
 - **Algorithm**: Apriori via `mlxtend` ($Min\_Support = 0.05$, $Min\_Lift = 1.2$).
 - **Discovered**: 41 frequent itemsets, 112 valid association rules.
 - **Top Business Rules**:
-  - `{Amul Gold Milk} => {Britannia Brown Bread, Amul Butter}` (Confidence: 85%, Lift: 2.3)
-  - `{Lay's Magic Masala} => {Coca-Cola 750ml}` (Confidence: 78%, Lift: 2.1)
-  - `{Surf Excel Detergent} => {Vim Dishwash Gel}` (Confidence: 72%, Lift: 1.9)
+  - `{Harpic Cleaner, Surf Excel} => {Vim Dishwash Gel}` (Confidence: 88.9%, Lift: **5.13**)
+  - `{Surf Excel Detergent} => {Vim Dishwash Gel}` (Confidence: 75.0%, Lift: **4.33**)
+  - `{Amul Gold Milk} => {Britannia Brown Bread, Amul Butter}` (Confidence: 85.0%, Lift: **2.35**)
+  - `{Lay's Magic Masala} => {Coca-Cola 750ml}` (Confidence: 78.2%, Lift: **2.18**)
 - **Merchandising Impact**:
-  - Introduce bundled breakfast kits.
+  - Co-locate cleaning agents on dedicated household end-caps.
+  - Introduce bundled breakfast kits at the store entrance.
   - Place cold beverage chillers right next to potato chips.
 - **Speaker Note (Student 5)**:  
-  *"Apriori uncovered high-affinity market baskets. Placing beverage chillers adjacent to chips directly drives impulse add-on sales."*
+  *"Apriori uncovered high-affinity market baskets. Placing cleaning agents together and beverage chillers adjacent to chips directly drives impulse add-on sales."*
 
 ---
 
-### Slide 11: Data Mining: Customer Spending Classification
-- **Objective**: Predict whether a shopping basket will result in a **High Spender** (Total $\ge$ Median ₹301) vs **Budget Spender**.
+### Slide 10: Data Mining: Customer Spending Classification
+- **Objective**: Predict whether a shopping basket will result in a **High Spender** (Total $\ge$ Median ₹301.00) vs **Budget Spender**.
 - **Models Evaluated**: Decision Tree Classifier (Depth=3) vs Random Forest (50 Trees).
-- **Performance**:
-  - **Decision Tree Accuracy**: **73.33%** | Precision: 70.0% | Recall: **87.5%** | F1: 77.8%
-  - **Random Forest Accuracy**: **80.00%** | Precision: 77.8% | Recall: **87.5%** | F1: **82.35%**
+- **Performance Benchmark**:
+  - **Decision Tree**: Accuracy = 73.33% | Precision = 70.00% | Recall = 87.50% | F1 = 77.78%
+  - **Random Forest**: Accuracy = **80.00%** | Precision = **77.78%** | Recall = **87.50%** | F1 = **82.35%**
 - **Key Split Drivers**: Total basket item count, Payment mode (Credit Card / UPI), and Customer Age Group.
 - **Speaker Note (Student 5)**:  
   *"Our models achieved 80% accuracy and 87.5% recall. Cashiers can proactively offer premium loyalty enrollments whenever customers match the high-spender demographic profile."*
 
 ---
 
-### Slide 12: Data Mining: K-Means Customer Segmentation
-- **Technique**: Unsupervised K-Means clustering on standardized RFM-like attributes.
-- **Cluster Validation**: Elbow Method (Inertia curve) and Silhouette Analysis confirmed optimal $K = 4$.
-- **4 Actionable Customer Personas**:
-  - **Cluster 0: Routine Staples Restockers** (Avg Spend: ₹813, 8 units, recurring dairy & flour).
-  - **Cluster 1: Impulse Snackers & Youth** (Avg Spend: ₹966, 12 units, high UPI usage).
-  - **Cluster 2: Premium Bulk Family Buyers** (Avg Spend: ₹2,014, 22 units, broad 4+ categories).
-  - **Cluster 3: Budget Quick Shoppers** (Avg Spend: ₹282, 5.6 units, focused 1-2 items).
+### Slide 11: Data Mining: Decision Tree Hierarchy & Split Rules
+- **White-Box Tree Architecture**:
+  - Root split on Total Item Count ($\ge 3$ items $\rightarrow$ High Spender probability 92%).
+  - Secondary splits on Credit Card payment mode and weekend evening hours.
+- **Feature Importance (Random Forest)**:
+  - Total Basket Item Count (0.42 importance score).
+  - Credit Card Payment Mode (0.21 importance score).
+  - Customer Age Group - Middle-Aged (0.16 importance score).
 - **Speaker Note (Student 5)**:  
-  *"Rather than treating all shoppers identically, our K-Means segmentation identifies four clear behavioral clusters, allowing FreshMart to tailor promotions specifically to bulk family buyers versus quick budget shoppers."*
+  *"The Decision Tree's white-box interpretability gives supermarket staff transparent, explainable rules for customer checkout segmentation."*
+
+---
+
+### Slide 12: Data Mining: K-Means Customer Segmentation
+- **Technique**: Unsupervised K-Means clustering on standardized RFM attributes.
+- **Cluster Validation**: Elbow Method (Inertia curve inflection) and Silhouette Analysis confirmed optimal $K = 4$.
+- **4 Data-Driven Customer Personas**:
+  - **Cluster 3: Budget Quick Shoppers** (Avg Spend: ₹282.07, 5.6 units, 1.5 categories).
+  - **Cluster 0: Routine Staples Restockers** (Avg Spend: ₹812.94, 8.0 units, 1.5 categories).
+  - **Cluster 1: Impulse Snackers & Diverse Shoppers** (Avg Spend: ₹966.52, 12.1 units, 3.3 categories).
+  - **Cluster 2: Premium Bulk Grocery Buyers** (Avg Spend: ₹2,013.79, 22.3 units, 4.3 categories).
+- **Speaker Note (Student 5)**:  
+  *"K-Means segmentation identified four clear behavioral clusters, allowing FreshMart to tailor promotions specifically to bulk family buyers versus quick budget shoppers."*
 
 ---
 

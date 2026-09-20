@@ -581,18 +581,18 @@ Pivot transforms relational row values into a cross-tabulated matrix evaluating 
 ======================================================================================================
 Product Category        UPI (INR)       Cash (INR)      Credit Card (INR)   Debit Card (INR)   Total Revenue
 ------------------------------------------------------------------------------------------------------
-Household Essentials    ₹12,450.00      ₹3,120.00       ₹4,200.00           ₹1,618.80          ₹21,388.80
-Snacks & Beverages      ₹8,920.00       ₹2,840.00       ₹1,450.00           ₹953.80            ₹14,163.80
-Dairy & Bakery          ₹6,840.00       ₹2,410.00       ₹820.00             ₹594.00            ₹10,664.00
-Personal Care           ₹4,110.00       ₹1,250.00       ₹1,520.00           ₹546.15            ₹7,426.15
-Grocery & Staples       ₹3,680.00       ₹980.00         ₹1,240.00           ₹493.95            ₹6,393.95
+Household Essentials    ₹11,113.60      ₹6,595.25       ₹3,032.00           ₹648.00            ₹21,388.80
+Snacks & Beverages      ₹8,756.00       ₹2,396.50       ₹1,381.00           ₹1,630.25          ₹14,163.80
+Dairy & Bakery          ₹4,734.80       ₹3,430.70       ₹1,642.15           ₹856.40            ₹10,664.00
+Personal Care           ₹2,479.15       ₹997.00         ₹2,068.00           ₹1,882.00          ₹7,426.15
+Grocery & Staples       ₹3,506.90       ₹140.25         ₹1,774.80           ₹972.00            ₹6,393.95
 ------------------------------------------------------------------------------------------------------
-Total Channel Volume    ₹36,000.00      ₹10,600.00      ₹9,230.00           ₹4,206.70          ₹60,036.70
-Percentage Share        59.96%          17.66%          15.37%              7.01%              100.00%
+Total Channel Volume    ₹30,590.45      ₹13,559.70      ₹9,897.95           ₹5,988.65          ₹60,036.70
+Percentage Share        50.95%          22.59%          16.49%              9.97%              100.00%
 ======================================================================================================
 ```
 
-**Key Finding**: UPI accounts for approximately **60% of all gross store revenue**, while Credit Cards are concentrated primarily in bulk household and grocery baskets.
+**Key Finding**: UPI accounts for over **50.95% of all gross store revenue**, while Credit Cards represent **16.49%**, concentrating disproportionately in high-value household essentials and personal care purchases. Cash accounts for **22.59%**, primarily used for smaller dairy and snack transactions.
 
 ---
 
