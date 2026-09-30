@@ -17,16 +17,14 @@
 
 | Sr. No. | Student Full Name | Enrollment Number | Assigned Role & Contribution Area |
 | :---: | :--- | :---: | :--- |
-| **1.** | **Student One (Lead)** | `20240101001` | Field Data Collection, Store Coordination & Domain Analysis |
-| **2.** | **Student Two** | `20240101002` | Data Cleaning Pipeline, Imputation & Anomaly Auditing |
-| **3.** | **Student Three** | `20240101003` | Data Warehouse 3-Tier Design & Star Schema DDL |
-| **4.** | **Student Four** | `20240101004` | Multi-Dimensional OLAP SQL Operations & Cube Analytics |
-| **5.** | **Student Five** | `20240101005` | Machine Learning Models (Apriori, Classification, Clustering) |
+| **1.** | **JAIMIN PRAJAPATI (Lead Student)** | `2404030100143` | Field Data Collection, ETL Pipeline & Data Warehouse Design |
+| **2.** | **KUSHAL SUTHAR** | `2404030100841` | Star Schema Modeling, OLAP Cube Analytics & Data Mining |
 
 ---
 
 ### **UNDER THE ESTEEMED GUIDANCE OF:**
-**Faculty Guide & Course Coordinator**  
+**Prof. Manika Tomar**  
+Course Coordinator & Faculty Guide  
 Department of Computer Application  
 Silver Oak College of Computer Application  
 Silver Oak University, Ahmedabad, Gujarat
@@ -62,33 +60,31 @@ This is to certify that the Innovative Assignment entitled:
 
 is a bonafide record of authentic project work successfully carried out by the following students of **Bachelor of Computer Application (BCA), Semester 5th (Academic Year 2026–2027)**:
 
-1. **Student One** (Enrollment No: `20240101001`)
-2. **Student Two** (Enrollment No: `20240101002`)
-3. **Student Three** (Enrollment No: `20240101003`)
-4. **Student Four** (Enrollment No: `20240101004`)
-5. **Student Five** (Enrollment No: `20240101005`)
+1. **JAIMIN PRAJAPATI (Lead Student)** (Enrollment No: `2404030100143`)
+2. **KUSHAL SUTHAR** (Enrollment No: `2404030100841`)
 
 This report represents original fieldwork, dimensional modeling, and algorithmic execution submitted for the course **Data Warehouse and Data Mining (Course Code: 4040233302)** in partial fulfillment of the requirements prescribed by Silver Oak University.
 
 <br><br><br>
 
 ------------------------------------- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -------------------------------------  
-**Internal Faculty Guide** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Head of Department (HOD)**  
-Department of Computer Application &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Department of Computer Application  
-Silver Oak College of Computer Application &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Silver Oak College of Computer Application  
+**Prof. Manika Tomar** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Head of Department (HOD)**  
+Internal Faculty Guide & Course Coordinator &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Department of Computer Application  
+Department of Computer Application &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Silver Oak College of Computer Application  
+Silver Oak College of Computer Application  
 
 <br><br>
 
 -------------------------------------  
 **External Examiner**  
-Date of Viva-Voce Examination: _____ / 09 / 2026  
+Date of Viva-Voce Examination: 30 / 09 / 2026  
 Official Seal:
 
 <div style="page-break-after: always;"></div>
 
 # CANDIDATE DECLARATION
 
-We hereby declare that the Innovative Assignment report entitled **"From Real-World Data Collection to Data Warehouse and Data Mining: An Empirical Study of FreshMart Supermarket Customer Behavior and Sales Trends"** submitted to **Silver Oak College of Computer Application, Silver Oak University**, is an authentic record of our own work conducted under the supervision of our Faculty Guide.
+We hereby declare that the Innovative Assignment report entitled **"From Real-World Data Collection to Data Warehouse and Data Mining: An Empirical Study of FreshMart Supermarket Customer Behavior and Sales Trends"** submitted to **Silver Oak College of Computer Application, Silver Oak University**, is an authentic record of our own work conducted under the supervision of our Faculty Guide, **Prof. Manika Tomar**.
 
 We affirm that:
 1. The on-site observational dataset was gathered directly from **FreshMart Supermarket**, Gota, Ahmedabad, during the 7-day observation window between August 18, 2026, and August 24, 2026.
@@ -99,13 +95,10 @@ We affirm that:
 
 **Signatures of Candidates:**
 
-1. ___________________________ (Student One - `20240101001`)  
-2. ___________________________ (Student Two - `20240101002`)  
-3. ___________________________ (Student Three - `20240101003`)  
-4. ___________________________ (Student Four - `20240101004`)  
-5. ___________________________ (Student Five - `20240101005`)  
+1. ___________________________ (JAIMIN PRAJAPATI - `2404030100143`)  
+2. ___________________________ (KUSHAL SUTHAR - `2404030100841`)  
 
-**Date**: 20th September, 2026  
+**Date**: 30th September, 2026  
 **Place**: Ahmedabad, Gujarat  
 
 ---
@@ -114,7 +107,7 @@ We affirm that:
 
 # ACKNOWLEDGEMENT
 
-We express our deepest gratitude to our respected **Course Coordinator and Faculty Guide**, Department of Computer Application, **Silver Oak College of Computer Application**, for providing invaluable guidance, constructive critique, and continuous encouragement throughout the conception, modeling, and execution phases of this Innovative Assignment.
+We express our deepest gratitude to our respected Course Coordinator and Faculty Guide, **Prof. Manika Tomar**, Department of Computer Application, **Silver Oak College of Computer Application**, for providing invaluable guidance, constructive critique, and continuous encouragement throughout the conception, modeling, and execution phases of this Innovative Assignment.
 
 We extend our profound thanks to the **Head of Department (HOD)** and the esteemed faculty members of the Department of Computer Application for providing access to computing facilities, software libraries, and an inspiring academic atmosphere.
 

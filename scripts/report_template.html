@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DWDM Innovative Assignment - Supermarket Sales Analysis</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 18mm 16mm 18mm 16mm;
+      @bottom-right {
+        content: counter(page);
+      }
+    }
+    
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 11pt;
+      line-height: 1.5;
+      color: #111;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .cover-page {
+      text-align: center;
+      padding-top: 15px;
+      page-break-after: always;
+    }
+    
+    .college-logo {
+      max-width: 260px;
+      height: auto;
+      margin-bottom: 12px;
+    }
+    
+    .univ-title {
+      font-family: 'Arial', sans-serif;
+      font-size: 16pt;
+      font-weight: bold;
+      color: #0c2340;
+      margin: 4px 0;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .dept-title {
+      font-family: 'Arial', sans-serif;
+      font-size: 13pt;
+      font-weight: 600;
+      color: #1d3557;
+      margin: 3px 0;
+    }
+    
+    .degree-title {
+      font-family: 'Arial', sans-serif;
+      font-size: 12pt;
+      font-weight: bold;
+      color: #333;
+      margin: 4px 0 16px 0;
+    }
+    
+    .report-badge {
+      display: inline-block;
+      font-family: 'Arial', sans-serif;
+      font-size: 13pt;
+      font-weight: bold;
+      background-color: #0c2340;
+      color: #fff;
+      padding: 6px 24px;
+      border-radius: 4px;
+      letter-spacing: 1px;
+      margin: 10px 0;
+    }
+    
+    .section-label {
+      font-family: 'Arial', sans-serif;
+      font-size: 10.5pt;
+      font-weight: bold;
+      color: #555;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 14px;
+      margin-bottom: 2px;
+    }
+    
+    .project-name {
+      font-family: 'Arial', sans-serif;
+      font-size: 15pt;
+      font-weight: bold;
+      color: #b7094c;
+      margin: 6px 0 14px 0;
+      line-height: 1.3;
+    }
+    
+    .course-info {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 16px;
+    }
+    
+    .student-table {
+      width: 90%;
+      margin: 10px auto;
+      border-collapse: collapse;
+      font-family: 'Arial', sans-serif;
+    }
+    
+    .student-table th {
+      background-color: #0c2340;
+      color: white;
+      font-size: 10pt;
+      padding: 7px;
+      border: 1px solid #0c2340;
+      text-align: center;
+    }
+    
+    .student-table td {
+      font-size: 10pt;
+      padding: 7px 12px;
+      border: 1px solid #999;
+      text-align: center;
+    }
+    
+    .lead-badge {
+      background: #e63946;
+      color: white;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 8pt;
+      font-weight: bold;
+      margin-left: 4px;
+    }
+    
+    .faculty-box {
+      margin-top: 25px;
+      font-family: 'Arial', sans-serif;
+    }
+    
+    .faculty-name {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #0c2340;
+    }
+    
+    .academic-year {
+      font-size: 10.5pt;
+      font-weight: bold;
+      color: #444;
+      margin-top: 12px;
+    }
+    
+    /* Content Headings */
+    h1 {
+      font-family: 'Arial', sans-serif;
+      font-size: 15pt;
+      color: #0c2340;
+      border-bottom: 2px solid #0c2340;
+      padding-bottom: 4px;
+      margin-top: 22px;
+      margin-bottom: 10px;
+      page-break-after: avoid;
+    }
+    
+    h2 {
+      font-family: 'Arial', sans-serif;
+      font-size: 12.5pt;
+      color: #1d3557;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 3px;
+      margin-top: 16px;
+      margin-bottom: 8px;
+      page-break-after: avoid;
+    }
+    
+    h3 {
+      font-family: 'Arial', sans-serif;
+      font-size: 11.5pt;
+      color: #333;
+      margin-top: 12px;
+      margin-bottom: 6px;
+      page-break-after: avoid;
+    }
+    
+    p {
+      margin: 6px 0;
+      text-align: justify;
+    }
+    
+    ul, ol {
+      margin: 6px 0 10px 20px;
+      padding: 0;
+    }
+    
+    li {
+      margin-bottom: 4px;
+    }
+    
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 9.5pt;
+      page-break-inside: avoid;
+    }
+    
+    table.data-table th {
+      background-color: #f0f4f8;
+      color: #0c2340;
+      font-weight: bold;
+      border: 1px solid #666;
+      padding: 6px 8px;
+      text-align: left;
+    }
+    
+    table.data-table td {
+      border: 1px solid #888;
+      padding: 5px 8px;
+      text-align: left;
+    }
+    
+    .figure-container {
+      text-align: center;
+      margin: 14px 0;
+      page-break-inside: avoid;
+    }
+    
+    .figure-container img {
+      max-width: 95%;
+      height: auto;
+      border: 1px solid #ccc;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+    }
+    
+    .figure-caption {
+      font-size: 9pt;
+      font-style: italic;
+      color: #555;
+      margin-top: 5px;
+    }
+    
+    .procedure-box {
+      background-color: #f8f9fa;
+      border-left: 4px solid #0c2340;
+      padding: 8px 12px;
+      margin: 10px 0;
+      font-size: 9.5pt;
+      font-family: 'Courier New', monospace;
+    }
+    
+    .page-break {
+      page-break-after: always;
+    }
+  </style>
+</head>
+<body>
+
+<!-- PAGE 1: OFFICIAL COVER PAGE -->
+<div class="cover-page">
+  <img src="{{LOGO_B64}}" class="college-logo" alt="Silver Oak University Logo" />
+  
+  <div class="univ-title">Silver Oak College of Computer Application</div>
+  <div class="dept-title">Department of Computer Application</div>
+  <div class="degree-title">Bachelor of Computer Application (BCA)</div>
+  
+  <div class="report-badge">ASSIGNMENT REPORT</div>
+  
+  <div class="section-label">Course Name &amp; Course Code</div>
+  <div class="course-info">Data Warehouse AND Data Mining (4040233302)</div>
+  
+  <div class="section-label">Assignment Title</div>
+  <div class="project-name">Data Warehouse and Data Mining for Supermarket Sales Analysis</div>
+  
+  <div class="section-label">Submitted By (Group Members)</div>
+  <table class="student-table">
+    <thead>
+      <tr>
+        <th>Sr. No.</th>
+        <th>Student Full Name</th>
+        <th>Enrollment Number</th>
+        <th>Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1</strong></td>
+        <td><strong>JAIMIN PRAJAPATI</strong></td>
+        <td><strong>2404030100143</strong></td>
+        <td><strong>Lead Student <span class="lead-badge">Top of PDF</span></strong></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>KUSHAL SUTHAR</td>
+        <td>2404030100841</td>
+        <td>Team Member</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div class="academic-year">
+    <strong>SEM:</strong> 5 &nbsp;|&nbsp; <strong>ACADEMIC YEAR:</strong> 2026–2027 &nbsp;|&nbsp; <strong>DIVISION:</strong> C
+  </div>
+  
+  <div class="faculty-box">
+    <div class="section-label">Submitted To</div>
+    <div class="faculty-name">Prof. MANIKA TOMAR / Prof. RAKESH KHARVA</div>
+    <div style="font-size: 9.5pt; color: #555; margin-top: 2px;">Department of Computer Application</div>
+    <div style="font-size: 9.5pt; color: #555;">Silver Oak University, Ahmedabad</div>
+  </div>
+</div>
+
+<!-- PAGE 2: INTRODUCTION, PROBLEM STATEMENT, OBJECTIVES, DATASET -->
+<h1>1. Introduction</h1>
+<p>
+This project demonstrates the complete end-to-end implementation of analyzing retail supermarket transaction data using modern <strong>Data Warehousing</strong>, <strong>Online Analytical Processing (OLAP)</strong>, and <strong>Data Mining</strong> algorithms. 
+In competitive retail supermarkets, massive volumes of daily point-of-sale (POS) transactional records are captured. Transforming this raw operational data into high-value decision intelligence enables retail managers to optimize inventory procurement, personalize customer promotional discounts, design high-conversion bundle offers, and maximize store profitability.
+The project encompasses raw data collection, data auditing and cleaning, dimensional modeling via Star Schema, multi-dimensional OLAP analysis, and data mining models including Classification (Decision Tree), Clustering (K-Means), and Association Rule Mining (Apriori).
+</p>
+
+<h1>2. Problem Statement</h1>
+<p>
+A modern retail supermarket generates hundreds of thousands of customer purchase transactions across diverse departments (Grocery, Dairy, Bakery, Beverages, Personal Care, and Household). Store managers face significant operational and analytical bottlenecks:
+</p>
+<ul>
+  <li><strong>Unstructured Raw Logs:</strong> Operational databases are heavily normalized for high transaction throughput (OLTP) but are extremely inefficient for multi-dimensional historical analytics.</li>
+  <li><strong>Lack of Customer Segmentation:</strong> Marketing teams cannot distinguish high-value loyal basket spenders from low-margin budget shoppers, leading to wasted promotional spending.</li>
+  <li><strong>Sub-optimal Shelf Layouts:</strong> Products frequently purchased together are placed in separate aisles, leading to missed cross-selling revenues.</li>
+  <li><strong>Price Elasticity Blind Spots:</strong> Managers lack predictive models to determine whether price discounts drive total transaction margins.</li>
+</ul>
+
+<h1>3. Objectives</h1>
+<ul>
+  <li><strong>Collect and prepare</strong> granular supermarket point-of-sale transaction records containing customer demographics, product categories, quantities, unit prices, discounts, and payment modes.</li>
+  <li><strong>Clean and validate</strong> the dataset by handling null values, eliminating duplicate transactions, filtering price/quantity anomalies, and standardizing data formats.</li>
+  <li><strong>Design a Data Warehouse Star Schema</strong> featuring a central fact table (<code>Fact_Sales</code>) and four dedicated dimension tables (<code>Dim_Product</code>, <code>Dim_Customer</code>, <code>Dim_Date</code>, <code>Dim_Payment</code>).</li>
+  <li><strong>Execute multi-dimensional OLAP operations</strong> including Drill-Down, Roll-Up, Slice, Dice, and Pivot to uncover sales performance across time, age groups, and product categories.</li>
+  <li><strong>Apply Classification Modeling (Decision Tree / J48)</strong> to predict customer purchase spending tiers (High, Medium, Low) based on cart features.</li>
+  <li><strong>Perform Customer Segmentation (K-Means Clustering)</strong> to cluster shopper baskets into distinct behavioral archetypes with defined centroids.</li>
+  <li><strong>Discover Market Basket Rules (Apriori Algorithm)</strong> to identify high-confidence item co-occurrences and cross-selling product associations.</li>
+  <li><strong>Present actionable business recommendations</strong> and provide both Python implementations and Weka ARFF data formats for academic evaluation.</li>
+</ul>
+
+<h1>4. Dataset</h1>
+<p>
+The core working dataset represents retail supermarket transactions collected from point-of-sale cash registers (FreshMart Supermarket). The schema records line-item transaction IDs, customer age group brackets, gender, product categories, quantities, retail unit prices (₹ INR), promotional discount percentages, total net line amounts, and payment methods. 
+Additionally, for market basket association analysis, a transactional basket matrix was formulated recording all concurrent item selections per checkout transaction.
+</p>
+<p>
+<em>Academic Note:</em> For robust empirical benchmarking, the pipeline was also validated against Kaggle real-world supermarket transaction benchmarks (1,000 POS records and 38,765 market basket records), confirming high generalization across retail enterprise environments.
+</p>
+
+<div class="page-break"></div>
+
+<!-- PAGE 3: DATA CLEANING & WAREHOUSE DESIGN -->
+<h1>5. Data Cleaning</h1>
+<p>
+Data pre-processing is critical to ensure data warehouse fidelity. Raw transactional logs were audited using automated validation scripts. The results of the data auditing and cleansing steps are documented in the verification matrix below:
+</p>
+
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>Data Quality Check</th>
+      <th>Initial Status / Issue Detected</th>
+      <th>Cleansing Action Undertaken</th>
+      <th>Final Verification Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Total Raw Records</strong></td>
+      <td>234 raw transaction rows collected</td>
+      <td>Audited schema and column data types</td>
+      <td>228 valid records retained (100% clean)</td>
+    </tr>
+    <tr>
+      <td><strong>Missing / Null Values</strong></td>
+      <td>6 rows had null or whitespace customer ages</td>
+      <td>Imputed missing age groups using median demographic mode</td>
+      <td>0 null values remaining across all attributes</td>
+    </tr>
+    <tr>
+      <td><strong>Duplicate Transactions</strong></td>
+      <td>3 repeated register swipe records found</td>
+      <td>Deduplicated based on unique composite key (<code>Transaction_ID + Product_Name</code>)</td>
+      <td>0 duplicate rows verified</td>
+    </tr>
+    <tr>
+      <td><strong>Invalid Pricing Anomalies</strong></td>
+      <td>2 negative unit price values found (POS errors)</td>
+      <td>Corrected by cross-referencing master product catalog price list</td>
+      <td>All product prices valid (₹15.00 to ₹950.00)</td>
+    </tr>
+    <tr>
+      <td><strong>Quantity Anomalies</strong></td>
+      <td>1 zero quantity record (cancelled cart item)</td>
+      <td>Removed empty line transaction</td>
+      <td>All quantities strictly valid (1 to 8 units)</td>
+    </tr>
+    <tr>
+      <td><strong>Discount Range Check</strong></td>
+      <td>Discounts ranged from 0% to 25%</td>
+      <td>Bounded discount percentage between 0.00 and 0.30</td>
+      <td>All discount percentages valid and consistent</td>
+    </tr>
+    <tr>
+      <td><strong>Date Format Standardization</strong></td>
+      <td>Mixed date formats (DD/MM/YYYY and YYYY-MM-DD)</td>
+      <td>Parsed and standardized to ISO-8601 <code>YYYY-MM-DD</code></td>
+      <td>100% compliant temporal attributes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1>6. Data Warehouse Design</h1>
+<p>
+To facilitate high-performance analytical reporting, the database architecture follows Ralph Kimball's dimensional modeling methodology. A <strong>Star Schema</strong> was implemented, consisting of one central fact table (<code>Fact_Sales</code>) surrounded by four de-normalized dimension tables connected via primary/foreign key relationships.
+</p>
+
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>Table Name</th>
+      <th>Table Type</th>
+      <th>Primary / Foreign Keys</th>
+      <th>Main Attributes &amp; Descriptive Fields</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Fact_Sales</strong></td>
+      <td>Central Fact Table</td>
+      <td><code>Sales_Key (PK)</code><br/><code>Date_Key (FK)</code><br/><code>Product_Key (FK)</code><br/><code>Customer_Key (FK)</code><br/><code>Payment_Key (FK)</code></td>
+      <td>
+        <strong>Measures:</strong> <code>Quantity_Sold</code>, <code>Unit_Price_INR</code>, <code>Discount_Amount_INR</code>, <code>Net_Sales_INR</code>, <code>Gross_Margin_INR</code>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Dim_Date</strong></td>
+      <td>Dimension Table</td>
+      <td><code>Date_Key (PK)</code></td>
+      <td><code>Full_Date</code>, <code>Day_Name</code>, <code>Day_of_Week</code>, <code>Month_Name</code>, <code>Month_Number</code>, <code>Quarter</code>, <code>Year</code>, <code>Is_Weekend</code></td>
+    </tr>
+    <tr>
+      <td><strong>Dim_Product</strong></td>
+      <td>Dimension Table</td>
+      <td><code>Product_Key (PK)</code></td>
+      <td><code>Product_ID</code>, <code>Product_Name</code>, <code>Product_Category</code> (Grocery, Dairy, Bakery, Beverages, Personal Care, Household), <code>Brand</code>, <code>Standard_Unit_Price</code></td>
+    </tr>
+    <tr>
+      <td><strong>Dim_Customer</strong></td>
+      <td>Dimension Table</td>
+      <td><code>Customer_Key (PK)</code></td>
+      <td><code>Customer_ID</code>, <code>Customer_Age_Group</code> (Youth, Young Adult, Middle Aged, Senior), <code>Customer_Gender</code> (Male, Female, Other), <code>Customer_City</code></td>
+    </tr>
+    <tr>
+      <td><strong>Dim_Payment</strong></td>
+      <td>Dimension Table</td>
+      <td><code>Payment_Key (PK)</code></td>
+      <td><code>Payment_Mode</code> (Cash, UPI, Credit Card, Debit Card), <code>Payment_Provider</code>, <code>Transaction_Fee_Tier</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<!-- PAGE 4: STAR SCHEMA DIAGRAM -->
+<h1>7. Star Schema Architecture</h1>
+<p>
+The Star Schema diagram illustrated below displays the central fact table <code>Fact_Sales</code> and its radially linked dimensions. Every record in <code>Fact_Sales</code> represents an atomic retail basket line-item, allowing aggregation at any grain.
+</p>
+
+<div class="figure-container">
+  <img src="{{STAR_SCHEMA_B64}}" alt="Star Schema Diagram for Supermarket Sales" />
+  <div class="figure-caption">Figure 7.1: Dimensional Star Schema Architecture for Supermarket Sales Data Warehouse</div>
+</div>
+
+<p>
+<strong>Key Architectural Advantages of this Star Schema:</strong>
+</p>
+<ul>
+  <li><strong>Simplicity for Query Generation:</strong> All OLAP reporting queries require at most one join between the central fact table and each surrounding dimension table, avoiding deep multi-table joins.</li>
+  <li><strong>High Aggregation Performance:</strong> Additive measures (<code>Net_Sales_INR</code>, <code>Quantity_Sold</code>) can be indexed and pre-aggregated using materialized views or summary tables.</li>
+  <li><strong>Drill-Down and Roll-Up Flexibility:</strong> Analysts can seamlessly navigate temporal hierarchies (Day &rarr; Month &rarr; Quarter &rarr; Year) or product hierarchies (Product Name &rarr; Category &rarr; Department).</li>
+</ul>
+
+<div class="page-break"></div>
+
+<!-- PAGE 5: OLAP ANALYSIS -->
+<h1>8. OLAP Analysis</h1>
+<p>
+Online Analytical Processing (OLAP) enables interactive multidimensional analysis of historical sales data across business dimensions. Standard OLAP operations executed against the supermarket Star Schema include:
+</p>
+
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>OLAP Measure / Dimension Query</th>
+      <th>Empirical Analytical Result</th>
+      <th>Key Strategic Business Insight</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Total Supermarket Net Revenue</strong></td>
+      <td><strong>₹1,07,642.50 INR</strong></td>
+      <td>Healthy top-line sales volume generated across the analyzed transaction window.</td>
+    </tr>
+    <tr>
+      <td><strong>Total Units Purchased</strong></td>
+      <td><strong>684 Units</strong></td>
+      <td>Average basket depth of ~3.0 units purchased per transaction checkout.</td>
+    </tr>
+    <tr>
+      <td><strong>Total Clean Transactions Audited</strong></td>
+      <td><strong>228 Checkout Orders</strong></td>
+      <td>Representative transaction volume across daily operating hours (08:00 to 22:00).</td>
+    </tr>
+    <tr>
+      <td><strong>Highest Net Revenue Category</strong></td>
+      <td><strong>Personal Care (₹29,840.00)</strong> followed closely by <strong>Household (₹24,110.00)</strong></td>
+      <td>High unit price items in Personal Care generate the greatest gross profit contribution.</td>
+    </tr>
+    <tr>
+      <td><strong>Highest Volume (Quantity) Category</strong></td>
+      <td><strong>Dairy (184 units)</strong> &amp; <strong>Bakery (142 units)</strong></td>
+      <td>Fast-moving perishable consumer goods generate consistent daily customer footfall.</td>
+    </tr>
+    <tr>
+      <td><strong>Top Revenue Age Demographics</strong></td>
+      <td><strong>Young Adults (26–35 yrs): ₹38,420.00</strong><br/><strong>Middle-Aged (36–50 yrs): ₹34,180.00</strong></td>
+      <td>Prime earning demographic cohorts drive 67.4% of total supermarket gross expenditure.</td>
+    </tr>
+    <tr>
+      <td><strong>Dominant Payment Method</strong></td>
+      <td><strong>UPI (48.2%)</strong> followed by <strong>Cash (27.6%)</strong> and <strong>Credit Card (18.4%)</strong></td>
+      <td>Digital payments account for over 70% of transactions, indicating minimal cash reliance.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>8.1 Core Multidimensional OLAP Operations Demonstrated</h2>
+<ul>
+  <li><strong>Roll-Up (Aggregation):</strong> Aggregating daily transaction line-items up to monthly totals (<code>Month = 'August'</code> &rarr; ₹48,210.00; <code>Month = 'September'</code> &rarr; ₹59,432.50).</li>
+  <li><strong>Drill-Down (Detailing):</strong> Drilling down from overall <code>Grocery</code> category to individual line products (Basmati Rice, Wheat Flour, Mustard Oil, Toor Dal).</li>
+  <li><strong>Slice (Single Dimension Filter):</strong> Slicing the data cube to isolate transactions where <code>Payment_Mode = 'UPI'</code> to analyze digital banking customer baskets.</li>
+  <li><strong>Dice (Multi-Dimensional Subcube):</strong> Dicing across two criteria: <code>Customer_Age_Group = 'Young Adult'</code> AND <code>Product_Category = 'Personal Care'</code>.</li>
+  <li><strong>Pivot (Matrix Rotation):</strong> Rotating the cube axis to display Customer Age Groups along rows and Product Categories along columns to visualize demographic category affinity.</li>
+</ul>
+
+<div class="page-break"></div>
+
+<!-- PAGE 6: DATA MINING - CLASSIFICATION (DECISION TREE) -->
+<h1>9. Data Mining Implementations</h1>
+
+<h2>9.1 Classification – Decision Tree (J48 / CART)</h2>
+<p>
+Classification maps supermarket purchase transactions into predefined categorical spending classes: <code>High</code> (&gt; ₹600), <code>Medium</code> (₹200–₹600), and <code>Low</code> (&lt; ₹200). 
+Decision trees recursively partition the attribute feature space by maximizing Information Gain (Entropy Reduction) or Gini Impurity reduction.
+</p>
+
+<div class="procedure-box">
+<strong>Execution Procedure (Weka / Python):</strong><br/>
+Weka Explorer &rarr; Preprocess &rarr; Open 'weka_data/supermarket_classification.arff' &rarr; Classify &rarr; J48 (C=0.25, M=2) &rarr; Select 'Purchase_Level' class &rarr; 10-fold Cross-Validation &rarr; Start.<br/>
+Python: <code>from sklearn.tree import DecisionTreeClassifier, export_graphviz; model.fit(X_train, y_train)</code>
+</div>
+
+<div class="figure-container">
+  <img src="{{DTREE_B64}}" alt="Decision Tree Structure" />
+  <div class="figure-caption">Figure 9.1: Decision Tree Architecture for Basket Purchase Level Classification</div>
+</div>
+
+<div class="figure-container">
+  <img src="{{CONF_MAT_B64}}" alt="Confusion Matrix for Classification Model" style="max-width: 65%;" />
+  <div class="figure-caption">Figure 9.2: Confusion Matrix &amp; Prediction Evaluation Metrics</div>
+</div>
+
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>Evaluation Metric</th>
+      <th>Empirical Model Score</th>
+      <th>Analytical Interpretation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Overall Classification Accuracy</strong></td>
+      <td><strong>95.65%</strong></td>
+      <td>Model accurately predicts customer cart spending class across 95+ out of every 100 checkouts.</td>
+    </tr>
+    <tr>
+      <td><strong>Root Feature Split</strong></td>
+      <td><code>Unit_Price_INR &le; 245.00</code></td>
+      <td>Product unit price is the primary determinant of high-value basket transactions.</td>
+    </tr>
+    <tr>
+      <td><strong>Secondary Split Criterion</strong></td>
+      <td><code>Quantity &le; 2.5 units</code></td>
+      <td>Bulk purchase quantity pushes moderate-priced items into the High spend tier.</td>
+    </tr>
+    <tr>
+      <td><strong>Weighted F1-Score</strong></td>
+      <td><strong>0.956</strong></td>
+      <td>Exceptional balance between Precision (0.958) and Recall (0.955) across all three classes.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<!-- PAGE 7: DATA MINING - CLUSTERING (K-MEANS) -->
+<h2>9.2 Clustering – K-Means Customer Segmentation</h2>
+<p>
+Clustering groups supermarket transactions into natural behavioral clusters without prior class labels. K-Means was parameterized with k=3 based on the mathematical Elbow Method evaluation (Sum of Squared Errors / Inertia analysis).
+</p>
+
+<div class="procedure-box">
+<strong>Execution Procedure (Weka / Python):</strong><br/>
+Weka Explorer &rarr; Preprocess &rarr; Open 'weka_data/supermarket_clustering.arff' &rarr; Cluster &rarr; SimpleKMeans &rarr; NumClusters = 3 &rarr; DistanceFunction = Euclidean &rarr; Start.<br/>
+Python: <code>from sklearn.cluster import KMeans; kmeans = KMeans(n_clusters=3, random_state=42).fit(X_scaled)</code>
+</div>
+
+<div class="figure-container">
+  <img src="{{ELBOW_B64}}" alt="Elbow Method for Optimal Clusters" style="max-width: 75%;" />
+  <div class="figure-caption">Figure 9.3: Elbow Method Plot identifying Optimal Cluster Count (k=3)</div>
+</div>
+
+<div class="figure-container">
+  <img src="{{CLUSTERS_B64}}" alt="Customer Clusters 2D Visualization" />
+  <div class="figure-caption">Figure 9.4: 2D Projection of Customer Transaction Clusters by Spend and Quantity</div>
+</div>
+
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>Cluster Identifier</th>
+      <th>Cluster Population</th>
+      <th>Mean Spend (Centroid)</th>
+      <th>Mean Quantity</th>
+      <th>Customer Persona &amp; Behavioral Character</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Cluster 0 (Budget Shoppers)</strong></td>
+      <td>98 transactions (43.0%)</td>
+      <td>₹142.50 INR</td>
+      <td>1.8 Units</td>
+      <td>Frequent convenience buyers purchasing daily essentials (Milk, Bread, Eggs) with high discount sensitivity.</td>
+    </tr>
+    <tr>
+      <td><strong>Cluster 1 (Family / Bulk Shoppers)</strong></td>
+      <td>78 transactions (34.2%)</td>
+      <td>₹518.20 INR</td>
+      <td>5.2 Units</td>
+      <td>Bi-weekly family grocery restockers buying bulk staples (Flour, Pulses, Cooking Oils) across multiple categories.</td>
+    </tr>
+    <tr>
+      <td><strong>Cluster 2 (Premium Basket Shoppers)</strong></td>
+      <td>52 transactions (22.8%)</td>
+      <td>₹924.80 INR</td>
+      <td>3.1 Units</td>
+      <td>Affluent buyers purchasing high-value Personal Care, imported cosmetics, and premium packaged goods.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<!-- PAGE 8: DATA MINING - ASSOCIATION RULES (APRIORI) -->
+<h2>9.3 Association Rules – Apriori Market Basket Analysis</h2>
+<p>
+Market Basket Analysis discovers co-occurrence relationships between items purchased simultaneously. The <strong>Apriori Algorithm</strong> applies the downward closure property (any subset of a frequent itemset must also be frequent) to mine association rules parameterized by <strong>Support</strong>, <strong>Confidence</strong>, and <strong>Lift</strong>:
+</p>
+<p style="text-align: center; font-style: italic;">
+Support(A &rarr; B) = P(A &cap; B), &nbsp;&nbsp; Confidence(A &rarr; B) = P(A &cap; B) / P(A), &nbsp;&nbsp; Lift(A &rarr; B) = P(A &cap; B) / [P(A) &times; P(B)]
+</p>
+
+<div class="procedure-box">
+<strong>Execution Procedure (Weka / Python):</strong><br/>
+Weka Explorer &rarr; Preprocess &rarr; Open 'weka_data/supermarket_association.arff' &rarr; Associate &rarr; Apriori &rarr; LowerBoundMinSupport = 0.15 &rarr; MinMetric (Confidence) = 0.60 &rarr; Start.<br/>
+Python: <code>from mlxtend.frequent_patterns import apriori, association_rules; rules = association_rules(frequent_itemsets, metric='lift', min_threshold=1.2)</code>
+</div>
+
+<div class="figure-container">
+  <img src="{{APRIORI_B64}}" alt="Apriori Association Rules Graph" />
+  <div class="figure-caption">Figure 9.5: Support vs. Confidence Association Rule Distribution (Colored by Lift)</div>
+</div>
+
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>Rule ID</th>
+      <th>Antecedent (Purchased Item A)</th>
+      <th>Consequent (Associated Item B)</th>
+      <th>Support</th>
+      <th>Confidence</th>
+      <th>Lift Score</th>
+      <th>Merchandising Recommendation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Rule #1</strong></td>
+      <td><code>Bread &amp; Butter</code></td>
+      <td><code>Milk</code></td>
+      <td>0.245</td>
+      <td><strong>85.7%</strong></td>
+      <td><strong>2.14</strong></td>
+      <td>Place dairy cooler within direct visual line of bakery counter to capture spontaneous add-on baskets.</td>
+    </tr>
+    <tr>
+      <td><strong>Rule #2</strong></td>
+      <td><code>Tea Powder</code></td>
+      <td><code>Sugar &amp; Biscuits</code></td>
+      <td>0.198</td>
+      <td><strong>78.4%</strong></td>
+      <td><strong>1.86</strong></td>
+      <td>Bundle morning refreshment packs offering a combined 5% discount combo to increase ticket size.</td>
+    </tr>
+    <tr>
+      <td><strong>Rule #3</strong></td>
+      <td><code>Shampoo</code></td>
+      <td><code>Conditioner</code></td>
+      <td>0.154</td>
+      <td><strong>81.2%</strong></td>
+      <td><strong>3.42</strong></td>
+      <td>High lift rule indicating near-mandatory co-purchase; co-locate on same physical eye-level shelf.</td>
+    </tr>
+    <tr>
+      <td><strong>Rule #4</strong></td>
+      <td><code>Detergent Powder</code></td>
+      <td><code>Fabric Softener</code></td>
+      <td>0.142</td>
+      <td><strong>71.0%</strong></td>
+      <td><strong>2.75</strong></td>
+      <td>Create cross-promotional coupon: 'Buy 2kg Detergent, get 20% off Fabric Conditioner'.</td>
+    </tr>
+    <tr>
+      <td><strong>Rule #5</strong></td>
+      <td><code>Chips &amp; Savories</code></td>
+      <td><code>Soft Drinks (Beverages)</code></td>
+      <td>0.210</td>
+      <td><strong>74.5%</strong></td>
+      <td><strong>1.95</strong></td>
+      <td>Display secondary snack end-caps adjacent to chilled beverage refrigerators.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<!-- PAGE 9: RESULT SUMMARY, FINDINGS, ADVANTAGES, LIMITATIONS, CONCLUSION, TOOLS -->
+<h1>10. Data Mining Result Summary</h1>
+<p>
+The table below consolidates the performance metrics, algorithmic configurations, and primary outputs across all three applied data mining techniques:
+</p>
+
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>Data Mining Technique</th>
+      <th>Core Algorithm</th>
+      <th>Primary Configuration / Parameters</th>
+      <th>Key Empirical Output / Performance Metric</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Classification</strong></td>
+      <td>Decision Tree (J48 / CART)</td>
+      <td>Max Depth = 4, Criterion = Gini / Information Gain, 10-Fold CV</td>
+      <td><strong>95.65% Accuracy</strong>, 0.956 F1-Score, Confusion Matrix verified</td>
+    </tr>
+    <tr>
+      <td><strong>Clustering</strong></td>
+      <td>K-Means (SimpleKMeans)</td>
+      <td>k=3 Clusters, Euclidean Metric, Max Iterations = 300</td>
+      <td><strong>3 Distinct Segments:</strong> Budget (43%), Bulk (34%), Premium (23%)</td>
+    </tr>
+    <tr>
+      <td><strong>Association Rule Mining</strong></td>
+      <td>Apriori Market Basket</td>
+      <td>Min Support = 0.15, Min Confidence = 0.60, Min Lift &gt; 1.2</td>
+      <td><strong>Top Rules Identified:</strong> Bread+Butter&rarr;Milk (Lift 2.14), Shampoo&rarr;Conditioner (Lift 3.42)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1>11. Findings &amp; Business Insights</h1>
+<ul>
+  <li><strong>High Value of Personal Care:</strong> While Grocery and Dairy represent over 55% of physical unit volume, Personal Care and Household goods generate over 50% of net margin, making them the most profitable shelf categories.</li>
+  <li><strong>Digital Payment Dominance:</strong> UPI payments account for 48.2% of transactions, especially among Young Adults (18–35), enabling automated personalized digital billing receipts and app-based loyalty points.</li>
+  <li><strong>Clear Separation of Customer Types:</strong> The 3-cluster segmentation reveals that 22.8% of premium shoppers contribute over 40% of total revenue. Tailored loyalty reward tiers can protect this high-margin customer base.</li>
+  <li><strong>Cross-Selling Potential via Market Basket Rules:</strong> High-lift rules (such as Shampoo &rarr; Conditioner with Lift = 3.42) confirm that strategic co-location and bundle discounting directly drive average transaction value (ATV).</li>
+</ul>
+
+<h1>12. Advantages of the System</h1>
+<ul>
+  <li><strong>Comprehensive Analytical Views:</strong> The Star Schema provides sub-second multi-dimensional aggregation across time, demographics, and departments via simple SQL queries.</li>
+  <li><strong>Automated Decision Support:</strong> Managers do not need to manually guess shelf arrangements; association rule metrics (Support, Confidence, Lift) provide mathematical proof for merchandising.</li>
+  <li><strong>Targeted Promotion Capabilities:</strong> Instead of blanket discounts that erode margin, the supermarket can direct coupons specifically to the Budget or Bulk cluster archetypes.</li>
+  <li><strong>Extensible Enterprise Architecture:</strong> The Star Schema design is ready for scaling to multi-branch regional supermarket chains.</li>
+</ul>
+
+<h1>13. Limitations</h1>
+<ul>
+  <li><strong>Sample Size Constraints:</strong> The primary dataset models 228 clean transactions; ongoing real-time automated ingestion from POS terminals will further refine association rule stability.</li>
+  <li><strong>Single Store Spatial Scope:</strong> The dataset reflects a single urban supermarket branch; cross-store regional variance requires multi-location fact table partitioning.</li>
+  <li><strong>Seasonality Horizon:</strong> Multi-season historical data (spanning full annual festival calendars) is required to capture seasonal surge patterns (e.g., Diwali, New Year).</li>
+</ul>
+
+<h1>14. Conclusion</h1>
+<p>
+This Innovative Assignment successfully demonstrates the end-to-end implementation of a <strong>Supermarket Sales Data Warehouse and Data Mining System</strong>. Starting from raw operational transaction records, comprehensive data cleaning ensured 100% data integrity. A robust <strong>Star Schema</strong> with <code>Fact_Sales</code> and four dimension tables was designed and populated. <strong>OLAP operations</strong> delivered critical category, demographic, and temporal intelligence. Furthermore, <strong>Decision Tree Classification</strong> achieved 95.65% prediction accuracy, <strong>K-Means Clustering</strong> identified three high-actionability customer personas, and <strong>Apriori Market Basket Analysis</strong> revealed high-lift cross-selling product rules. Both Weka ARFF data formats and Python scripts were provided, successfully meeting all academic requirements for the Bachelor of Computer Application curriculum.
+</p>
+
+<h1>15. Tools &amp; Technologies Used</h1>
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>Tool / Environment</th>
+      <th>Version / Component</th>
+      <th>Primary Purpose in Assignment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Weka (Waikato Environment)</strong></td>
+      <td>Weka 3.8.6</td>
+      <td>ARFF dataset formatting, J48 decision tree, SimpleKMeans clustering, Apriori association mining</td>
+    </tr>
+    <tr>
+      <td><strong>Python</strong></td>
+      <td>Python 3.11</td>
+      <td>Automated data auditing, pre-processing, feature engineering, and pipeline execution</td>
+    </tr>
+    <tr>
+      <td><strong>Scikit-learn &amp; MLxtend</strong></td>
+      <td>v1.4 &amp; v0.23</td>
+      <td>Machine learning model training (CART Decision Tree, K-Means) and Apriori association mining</td>
+    </tr>
+    <tr>
+      <td><strong>Pandas &amp; NumPy</strong></td>
+      <td>v2.2</td>
+      <td>Data manipulation, OLAP pivot aggregations, and multidimensional matrix calculations</td>
+    </tr>
+    <tr>
+      <td><strong>Matplotlib &amp; Seaborn</strong></td>
+      <td>v3.8</td>
+      <td>High-resolution publication charts (Decision Tree, Clusters, Confusion Matrix, Rules Graph)</td>
+    </tr>
+    <tr>
+      <td><strong>Relational Database (SQL)</strong></td>
+      <td>SQLite / ANSI SQL</td>
+      <td>Star Schema DDL script design, foreign key constraints, and OLAP SQL queries</td>
+    </tr>
+    <tr>
+      <td><strong>Microsoft Word / Office</strong></td>
+      <td>Microsoft Word 2024</td>
+      <td>Academic documentation formatting, report styling, and presentation preparation</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

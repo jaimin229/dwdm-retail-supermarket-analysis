@@ -11,14 +11,12 @@
 ### Slide 1: Title & Project Overview
 - **Project Title**: End-to-End Retail Data Warehouse & Data Mining Architecture
 - **Objective**: Transform raw supermarket point-of-sale receipt logs into actionable business intelligence through dimensional modeling, OLAP analytics, and machine learning.
-- **Team Members (Group of 5)**:
-  1. Student 1 (Enrollment No: 20240101001) - Field Data Collection & Coordination
-  2. Student 2 (Enrollment No: 20240101002) - ETL Pipeline & Data Hygiene
-  3. Student 3 (Enrollment No: 20240101003) - Data Warehouse Design & Star Schema
-  4. Student 4 (Enrollment No: 20240101004) - Multi-Dimensional OLAP Operations
-  5. Student 5 (Enrollment No: 20240101005) - Machine Learning & Data Mining Models
-- **Speaker Note (Student 1)**:  
-  *"Good morning respected examiners and faculty members. Today, our team presents our end-to-end innovative assignment in Data Warehouse and Data Mining. We conducted on-site field data collection at FreshMart Supermarket in Gota, designed a production-grade 3-Tier Data Warehouse, modeled a Star Schema, executed 5 core OLAP operations, and applied three fundamental data mining algorithms: Apriori, Decision Trees, and K-Means clustering."*
+- **Team Members**:
+  1. **JAIMIN PRAJAPATI (Lead Student)** (Enrollment No: `2404030100143`)
+  2. **KUSHAL SUTHAR** (Enrollment No: `2404030100841`)
+- **Faculty Guide**: **Prof. Manika Tomar**, Department of Computer Application
+- **Speaker Note (Jaimin Prajapati)**:  
+  *"Good morning respected faculty guide Prof. Manika Tomar and examiners. Today, our team (Jaimin Prajapati & Kushal Suthar) presents our end-to-end innovative assignment in Data Warehouse and Data Mining. We conducted on-site field data collection at FreshMart Supermarket in Gota, designed a production-grade 3-Tier Data Warehouse, modeled a Star Schema, executed 5 core OLAP operations, and applied three fundamental data mining algorithms: Apriori, Decision Trees, and K-Means clustering."*
 
 ---
 

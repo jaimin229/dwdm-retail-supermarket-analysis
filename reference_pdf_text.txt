@@ -1,0 +1,251 @@
+=== PAGE 1 ===
+ 
+Silver Oak College of Computer Application 
+Department of Computer Application 
+Bachelor of Computer Application (BCA) 
+ASSIGNMENT REPORT 
+ 
+ 
+Course Name & Course Code 
+ 
+Data Warehouse AND Data Mining (4040233302) 
+ 
+Assignment Title 
+ 
+Data Warehouse and Data Mining for Supermarket Sales 
+Analysis 
+ 
+Student Name 
+ 
+ 
+SIYOLA NIKHIL DIPAKBHAI 
+CHAVDA BHOOMI HARIBHAI 
+KHALYANI RAMJAN 
+AYESHA VIKASH CHANANI 
+ 
+ 
+Enrollment Number 
+ 
+2404030100263 
+2404030100866 
+2404030100925 
+2404030100072 
+ 
+Semester & Academic Year 
+ 
+ 
+SEM = 5 
+YEAR = 2026-2027 
+ 
+ 
+SUBMITTED TO 
+Prof. MANIKA TOMER / Prof. RAKESH KHARVA 
+Department of Computer Application 
+
+
+=== PAGE 2 ===
+1. Introduction
+This project demonstrates the complete process of analyzing supermarket transaction 
+data using Data Warehouse, OLAP and Data Mining techniques. The project covers data 
+collection, data cleaning, dimensional modeling, star schema design, OLAP analysis 
+and data mining using Weka. 
+2. Problem Statement 
+A supermarket generates a large amount of transaction data. It is difficult to identify 
+sales patterns, customer behavior and useful product relationships from raw 
+transaction records. This project organizes supermarket data into a data warehouse and 
+applies analytical and data mining techniques. 
+3. Objectives 
+• Collect and prepare supermarket transaction data. 
+• Clean and validate the dataset. 
+• Design a Data Warehouse using a Star Schema. 
+• Create fact and dimension tables. 
+• Perform OLAP analysis such as category-wise, age-group-wise and monthly 
+analysis. 
+• Apply Classification, Clustering and Association Rules using Weka. 
+• Present the findings in a simple and understandable form. 
+4. Dataset 
+The working dataset contains 150 supermarket transaction records. The Weka datasets 
+are prepared for Classification, Clustering and Association Rules. The Classification 
+and Clustering datasets contain Transaction_ID, Customer_Age_Group, 
+Payment_Mode, Product_Category, Quantity, Price, Discount_Percent, Total_Sales and 
+Purchase_Level. 
+Note: The dataset used for this academic project is a prepared sample/demo dataset. If 
+verified real-world collection is required by the faculty, actual shop-collected records 
+should be substituted and documented. 
+
+=== PAGE 3 ===
+5. Data Cleaning 
+Check Result Action 
+Total records 150 Verified 
+Missing values 0 No missing values 
+Duplicate rows 0 No duplicates 
+Invalid price 0 All prices valid 
+Invalid quantity 0 All quantities valid 
+Invalid discount 0 All discounts valid 
+6. Data Warehouse Design 
+The project uses a Star Schema. Fact_Sales is the central fact table and stores 
+measurable sales information. Dimension tables provide descriptive information about 
+date, product, customer and payment. 
+Table Main Fields 
+Fact_Sales Transaction_ID, Date_Key, Product_Key, 
+Customer_Key, Payment_Key, 
+Quantity_Purchased, Price, 
+Discount_Percent, Net_Amount 
+Dim_Date Date_Key, Date, Month, Quarter, Year 
+Dim_Product Product_Key, Product_Name, Category, Price 
+Dim_Customer Customer_Key, Age_Group 
+Dim_Payment Payment_Key, Payment_Mode 
+
+=== PAGE 4 ===
+ 
+7. Star Schema 
+ 
+ 
+ 
+ 
+Fact_Sales is the central fact table connected to the four dimension tables 
+through keys. 
+ 
+ 
+ 
+ 
+ 
+
+
+=== PAGE 5 ===
+8. OLAP Analysis 
+ 
+OLAP analysis examines sales from different dimensions. The project includes monthly 
+sales, category-wise sales and age-group-wise sales. 
+ 
+OLAP Measure Result 
+Total Sales ₹38,886.25 
+Total Quantity 502 
+Total Transactions 150 
+Category-wise highest sales Personal Care – ₹11,272.00 
+Age-group highest sales 26–35 – ₹10,654.50 
+ 
+All available transaction dates are in September 2026, so the monthly analysis currently 
+represents September 2026. 
+9. Data Mining Using Weka 
+ 
+9.1 Classification – J48 Decision Tree 
+ 
+J48 Decision Tree was used to classify supermarket transactions into purchase-level 
+categories. Weka provides the decision tree, classification accuracy and confusion 
+matrix. 
+ 
+Procedure: Explorer → Preprocess → Open Classification ARFF → Classify → J48 → select 
+class attribute → Start. 
+ 
+
+=== PAGE 6 ===
+ 
+ 
+
+
+=== PAGE 7 ===
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+=== PAGE 8 ===
+9.2 Clustering – SimpleKMeans 
+ 
+SimpleKMeans was used to group transactions into three clusters. Numerical attributes 
+such as Quantity, Price, Discount and Total_Sales can be used for clustering. 
+ 
+Procedure: Explorer → Preprocess → Open Clustering ARFF → Cluster → SimpleKMeans → 
+NumClusters = 3 → Start.  
+ 
+ 
+ 
+ 
+
+
+=== PAGE 9 ===
+ 
+ 
+ 
+ 
+
+
+=== PAGE 10 ===
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+=== PAGE 11 ===
+9.3 Association Rules – Apriori 
+ 
+Apriori is used to discover relationships between product attributes. The output can be 
+interpreted using support, confidence and lift. 
+Procedure: Explorer → Preprocess → Open Association ARFF → Associate → Apriori → 
+Start. 
+ 
+ 
+ 
+
+
+=== PAGE 12 ===
+ 
+ 
+ 
+ 
+Note: The prepared association dataset contains one product indicator per source 
+transaction row, so meaningful product-to-product co-occurrence rules may be limited 
+unless multiple products are recorded within the same transaction. 
+ 
+10. Weka Result Summary 
+ 
+Technique Algorithm Output 
+Classification J48 Decision tree, accuracy, 
+confusion matrix 
+Clustering SimpleKMeans 3 clusters and cluster 
+centroids 
+Association Rules Apriori Rules with support, 
+confidence and lift 
+
+
+=== PAGE 13 ===
+11. Findings 
+• Supermarket transactions can be organized using a dimensional data warehouse. 
+• OLAP provides different views of sales data. 
+• J48 provides an interpretable classification model. 
+• SimpleKMeans groups similar transactions. 
+• Apriori can identify product relationships when transaction-level item combinations are 
+available. 
+12. Advantages 
+• Easy analysis of transaction data. 
+• Supports sales and customer analysis. 
+• Provides multiple analytical views through OLAP. 
+• Data mining reveals patterns that are difficult to observe manually. 
+• Star Schema is simple and suitable for analytical queries. 
+13. Limitations 
+• The working dataset is a prepared academic sample/demo dataset. 
+• Association-rule quality depends on having multiple products per transaction. 
+• Results may change when actual supermarket data is substituted. 
+14. Conclusion 
+The project demonstrates the complete pipeline from supermarket transaction data to 
+Data Warehouse, OLAP and Data Mining. A Star Schema was designed with Fact_Sales 
+and supporting dimension tables. OLAP provides analytical views, while J48, 
+SimpleKMeans and Apriori provide classification, clustering and association analysis. 
+15. Tools Used 
+• Microsoft Excel 
+• Weka 
+• Microsoft Word 
+• PowerPoint 
+ 
+
