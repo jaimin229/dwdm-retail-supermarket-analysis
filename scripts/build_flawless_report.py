@@ -19,12 +19,12 @@ def generate_flawless_pdf():
     # Load Base64 Images
     logo_b64         = img_to_base64("reports/silver_oak_logo.png")
     star_schema_b64  = img_to_base64("output_figures/star_schema_diagram.png")
-    weka_pre_gui     = img_to_base64("output_figures/weka_gui_preprocess.png")
-    weka_class_gui   = img_to_base64("output_figures/weka_gui_classify.png")
-    weka_tree_viz    = img_to_base64("output_figures/weka_j48_tree_viz.png")
-    weka_clust_gui   = img_to_base64("output_figures/weka_gui_cluster.png")
-    weka_clust_viz   = img_to_base64("output_figures/weka_gui_cluster_viz.png")
-    weka_assoc_gui   = img_to_base64("output_figures/weka_gui_associate.png")
+    weka_pre_gui     = img_to_base64("output_figures/real_weka_explorer_preprocess.png")
+    weka_class_gui   = img_to_base64("output_figures/real_weka_explorer_classify.png")
+    weka_tree_viz    = img_to_base64("output_figures/real_weka_tree_visualizer.png")
+    weka_clust_gui   = img_to_base64("output_figures/real_weka_explorer_cluster.png")
+    weka_clust_viz   = img_to_base64("output_figures/real_weka_cluster_visualizer.png")
+    weka_assoc_gui   = img_to_base64("output_figures/real_weka_explorer_associate.png")
 
     with open("scripts/flawless_template.html", "r", encoding="utf-8") as f:
         template = f.read()
