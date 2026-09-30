@@ -1,10 +1,10 @@
 @relation supermarket_association
 
-@attribute Dairy & Bakery {t, ?}
-@attribute Grocery & Staples {t, ?}
-@attribute Household Essentials {t, ?}
-@attribute Personal Care {t, ?}
-@attribute Snacks & Beverages {t, ?}
+@attribute Dairy_Bakery {t, ?}
+@attribute Grocery_Staples {t, ?}
+@attribute Household_Essentials {t, ?}
+@attribute Personal_Care {t, ?}
+@attribute Snacks_Beverages {t, ?}
 
 @data
 ?,?,t,?,?

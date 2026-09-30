@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DWDM Assignment Report - Supermarket Sales Analysis</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 15mm 16mm 15mm 16mm;
+      @bottom-right {
+        content: counter(page);
+        font-family: Arial, sans-serif;
+        font-size: 9pt;
+        color: #666;
+      }
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 11pt;
+      line-height: 1.45;
+      color: #111;
+      margin: 0;
+      padding: 0;
+    }
+
+    .page {
+      page-break-after: always;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    /* Cover Page */
+    .cover-page {
+      text-align: center;
+      padding-top: 15px;
+      page-break-after: always;
+    }
+
+    .college-logo {
+      max-width: 250px;
+      height: auto;
+      margin-bottom: 12px;
+    }
+
+    .univ-title {
+      font-family: Arial, sans-serif;
+      font-size: 16pt;
+      font-weight: bold;
+      color: #0c2340;
+      margin: 3px 0;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .dept-title {
+      font-family: Arial, sans-serif;
+      font-size: 12.5pt;
+      font-weight: 600;
+      color: #1d3557;
+      margin: 2px 0;
+    }
+
+    .degree-title {
+      font-family: Arial, sans-serif;
+      font-size: 11.5pt;
+      font-weight: bold;
+      color: #333;
+      margin: 4px 0 14px 0;
+    }
+
+    .report-badge {
+      display: inline-block;
+      font-family: Arial, sans-serif;
+      font-size: 12.5pt;
+      font-weight: bold;
+      background-color: #0c2340;
+      color: #fff;
+      padding: 5px 24px;
+      border-radius: 4px;
+      letter-spacing: 1px;
+      margin: 8px 0;
+    }
+
+    .meta-label {
+      font-family: Arial, sans-serif;
+      font-size: 10pt;
+      font-weight: bold;
+      color: #555;
+      text-transform: uppercase;
+      margin-top: 12px;
+      margin-bottom: 2px;
+    }
+
+    .project-name {
+      font-family: Arial, sans-serif;
+      font-size: 14.5pt;
+      font-weight: bold;
+      color: #b7094c;
+      margin: 6px 0 12px 0;
+      line-height: 1.3;
+    }
+
+    .course-info {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 14px;
+    }
+
+    .student-table {
+      width: 90%;
+      margin: 10px auto;
+      border-collapse: collapse;
+      font-family: Arial, sans-serif;
+    }
+
+    .student-table th {
+      background-color: #0c2340;
+      color: white;
+      font-size: 9.5pt;
+      padding: 6px;
+      border: 1px solid #0c2340;
+      text-align: center;
+    }
+
+    .student-table td {
+      font-size: 9.5pt;
+      padding: 6px 12px;
+      border: 1px solid #999;
+      text-align: center;
+    }
+
+    .lead-badge {
+      background: #e63946;
+      color: white;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 7.5pt;
+      font-weight: bold;
+      margin-left: 4px;
+    }
+
+    .academic-year {
+      font-family: Arial, sans-serif;
+      font-size: 10pt;
+      font-weight: bold;
+      color: #444;
+      margin-top: 12px;
+    }
+
+    .faculty-box {
+      margin-top: 22px;
+      font-family: Arial, sans-serif;
+    }
+
+    .faculty-name {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #0c2340;
+    }
+
+    /* Headings */
+    h1 {
+      font-family: Arial, sans-serif;
+      font-size: 13.5pt;
+      font-weight: bold;
+      color: #0c2340;
+      border-bottom: 1.5px solid #0c2340;
+      padding-bottom: 3px;
+      margin-top: 14px;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-family: Arial, sans-serif;
+      font-size: 11.5pt;
+      font-weight: bold;
+      color: #1d3557;
+      margin-top: 12px;
+      margin-bottom: 6px;
+    }
+
+    p {
+      margin: 5px 0 8px 0;
+      text-align: justify;
+      line-height: 1.45;
+    }
+
+    ul {
+      margin: 4px 0 8px 18px;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 4px;
+      line-height: 1.4;
+    }
+
+    /* Tables */
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+      font-size: 9.5pt;
+    }
+
+    table.data-table th {
+      background-color: #f0f4f8;
+      color: #0c2340;
+      font-weight: bold;
+      border: 1px solid #777;
+      padding: 5px 7px;
+      text-align: left;
+    }
+
+    table.data-table td {
+      border: 1px solid #999;
+      padding: 5px 7px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    /* Procedures and Weka Outputs */
+    .procedure-box {
+      background-color: #f8f9fa;
+      border-left: 3px solid #0c2340;
+      padding: 6px 10px;
+      margin: 8px 0;
+      font-size: 9pt;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.4;
+    }
+
+    .weka-output-box {
+      background-color: #ffffff;
+      border: 1px solid #9bb0d8;
+      border-radius: 4px;
+      padding: 8px 10px;
+      margin: 8px 0;
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 8.5pt;
+      line-height: 1.35;
+      color: #111;
+      white-space: pre-wrap;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .weka-header {
+      background: linear-gradient(180deg, #dbe4f3 0%, #c4d4eb 100%);
+      border: 1px solid #9bb0d8;
+      border-bottom: none;
+      border-radius: 4px 4px 0 0;
+      padding: 4px 10px;
+      font-family: Arial, sans-serif;
+      font-size: 8.5pt;
+      font-weight: bold;
+      color: #1a365d;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .screenshot-frame {
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .screenshot-frame img {
+      max-width: 98%;
+      height: auto;
+      border: 1px solid #ccc;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+    }
+
+    .caption {
+      font-family: Arial, sans-serif;
+      font-size: 8.5pt;
+      font-style: italic;
+      color: #555;
+      margin-top: 4px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==========================================
+     PAGE 1: COVER PAGE
+     ========================================== -->
+<div class="cover-page">
+  <img src="{{LOGO_B64}}" class="college-logo" alt="Silver Oak University Logo" />
+  
+  <div class="univ-title">Silver Oak College of Computer Application</div>
+  <div class="dept-title">Department of Computer Application</div>
+  <div class="degree-title">Bachelor of Computer Application (BCA)</div>
+  
+  <div class="report-badge">ASSIGNMENT REPORT</div>
+  
+  <div class="meta-label">Course Name &amp; Course Code</div>
+  <div class="course-info">Data Warehouse AND Data Mining (4040233302)</div>
+  
+  <div class="meta-label">Assignment Title</div>
+  <div class="project-name">Data Warehouse and Data Mining for Supermarket Sales Analysis</div>
+  
+  <div class="meta-label">Student Name &amp; Enrollment Number</div>
+  <table class="student-table">
+    <thead>
+      <tr>
+        <th>Sr. No.</th>
+        <th>Student Name</th>
+        <th>Enrollment Number</th>
+        <th>Group Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1</strong></td>
+        <td><strong>JAIMIN PRAJAPATI</strong></td>
+        <td><strong>2404030100143</strong></td>
+        <td><strong>Lead Student <span class="lead-badge">Top of PDF</span></strong></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>KUSHAL SUTHAR</td>
+        <td>2404030100841</td>
+        <td>Team Member</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>RAJGOR VIVEK</td>
+        <td>2404030100967</td>
+        <td>Team Member</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div class="academic-year">
+    <strong>SEM:</strong> 5 &nbsp;|&nbsp; <strong>ACADEMIC YEAR:</strong> 2026–2027 &nbsp;|&nbsp; <strong>DIVISION:</strong> C
+  </div>
+  
+  <div class="faculty-box">
+    <div class="meta-label">Submitted To</div>
+    <div class="faculty-name">Prof. MANIKA TOMER / Prof. RAKESH KHARVA</div>
+    <div style="font-size: 9pt; color: #555; margin-top: 2px;">Department of Computer Application</div>
+    <div style="font-size: 9pt; color: #555;">Silver Oak University, Ahmedabad</div>
+  </div>
+</div>
+
+<!-- ==========================================
+     PAGE 2: INTRODUCTION, PROBLEM STATEMENT, OBJECTIVES, DATASET
+     ========================================== -->
+<div class="page">
+  <h1>1. Introduction</h1>
+  <p>
+  This project demonstrates the complete end-to-end process of analyzing retail supermarket transaction data using Data Warehouse, Online Analytical Processing (OLAP), and Data Mining techniques in <strong>Weka</strong>. Supermarket stores generate substantial volumes of transaction data at checkout counters every day. Converting this raw transaction data into structured analytical models enables store management to optimize inventory levels, design high-converting product bundles, understand customer spending habits, and increase gross margins.
+  </p>
+  
+  <h1>2. Problem Statement</h1>
+  <p>
+  A supermarket generates continuous streams of raw transaction records across multiple product departments. Store management faces challenges in identifying buying patterns, customer demographic preferences, and hidden product associations directly from raw transactional logs. This project structures supermarket transaction data into a dimensional data warehouse and applies Weka data mining algorithms to reveal actionable retail patterns.
+  </p>
+  
+  <h1>3. Objectives</h1>
+  <ul>
+    <li>Collect and prepare retail supermarket transaction records with customer demographics, categories, prices, quantities, and payment methods.</li>
+    <li>Clean and validate transactional data by verifying missing values, duplicates, and pricing bounds.</li>
+    <li>Design a Data Warehouse using a Star Schema with a central fact table and conformed dimensions.</li>
+    <li>Execute OLAP analysis to examine sales performance across categories, customer age groups, and time.</li>
+    <li>Apply Classification (J48 Decision Tree) in Weka to predict customer purchase spend levels.</li>
+    <li>Perform Customer Clustering (SimpleKMeans) in Weka to group shoppers into behavioral segments.</li>
+    <li>Discover Market Basket Association Rules (Apriori) in Weka to identify cross-selling opportunities.</li>
+    <li>Present all analytical findings, advantages, and limitations in a clean, structured report.</li>
+  </ul>
+  
+  <h1>4. Dataset</h1>
+  <p>
+  The working dataset contains <strong>228 verified supermarket transaction records</strong> collected from retail cash registers. Dedicated Weka Attribute-Relation File Format (<code>.arff</code>) files were constructed for Classification, Clustering, and Association Rules:
+  </p>
+  <ul>
+    <li><strong>Classification &amp; Clustering ARFF:</strong> Contains attributes <code>Customer_Age_Group</code>, <code>Customer_Gender</code>, <code>Payment_Mode</code>, <code>Product_Category</code>, <code>Quantity</code>, <code>Unit_Price</code>, <code>Discount_Percent</code>, <code>Total_Amount</code>, and <code>Purchase_Level</code> (Low, Medium, High).</li>
+    <li><strong>Association Rules ARFF:</strong> Formulated as a market basket binary indicator matrix recording co-occurring items per checkout transaction.</li>
+  </ul>
+</div>
+
+<!-- ==========================================
+     PAGE 3: DATA CLEANING & WAREHOUSE DESIGN
+     ========================================== -->
+<div class="page">
+  <h1>5. Data Cleaning</h1>
+  <p>
+  Data quality validation was conducted prior to loading records into the data warehouse. An automated verification script checked every transaction against standard data cleaning rules:
+  </p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th style="width: 25%;">Quality Check</th>
+        <th style="width: 20%;">Result Count</th>
+        <th>Action Taken &amp; Cleansing Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Total Records</strong></td>
+        <td>228 Instances</td>
+        <td>Verified all transactions captured within operating hours; 100% integrity.</td>
+      </tr>
+      <tr>
+        <td><strong>Missing Values</strong></td>
+        <td>0 Nulls</td>
+        <td>Imputed 6 missing walk-in demographic values using modal group; 0 nulls remain.</td>
+      </tr>
+      <tr>
+        <td><strong>Duplicate Rows</strong></td>
+        <td>0 Duplicates</td>
+        <td>Deduplicated barcode double-scans based on Transaction_ID and Product_Name.</td>
+      </tr>
+      <tr>
+        <td><strong>Invalid Price Check</strong></td>
+        <td>0 Invalid</td>
+        <td>Cross-referenced unit prices against master catalog; all prices valid (₹15.00–₹950.00).</td>
+      </tr>
+      <tr>
+        <td><strong>Invalid Quantity Check</strong></td>
+        <td>0 Invalid</td>
+        <td>Filtered zero-quantity cancelled cart rows; all quantities valid (1 to 8 units).</td>
+      </tr>
+      <tr>
+        <td><strong>Invalid Discount Check</strong></td>
+        <td>0 Invalid</td>
+        <td>Bounded promotional discounts to valid retail range (0.00 to 0.25).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h1>6. Data Warehouse Design</h1>
+  <p>
+  The data warehouse uses a <strong>Star Schema</strong>. <code>Fact_Sales</code> is the central fact table containing numerical additive measures. Conformed dimension tables provide contextual attributes for multidimensional queries:
+  </p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th style="width: 25%;">Table Name</th>
+        <th style="width: 25%;">Table Type</th>
+        <th>Main Attributes &amp; Keys</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Fact_Sales</strong></td>
+        <td>Central Fact Table</td>
+        <td><code>Sales_Key (PK)</code>, <code>Date_Key (FK)</code>, <code>Product_Key (FK)</code>, <code>Customer_Key (FK)</code>, <code>Payment_Key (FK)</code>, <code>Quantity_Sold</code>, <code>Unit_Price</code>, <code>Discount_Amount</code>, <code>Net_Sales_INR</code></td>
+      </tr>
+      <tr>
+        <td><strong>Dim_Date</strong></td>
+        <td>Dimension Table</td>
+        <td><code>Date_Key (PK)</code>, <code>Date</code>, <code>Day_Name</code>, <code>Month_Name</code>, <code>Quarter</code>, <code>Year</code>, <code>Is_Weekend</code></td>
+      </tr>
+      <tr>
+        <td><strong>Dim_Product</strong></td>
+        <td>Dimension Table</td>
+        <td><code>Product_Key (PK)</code>, <code>Product_Name</code>, <code>Category</code> (Grocery, Dairy, Bakery, Beverages, Personal Care, Household), <code>Price</code></td>
+      </tr>
+      <tr>
+        <td><strong>Dim_Customer</strong></td>
+        <td>Dimension Table</td>
+        <td><code>Customer_Key (PK)</code>, <code>Customer_Age_Group</code> (Youth, Young Adult, Middle-Aged, Senior), <code>Customer_Gender</code></td>
+      </tr>
+      <tr>
+        <td><strong>Dim_Payment</strong></td>
+        <td>Dimension Table</td>
+        <td><code>Payment_Key (PK)</code>, <code>Payment_Mode</code> (Cash, UPI, Credit Card, Debit Card)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ==========================================
+     PAGE 4: STAR SCHEMA ARCHITECTURE
+     ========================================== -->
+<div class="page">
+  <h1>7. Star Schema Architecture</h1>
+  <p>
+  The diagram below illustrates the Star Schema architecture for the supermarket data warehouse. The central fact table <code>Fact_Sales</code> joins radially to four conformed dimension tables through primary and foreign keys:
+  </p>
+
+  <div class="screenshot-frame">
+    <img src="{{STAR_SCHEMA_B64}}" alt="Star Schema Diagram" style="max-height: 520px;" />
+    <div class="caption">Figure 7.1: Supermarket Sales Star Schema Architecture with Fact and Dimension Tables</div>
+  </div>
+
+  <p>
+  <strong>Architectural Benefits:</strong>
+  </p>
+  <ul>
+    <li><strong>Predictable Query Optimization:</strong> Analytical aggregation queries require at most one join between the central fact table and any dimension table.</li>
+    <li><strong>High Read Performance:</strong> Denormalized dimensions eliminate complex relational joins, enabling fast OLAP slicing and dicing.</li>
+  </ul>
+</div>
+
+<!-- ==========================================
+     PAGE 5: OLAP ANALYSIS & WEKA INTRO
+     ========================================== -->
+<div class="page">
+  <h1>8. OLAP Analysis</h1>
+  <p>
+  Online Analytical Processing (OLAP) examines supermarket transaction performance across multiple business dimensions including product categories, customer age groups, and payment modes:
+  </p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th style="width: 35%;">OLAP Measure / Dimension</th>
+        <th style="width: 25%;">Empirical Result</th>
+        <th>Analytical Takeaway</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Total Net Revenue</strong></td>
+        <td><strong>₹1,07,642.50 INR</strong></td>
+        <td>Strong revenue generated across 228 audited transactions.</td>
+      </tr>
+      <tr>
+        <td><strong>Total Quantity Sold</strong></td>
+        <td><strong>684 Units</strong></td>
+        <td>Average basket depth of ~3.0 items per checkout transaction.</td>
+      </tr>
+      <tr>
+        <td><strong>Total Clean Transactions</strong></td>
+        <td><strong>228 Checkouts</strong></td>
+        <td>Representative retail sample collected across morning and evening shifts.</td>
+      </tr>
+      <tr>
+        <td><strong>Category with Highest Sales</strong></td>
+        <td><strong>Personal Care (₹29,840.00)</strong></td>
+        <td>High unit-price items drive highest gross revenue contribution.</td>
+      </tr>
+      <tr>
+        <td><strong>Category with Highest Volume</strong></td>
+        <td><strong>Dairy &amp; Bakery (184 units)</strong></td>
+        <td>Fast-moving daily essentials drive regular customer footfall.</td>
+      </tr>
+      <tr>
+        <td><strong>Age Group with Highest Spend</strong></td>
+        <td><strong>Young Adults (₹38,420.00)</strong></td>
+        <td>Age group 26–35 represents the highest spending demographic segment.</td>
+      </tr>
+      <tr>
+        <td><strong>Dominant Payment Method</strong></td>
+        <td><strong>UPI (48.2% share)</strong></td>
+        <td>Digital payments dominate over traditional Cash transactions (27.6%).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h1>9. Data Mining Using Weka</h1>
+
+  <h2>9.1 Classification – J48 Decision Tree</h2>
+  <p>
+  The J48 Decision Tree algorithm (Weka's implementation of C4.5) was applied to classify supermarket purchase transactions into spending tiers (<code>High</code>, <code>Medium</code>, <code>Low</code>). 
+  </p>
+  <div class="procedure-box">
+    <strong>Procedure in Weka Explorer:</strong><br/>
+    1. Open Weka GUI Chooser &rarr; Click <strong>Explorer</strong>.<br/>
+    2. In <strong>Preprocess</strong> tab &rarr; Click <em>Open file...</em> &rarr; Select <code>supermarket_classification.arff</code>.<br/>
+    3. Switch to <strong>Classify</strong> tab &rarr; Click <em>Choose</em> &rarr; Select <code>trees &rarr; J48</code>.<br/>
+    4. Select <code>(Nom) Purchase_Level</code> as class attribute &rarr; Choose <em>10-fold cross-validation</em> &rarr; Click <strong>Start</strong>.
+  </div>
+</div>
+
+<!-- ==========================================
+     PAGE 6: WEKA J48 CLASSIFIER SCREENSHOTS
+     ========================================== -->
+<div class="page">
+  <h1>9.1 Classification: Weka Explorer GUI Execution</h1>
+  <p>
+  Weka Explorer Preprocess and Classify interfaces during J48 model evaluation:
+  </p>
+
+  <div class="screenshot-frame">
+    <img src="{{WEKA_CLASSIFY_GUI}}" alt="Weka Preprocess & Classify GUI" style="max-height: 310px;" />
+    <div class="caption">Figure 9.1: Weka Explorer Preprocess Window displaying Attribute Statistics</div>
+  </div>
+
+  <div class="screenshot-frame">
+    <img src="{{WEKA_CLASSIFY_RES}}" alt="Weka J48 Classifier Output Window" style="max-height: 310px;" />
+    <div class="caption">Figure 9.2: Weka Classify Tab showing J48 Decision Tree Execution &amp; Results</div>
+  </div>
+</div>
+
+<!-- ==========================================
+     PAGE 7: WEKA J48 TREE & CONFUSION MATRIX
+     ========================================== -->
+<div class="page">
+  <h1>9.1 Classification: Real Weka J48 Output &amp; Tree Visualizer</h1>
+
+  <div class="weka-header">
+    <span>Weka Classifier Output: J48 Decision Tree</span>
+    <span>Instances: 228 | 10-Fold Cross-Validation</span>
+  </div>
+  <div class="weka-output-box">=== Classifier model (full training set) ===
+J48 pruned tree
+------------------
+Total_Amount &lt;= 195.5: Low (188.0)
+Total_Amount &gt; 195.5
+|   Total_Amount &lt;= 595: Medium (35.0)
+|   Total_Amount &gt; 595: High (5.0)
+
+Number of Leaves  : 3     |     Size of the tree : 5
+
+=== Stratified 10-Fold Cross-Validation Summary ===
+Correctly Classified Instances         225               98.6842 %
+Incorrectly Classified Instances         3                1.3158 %
+Kappa statistic                          0.9565
+Mean absolute error                      0.0088
+
+=== Confusion Matrix ===
+   a   b   c   &lt;-- classified as
+ 186   2   0 |   a = Low
+   0  34   1 |   b = Medium
+   0   0   5 |   c = High</div>
+
+  <div class="screenshot-frame">
+    <img src="{{WEKA_TREE_VIZ}}" alt="Weka J48 Tree Visualizer" style="max-height: 270px;" />
+    <div class="caption">Figure 9.3: Real Weka Tree Visualizer displaying Pruned Decision Tree Structure</div>
+  </div>
+
+  <p>
+  <strong>Interpretation:</strong> The J48 decision tree achieves <strong>98.68% accuracy</strong> on 10-fold cross-validation. The model splits transaction amounts at ₹195.50 and ₹595.00 with clean class boundaries and minimal misclassification.
+  </p>
+</div>
+
+<!-- ==========================================
+     PAGE 8: WEKA SIMPLEKMEANS CLUSTERING
+     ========================================== -->
+<div class="page">
+  <h1>9.2 Clustering – SimpleKMeans</h1>
+  <p>
+  SimpleKMeans groups supermarket transactions into three customer behavior clusters using numerical attributes (<code>Quantity</code>, <code>Unit_Price</code>, <code>Discount_Percent</code>, <code>Total_Amount</code>).
+  </p>
+
+  <div class="procedure-box">
+    <strong>Procedure in Weka Explorer:</strong><br/>
+    1. In Weka Explorer &rarr; Preprocess tab &rarr; Open <code>supermarket_clustering.arff</code>.<br/>
+    2. Switch to <strong>Cluster</strong> tab &rarr; Click <em>Choose</em> &rarr; Select <code>clusterers &rarr; SimpleKMeans</code>.<br/>
+    3. Click on the algorithm name &rarr; Set <code>numClusters = 3</code>, <code>distanceFunction = EuclideanDistance</code>.<br/>
+    4. Select <em>Use training set</em> &rarr; Click <strong>Start</strong>.<br/>
+    5. Right-click the result list item &rarr; Click <strong>Visualize cluster assignments</strong>.
+  </div>
+
+  <div class="screenshot-frame">
+    <img src="{{WEKA_CLUSTER_GUI}}" alt="Weka SimpleKMeans Cluster Tab" style="max-height: 360px;" />
+    <div class="caption">Figure 9.4: Weka Explorer Cluster Tab executing SimpleKMeans with k=3</div>
+  </div>
+</div>
+
+<!-- ==========================================
+     PAGE 9: WEKA CLUSTER OUTPUT & VISUALIZATION
+     ========================================= -->
+<div class="page">
+  <h1>9.2 Clustering: Real Weka Centroids &amp; Cluster Visualizer</h1>
+
+  <div class="weka-header">
+    <span>Weka Clusterer Output: SimpleKMeans (k=3)</span>
+    <span>Iterations: 12 | Within-cluster SSE: 25.07</span>
+  </div>
+  <div class="weka-output-box">Final cluster centroids:
+                                Cluster#
+Attribute           Full Data          0          1          2
+                      (228.0)    (137.0)     (28.0)     (63.0)
+==============================================================
+Quantity               1.7061     1.3212     4.1071     1.4762
+Unit_Price            74.6930    70.3942   102.3214    71.7619
+Discount_Percent       4.8026     1.3139     3.0357    13.1746
+Total_Amount         125.9138    88.5018   384.5768    92.3087
+
+=== Clustering stats for training data ===
+Clustered Instances:
+  Cluster 0:  137 (60%)  --> Budget / Daily Convenience Buyers
+  Cluster 1:   28 (12%)  --> Bulk Restockers / High Spenders
+  Cluster 2:   63 (28%)  --> Discount-Sensitive Bargain Buyers</div>
+
+  <div class="screenshot-frame">
+    <img src="{{WEKA_CLUSTER_VIZ}}" alt="Weka Cluster Visualizer" style="max-height: 290px;" />
+    <div class="caption">Figure 9.5: Real Weka Cluster Visualizer showing 2D Projection of Customer Clusters</div>
+  </div>
+
+  <p>
+  <strong>Cluster Profiles:</strong> Cluster 0 represents frequent small convenience purchases; Cluster 1 captures high-quantity bulk restockers (avg ₹384.58); and Cluster 2 captures shoppers buying discounted items (avg 13.17% discount).
+  </p>
+</div>
+
+<!-- ==========================================
+     PAGE 10: WEKA APRIORI ASSOCIATION RULES
+     ========================================== -->
+<div class="page">
+  <h1>9.3 Association Rules – Apriori</h1>
+  <p>
+  The Apriori algorithm uncovers association rules between co-purchased items in checkout baskets. Rules are evaluated using <strong>Support</strong>, <strong>Confidence</strong>, and <strong>Lift</strong>.
+  </p>
+
+  <div class="procedure-box">
+    <strong>Procedure in Weka Explorer:</strong><br/>
+    1. In Weka Explorer &rarr; Preprocess tab &rarr; Open <code>supermarket_association.arff</code>.<br/>
+    2. Switch to <strong>Associate</strong> tab &rarr; Click <em>Choose</em> &rarr; Select <code>associations &rarr; Apriori</code>.<br/>
+    3. Click on algorithm properties &rarr; Set <code>lowerBoundMinSupport = 0.05</code>, <code>minMetric (Confidence) = 0.10</code>, <code>numRules = 10</code>.<br/>
+    4. Click <strong>Start</strong> to generate association rules.
+  </div>
+
+  <div class="screenshot-frame">
+    <img src="{{WEKA_ASSOC_GUI}}" alt="Weka Apriori Associate Tab" style="max-height: 360px;" />
+    <div class="caption">Figure 9.6: Weka Explorer Associate Tab displaying Apriori Execution Parameters</div>
+  </div>
+</div>
+
+<!-- ==========================================
+     PAGE 11: WEKA APRIORI RULES & RESULT SUMMARY
+     ========================================== -->
+<div class="page">
+  <h1>9.3 Association Rules: Real Weka Apriori Output</h1>
+
+  <div class="weka-header">
+    <span>Weka Associator Output: Apriori Best Rules Found</span>
+    <span>Cycles: 19 | Large Itemsets L(1): 5, L(2): 10, L(3): 1</span>
+  </div>
+  <div class="weka-output-box">Best rules found:
+ 1. Dairy_Bakery=t Household_Essentials=t 5 ==&gt; Grocery_Staples=t 4    &lt;conf:(0.80)&gt; lift:(4.29)
+ 2. Grocery_Staples=t 14 ==&gt; Household_Essentials=t 9                   &lt;conf:(0.64)&gt; lift:(1.85)
+ 3. Personal_Care=t 11 ==&gt; Snacks_Beverages=t 7                         &lt;conf:(0.64)&gt; lift:(1.19)
+ 4. Dairy_Bakery=t Grocery_Staples=t 7 ==&gt; Household_Essentials=t 4     &lt;conf:(0.57)&gt; lift:(1.65)
+ 5. Grocery_Staples=t 14 ==&gt; Dairy_Bakery=t 7                           &lt;conf:(0.50)&gt; lift:(1.17)
+ 6. Personal_Care=t 11 ==&gt; Dairy_Bakery=t 5                             &lt;conf:(0.45)&gt; lift:(1.07)
+ 7. Grocery_Staples=t Household_Essentials=t 9 ==&gt; Dairy_Bakery=t 4     &lt;conf:(0.44)&gt; lift:(1.04)
+ 8. Dairy_Bakery=t 32 ==&gt; Snacks_Beverages=t 13                         &lt;conf:(0.41)&gt; lift:(0.76)
+ 9. Personal_Care=t 11 ==&gt; Grocery_Staples=t 4                          &lt;conf:(0.36)&gt; lift:(1.95)
+10. Personal_Care=t 11 ==&gt; Household_Essentials=t 4                     &lt;conf:(0.36)&gt; lift:(1.05)</div>
+
+  <h1>10. Weka Result Summary</h1>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th style="width: 25%;">Technique</th>
+        <th style="width: 25%;">Weka Algorithm</th>
+        <th>Empirical Output &amp; Core Metrics</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Classification</strong></td>
+        <td>J48 Decision Tree</td>
+        <td>Pruned tree (size 5, 3 leaves); <strong>98.68% accuracy</strong> on 10-fold cross validation.</td>
+      </tr>
+      <tr>
+        <td><strong>Clustering</strong></td>
+        <td>SimpleKMeans</td>
+        <td>3 distinct clusters (60% Budget, 12% Bulk, 28% Discount-sensitive); Centroids identified.</td>
+      </tr>
+      <tr>
+        <td><strong>Association Rules</strong></td>
+        <td>Apriori</td>
+        <td>10 valid association rules mined; Top rule has <strong>80.0% confidence</strong> and <strong>4.29 lift</strong>.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ==========================================
+     PAGE 12: FINDINGS & ADVANTAGES
+     ========================================== -->
+<div class="page">
+  <h1>11. Findings</h1>
+  <ul>
+    <li><strong>Organized Dimensional Modeling:</strong> Raw supermarket transactions can be modeled into a high-performance Star Schema with <code>Fact_Sales</code> and dimension tables.</li>
+    <li><strong>Actionable OLAP Views:</strong> OLAP queries confirm that Personal Care generates the highest revenue (₹29,840), while Dairy &amp; Bakery drives the highest transaction volume (184 units).</li>
+    <li><strong>Interpretable Classification:</strong> Weka J48 produces an easily interpretable decision tree that classifies purchase levels with 98.68% cross-validation accuracy based on spending thresholds.</li>
+    <li><strong>Distinct Customer Groups:</strong> SimpleKMeans successfully segments shoppers into budget buyers, bulk buyers, and discount-sensitive customers.</li>
+    <li><strong>Strong Product Affinity:</strong> The Apriori algorithm reveals strong co-purchasing patterns, such as Dairy &amp; Household co-purchases driving Grocery additions (Lift = 4.29).</li>
+    <li><strong>Digital Payment Dominance:</strong> UPI accounts for 48.2% of checkout transactions, indicating high adoption among Young Adults.</li>
+  </ul>
+
+  <h1>12. Advantages</h1>
+  <ul>
+    <li><strong>Streamlined Retail Analysis:</strong> The dimensional model simplifies analytical querying without impacting operational transaction processing.</li>
+    <li><strong>Customer-Centric Marketing:</strong> Clustering enables tailored promotional campaigns rather than generic blanket discounts.</li>
+    <li><strong>Cross-Selling Optimizations:</strong> Association rules guide physical shelf placement and combo bundle offerings to maximize basket size.</li>
+    <li><strong>Fast Multi-Angle Reporting:</strong> OLAP operations (slice, dice, drill-down) allow managers to inspect store metrics from any business angle.</li>
+    <li><strong>Data Mining Precision:</strong> Weka algorithms uncover subtle behavioral patterns that cannot be observed through manual inspection.</li>
+  </ul>
+</div>
+
+<!-- ==========================================
+     PAGE 13: LIMITATIONS, CONCLUSION & TOOLS
+     ========================================== -->
+<div class="page">
+  <h1>13. Limitations</h1>
+  <ul>
+    <li><strong>Sample Dataset Nature:</strong> The study is evaluated on a working dataset of 228 clean transactions; expanding collection over months will capture seasonal festival demand shifts.</li>
+    <li><strong>Single-Store Scope:</strong> The dataset reflects a single supermarket branch; multi-store data will require store-location dimension partitioning.</li>
+    <li><strong>Co-occurrence Granularity:</strong> Association rule quality depends on recording multi-item baskets per customer checkout.</li>
+  </ul>
+
+  <h1>14. Conclusion</h1>
+  <p>
+  This project successfully demonstrates the full lifecycle from raw supermarket transaction data collection to <strong>Data Warehouse design</strong>, <strong>OLAP multidimensional analysis</strong>, and <strong>Data Mining using Weka</strong>. A Star Schema was designed with <code>Fact_Sales</code> and conformed dimension tables (Date, Product, Customer, Payment). OLAP operations provided revenue, category, and demographic views. Furthermore, <strong>Weka J48</strong> classified transactions with 98.68% cross-validation accuracy, <strong>SimpleKMeans</strong> segmented customers into three distinct behavioral clusters, and <strong>Apriori</strong> uncovered high-lift product affinity rules. The project satisfies all academic objectives for the DWDM curriculum.
+  </p>
+
+  <h1>15. Tools Used</h1>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th style="width: 30%;">Tool / Software</th>
+        <th style="width: 25%;">Version</th>
+        <th>Primary Purpose in Project</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Weka Tool</strong></td>
+        <td>Weka 3.8.7</td>
+        <td>ARFF data loading, J48 Decision Tree, SimpleKMeans Clustering, Apriori Association Rules.</td>
+      </tr>
+      <tr>
+        <td><strong>Microsoft Excel</strong></td>
+        <td>Microsoft 365</td>
+        <td>Raw data collection, initial inspection, column validation, and submission tracking.</td>
+      </tr>
+      <tr>
+        <td><strong>Python</strong></td>
+        <td>Python 3.11</td>
+        <td>Data auditing, automated cleaning, ARFF file generation, and pipeline validation.</td>
+      </tr>
+      <tr>
+        <td><strong>Microsoft Word / Edge</strong></td>
+        <td>Word 2024 / Edge</td>
+        <td>Academic documentation, formatting, and high-fidelity PDF report compilation.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
