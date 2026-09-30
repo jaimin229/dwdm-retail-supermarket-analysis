@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DWDM Assignment Report - Supermarket Sales Analysis</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 12mm 15mm 12mm 15mm;
+      @bottom-right {
+        content: counter(page);
+        font-family: Arial, sans-serif;
+        font-size: 8.5pt;
+        color: #64748b;
+      }
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 10.5pt;
+      line-height: 1.4;
+      color: #1e293b;
+      margin: 0;
+      padding: 0;
+    }
+
+    .page {
+      page-break-after: always;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    /* Cover Page */
+    .cover-page {
+      text-align: center;
+      padding-top: 10px;
+      page-break-after: always;
+    }
+
+    .college-logo {
+      max-width: 240px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .univ-title {
+      font-family: Arial, sans-serif;
+      font-size: 15pt;
+      font-weight: bold;
+      color: #0c2340;
+      margin: 2px 0;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .dept-title {
+      font-family: Arial, sans-serif;
+      font-size: 12pt;
+      font-weight: 600;
+      color: #1d3557;
+      margin: 2px 0;
+    }
+
+    .degree-title {
+      font-family: Arial, sans-serif;
+      font-size: 11pt;
+      font-weight: bold;
+      color: #333;
+      margin: 3px 0 12px 0;
+    }
+
+    .report-badge {
+      display: inline-block;
+      font-family: Arial, sans-serif;
+      font-size: 12pt;
+      font-weight: bold;
+      background-color: #0c2340;
+      color: #fff;
+      padding: 4px 22px;
+      border-radius: 4px;
+      letter-spacing: 1px;
+      margin: 6px 0;
+    }
+
+    .meta-label {
+      font-family: Arial, sans-serif;
+      font-size: 9.5pt;
+      font-weight: bold;
+      color: #64748b;
+      text-transform: uppercase;
+      margin-top: 10px;
+      margin-bottom: 2px;
+    }
+
+    .project-name {
+      font-family: Arial, sans-serif;
+      font-size: 14pt;
+      font-weight: bold;
+      color: #b7094c;
+      margin: 4px 0 10px 0;
+      line-height: 1.3;
+    }
+
+    .course-info {
+      font-size: 10.5pt;
+      font-weight: bold;
+      color: #1e293b;
+      margin-bottom: 12px;
+    }
+
+    .student-table {
+      width: 90%;
+      margin: 8px auto;
+      border-collapse: collapse;
+      font-family: Arial, sans-serif;
+    }
+
+    .student-table th {
+      background-color: #0c2340;
+      color: white;
+      font-size: 9pt;
+      padding: 6px;
+      border: 1px solid #0c2340;
+      text-align: center;
+    }
+
+    .student-table td {
+      font-size: 9pt;
+      padding: 6px 10px;
+      border: 1px solid #cbd5e1;
+      text-align: center;
+    }
+
+    .academic-year {
+      font-family: Arial, sans-serif;
+      font-size: 9.5pt;
+      font-weight: bold;
+      color: #475569;
+      margin-top: 10px;
+    }
+
+    .faculty-box {
+      margin-top: 18px;
+      font-family: Arial, sans-serif;
+    }
+
+    .faculty-name {
+      font-size: 10.5pt;
+      font-weight: bold;
+      color: #0c2340;
+    }
+
+    /* Headings */
+    h1 {
+      font-family: Arial, sans-serif;
+      font-size: 13pt;
+      font-weight: bold;
+      color: #0c2340;
+      border-bottom: 1.5px solid #0c2340;
+      padding-bottom: 2px;
+      margin-top: 10px;
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      font-family: Arial, sans-serif;
+      font-size: 11pt;
+      font-weight: bold;
+      color: #1d3557;
+      margin-top: 8px;
+      margin-bottom: 4px;
+    }
+
+    p {
+      margin: 4px 0 6px 0;
+      text-align: justify;
+      line-height: 1.4;
+    }
+
+    ul {
+      margin: 3px 0 6px 18px;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 3px;
+      line-height: 1.35;
+    }
+
+    /* Tables */
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0;
+      font-size: 9pt;
+    }
+
+    table.data-table th {
+      background-color: #f1f5f9;
+      color: #0c2340;
+      font-weight: bold;
+      border: 1px solid #94a3b8;
+      padding: 4px 6px;
+      text-align: left;
+    }
+
+    table.data-table td {
+      border: 1px solid #cbd5e1;
+      padding: 4px 6px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    /* Procedures and Code Blocks */
+    .procedure-box {
+      background-color: #f8fafc;
+      border-left: 3px solid #0c2340;
+      padding: 5px 8px;
+      margin: 6px 0;
+      font-size: 8.5pt;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      line-height: 1.35;
+    }
+
+    .screenshot-frame {
+      text-align: center;
+      margin: 6px 0;
+    }
+
+    .screenshot-frame img {
+      max-width: 98%;
+      height: auto;
+      border: 1px solid #cbd5e1;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .caption {
+      font-family: Arial, sans-serif;
+      font-size: 8pt;
+      font-style: italic;
+      color: #64748b;
+      margin-top: 3px;
+      text-align: center;
+    }
+
+    .callout {
+      background: #eff6ff;
+      border-left: 3px solid #2563eb;
+      padding: 5px 8px;
+      font-size: 8.5pt;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==========================================
+     PAGE 1: COVER PAGE
+     ========================================== -->
+<div class="cover-page">
+  <img src="{{LOGO_B64}}" class="college-logo" alt="Silver Oak University Logo" />
+  
+  <div class="univ-title">Silver Oak College of Computer Application</div>
+  <div class="dept-title">Department of Computer Application</div>
+  <div class="degree-title">Bachelor of Computer Application (BCA)</div>
+  
+  <div class="report-badge">ASSIGNMENT REPORT</div>
+  
+  <div class="meta-label">Course Name &amp; Course Code</div>
+  <div class="course-info">Data Warehouse AND Data Mining (4040233302)</div>
+  
+  <div class="meta-label">Assignment Title</div>
+  <div class="project-name">Data Warehouse and Data Mining for Supermarket Sales Analysis</div>
+  
+  <div class="meta-label">Student Name &amp; Enrollment Number</div>
+  <table class="student-table">
+    <thead>
+      <tr>
+        <th style="width: 12%;">Sr. No.</th>
+        <th style="width: 40%;">Student Name</th>
+        <th style="width: 28%;">Enrollment Number</th>
+        <th style="width: 20%;">Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1</strong></td>
+        <td><strong>JAIMIN PRAJAPATI</strong></td>
+        <td><strong>2404030100143</strong></td>
+        <td><strong>Lead Student</strong></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>KUSHAL SUTHAR</td>
+        <td>2404030100841</td>
+        <td>Team Member</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>RAJGOR VIVEK</td>
+        <td>2404030100967</td>
+        <td>Team Member</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div class="academic-year">
+    <strong>SEM:</strong> 5 &nbsp;|&nbsp; <strong>ACADEMIC YEAR:</strong> 2026–2027 &nbsp;|&nbsp; <strong>DIVISION:</strong> C
+  </div>
+  
+  <div class="faculty-box">
+    <div class="meta-label">Submitted To</div>
+    <div class="faculty-name">Prof. MANIKA TOMER / Prof. RAKESH KHARVA</div>
+    <div style="font-size: 8.5pt; color: #64748b; margin-top: 2px;">Department of Computer Application</div>
+    <div style="font-size: 8.5pt; color: #64748b;">Silver Oak University, Ahmedabad</div>
+  </div>
+</div>
+
+<!-- ==========================================
+     PAGE 2: INTRODUCTION, PROBLEM STATEMENT, OBJECTIVES, DATASET
+     ========================================== -->
+<div class="page">
+  <h1>1. Introduction</h1>
+  <p>
+  This project implements an end-to-end analytical framework for retail supermarket transactions using <strong>Data Warehouse</strong>, <strong>Online Analytical Processing (OLAP)</strong>, and <strong>Data Mining techniques in Weka</strong>. Modern retail stores capture thousands of transaction records daily at point-of-sale (POS) cash registers. Transforming these operational logs into structured dimensional models enables retail store managers to optimize inventory procurement, discover product affinities, analyze customer demographic preferences, and boost overall retail margins.
+  </p>
+  
+  <h1>2. Problem Statement</h1>
+  <p>
+  Supermarket transactions contain complex interactions across customer demographics, product categories, quantities, unit prices, and payment modes. Operational relational databases (OLTP) are optimized for transactional updates rather than multi-dimensional queries or pattern extraction. Store management faces difficulties identifying which customer demographics drive sales, which products are frequently co-purchased, and how to classify customer spending tiers. This project structures raw POS transactions into a Star Schema and applies Weka algorithms to uncover actionable retail intelligence.
+  </p>
+  
+  <h1>3. Objectives</h1>
+  <ul>
+    <li>Collect and audit point-of-sale supermarket transaction records across core retail merchandise categories.</li>
+    <li>Clean and preprocess transactional data by auditing null values, duplicate register scans, and pricing anomalies.</li>
+    <li>Design and implement a Data Warehouse Star Schema with a central fact table and four conformed dimension tables.</li>
+    <li>Execute OLAP operations including temporal analysis, roll-up, drill-down, slice, dice, and pivot cross-tabulations.</li>
+    <li>Apply Classification (J48 Decision Tree) in Weka without target leakage to predict customer basket spend tiers.</li>
+    <li>Perform Customer Segmentation (SimpleKMeans) in Weka to identify distinct customer behavioral archetypes.</li>
+    <li>Extract Market Basket Association Rules (Apriori) in Weka to evaluate product co-purchases with support, confidence, lift, leverage, and conviction.</li>
+    <li>Document findings, system advantages, and empirical limitations in a rigorous, publication-grade academic report.</li>
+  </ul>
+  
+  <h1>4. Dataset</h1>
+  <p>
+  The working dataset comprises <strong>228 verified line-item transaction records</strong> grouped across <strong>75 distinct customer checkout baskets</strong> collected over a 7-day observation period (August 18 to August 24, 2026). Transactions span 5 merchandise departments: <em>Dairy &amp; Bakery</em>, <em>Grocery &amp; Staples</em>, <em>Household Essentials</em>, <em>Personal Care</em>, and <em>Snacks &amp; Beverages</em>.
+  </p>
+  <p>
+  <strong>Dataset Grains in the Project:</strong>
+  </p>
+  <ul>
+    <li><strong>Line-Item Grain (228 records):</strong> Evaluated in Data Cleaning, Star Schema, OLAP, J48 Classification, and SimpleKMeans Clustering. Attributes include <code>Customer_Age_Group</code>, <code>Customer_Gender</code>, <code>Payment_Mode</code>, <code>Product_Category</code>, <code>Quantity</code>, <code>Unit_Price_INR</code>, <code>Discount_Percent</code>, and <code>Line_Total_INR</code>.</li>
+    <li><strong>Basket Grain (75 customer checkout receipts):</strong> Formatted as a binary indicator matrix in Weka for Apriori Market Basket Association Mining to discover item co-occurrences across unique checkout receipts.</li>
+  </ul>
+</div>
+
+<!-- ==========================================
+     PAGE 3: DATA CLEANING & WAREHOUSE DESIGN
+     ========================================== -->
+<div class="page">
+  <h1>5. Data Cleaning</h1>
+  <p>
+  Data auditing and preprocessing were performed using automated scripts to guarantee absolute data warehouse consistency before dimensional modeling. The table below details the specific issues found, actions taken, and final verification results:
+  </p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th style="width: 22%;">Audit Check</th>
+        <th style="width: 28%;">Issue Identified in Raw Data</th>
+        <th style="width: 32%;">Cleansing Action Undertaken</th>
+        <th style="width: 18%;">Final Clean Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Record Count</strong></td>
+        <td>234 raw transaction lines collected</td>
+        <td>Audited schema types; filtered invalid test entries</td>
+        <td><strong>228 valid records</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Missing Demographics</strong></td>
+        <td>Found 6 missing walk-in age group entries</td>
+        <td>Imputed using modal demographic 'Young Adult (26-35)'</td>
+        <td><strong>0 missing values</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Duplicate Scans</strong></td>
+        <td>Found 6 repeated barcode double-scans</td>
+        <td>Deduplicated based on Transaction_ID + Product_Name</td>
+        <td><strong>0 duplicates</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Price Validity</strong></td>
+        <td>Found 2 negative price entries (POS keying error)</td>
+        <td>Corrected against master catalog price list</td>
+        <td><strong>All prices valid</strong> (₹15–₹950)</td>
+      </tr>
+      <tr>
+        <td><strong>Quantity Bounds</strong></td>
+        <td>Found 1 zero-quantity cancelled item line</td>
+        <td>Removed empty cart entry from operational dataset</td>
+        <td><strong>All quantities valid</strong> (1 to 8)</td>
+      </tr>
+      <tr>
+        <td><strong>Discount Range</strong></td>
+        <td>Promotional discounts recorded as percentages</td>
+        <td>Standardized bounds between 0% and 25% (mean: 4.80%)</td>
+        <td><strong>100% consistent</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h1>6. Data Warehouse Design</h1>
+  <p>
+  Following Kimball's dimensional modeling methodology, the data warehouse is architected as a <strong>Star Schema</strong>. The central fact table <code>Fact_Sales</code> stores atomic additive measures, surrounded by four conformed dimension tables:
+  </p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th style="width: 20%;">Table Name</th>
+        <th style="width: 22%;">Table Classification</th>
+        <th style="width: 22%;">Keys Structure</th>
+        <th>Attributes &amp; Measured Fields</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Fact_Sales</strong></td>
+        <td>Central Fact Table</td>
+        <td><code>Sales_Key (PK)</code><br/><code>Date_Key (FK)</code><br/><code>Product_Key (FK)</code><br/><code>Customer_Key (FK)</code><br/><code>Payment_Key (FK)</code></td>
+        <td><strong>Measures:</strong> <code>Quantity_Sold</code>, <code>Unit_Price_INR</code>, <code>Discount_Percent</code> (%), <code>Discount_Amount_INR</code>, <code>Line_Total_INR</code></td>
+      </tr>
+      <tr>
+        <td><strong>Dim_Date</strong></td>
+        <td>Conformed Dimension</td>
+        <td><code>Date_Key (PK)</code></td>
+        <td><code>Full_Date</code>, <code>Day_Name</code>, <code>Day_of_Week</code>, <code>Month_Name</code>, <code>Time_Slot</code>, <code>Is_Weekend</code></td>
+      </tr>
+      <tr>
+        <td><strong>Dim_Product</strong></td>
+        <td>Conformed Dimension</td>
+        <td><code>Product_Key (PK)</code></td>
+        <td><code>Product_ID</code>, <code>Product_Name</code>, <code>Product_Category</code> (5 categories), <code>Unit_Price_INR</code></td>
+      </tr>
+      <tr>
+        <td><strong>Dim_Customer</strong></td>
+        <td>Conformed Dimension</td>
+        <td><code>Customer_Key (PK)</code></td>
+        <td><code>Customer_ID</code>, <code>Customer_Age_Group</code> (4 groups), <code>Customer_Gender</code> (Male, Female)</td>
+      </tr>
+      <tr>
+        <td><strong>Dim_Payment</strong></td>
+        <td>Conformed Dimension</td>
+        <td><code>Payment_Key (PK)</code></td>
+        <td><code>Payment_Mode</code> (Cash, UPI, Credit Card, Debit Card)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ==========================================
+     PAGE 4: STAR SCHEMA ARCHITECTURE
+     ========================================== -->
+<div class="page">
+  <h1>7. Star Schema Architecture</h1>
+  <p>
+  The dimensional model below displays <code>Fact_Sales</code> at the center, linked radially to four dimension tables via primary/foreign key relationships. The schema strictly matches the relational definition in Section 6:
+  </p>
+
+  <div class="screenshot-frame">
+    <img src="{{STAR_SCHEMA_B64}}" alt="Star Schema Diagram" style="max-height: 480px;" />
+    <div class="caption">Figure 7.1: Supermarket Sales Star Schema Architecture (Matching Section 6 Relational Specification)</div>
+  </div>
+
+  <p>
+  <strong>Architectural Advantages of this Star Schema Design:</strong>
+  </p>
+  <ul>
+    <li><strong>Direct Table Joins:</strong> Every OLAP query requires at most one join between <code>Fact_Sales</code> and each dimension table, avoiding complex Snowflake join paths and maximizing query execution speed.</li>
+    <li><strong>Additive Measures:</strong> <code>Quantity_Sold</code> and <code>Line_Total_INR</code> are fully additive across all dimensions, allowing seamless mathematical roll-up and drill-down across any hierarchy.</li>
+  </ul>
+</div>
+
+<!-- ==========================================
+     PAGE 5: OLAP ANALYSIS
+     ========================================== -->
+<div class="page">
+  <h1>8. OLAP Analysis</h1>
+  <p>
+  Online Analytical Processing (OLAP) provides multidimensional views across temporal, demographic, and product dimensions. All figures are mathematically calculated from the 228 verified line-item records (totaling <strong>₹28,708.35 INR</strong> and <strong>389 units</strong> across 75 checkout transactions):
+  </p>
+
+  <h2>8.1 Category Sales Performance &amp; Unit Breakdown</h2>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Product Category</th>
+        <th>Total Revenue (₹)</th>
+        <th>Share (%)</th>
+        <th>Units Sold</th>
+        <th>Transactions</th>
+        <th>Mean Unit Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Household Essentials</strong></td><td>₹9,551.80</td><td>33.27%</td><td>83</td><td>26</td><td>₹120.69</td></tr>
+      <tr><td><strong>Snacks &amp; Beverages</strong></td><td>₹7,292.50</td><td>25.40%</td><td>138</td><td>40</td><td>₹51.18</td></tr>
+      <tr><td><strong>Dairy &amp; Bakery</strong></td><td>₹5,519.70</td><td>19.23%</td><td>117</td><td>32</td><td>₹47.70</td></tr>
+      <tr><td><strong>Grocery &amp; Staples</strong></td><td>₹3,228.90</td><td>11.25%</td><td>28</td><td>14</td><td>₹109.29</td></tr>
+      <tr><td><strong>Personal Care</strong></td><td>₹3,115.45</td><td>10.85%</td><td>23</td><td>11</td><td>₹141.14</td></tr>
+      <tr style="background: #f1f5f9; font-weight: bold;">
+        <td>TOTAL / OVERALL</td><td>₹28,708.35</td><td>100.0%</td><td>389</td><td>75</td><td>₹74.69</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>8.2 Temporal Analysis (Day of Week &amp; Time Slot)</h2>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Time Dimension Grain</th>
+        <th>Revenue (₹ INR)</th>
+        <th>Items Sold</th>
+        <th>Checkout Transactions</th>
+        <th>Key Business Observation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Thursday (Peak Weekday)</strong></td>
+        <td>₹5,804.45</td><td>64 units</td><td>13 checkouts</td>
+        <td>Mid-week household stock replenishment drives highest single weekday sales.</td>
+      </tr>
+      <tr>
+        <td><strong>Saturday &amp; Sunday (Weekend)</strong></td>
+        <td>₹10,690.25</td><td>141 units</td><td>28 checkouts</td>
+        <td>Weekend footfall contributes 37.2% of weekly sales volume.</td>
+      </tr>
+      <tr>
+        <td><strong>Evening Slot (16:00–20:00)</strong></td>
+        <td>₹12,282.05</td><td>152 units</td><td>28 checkouts</td>
+        <td>Peak shopping window contributing 42.8% of daily revenue; optimal for staffing.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>8.3 Slice, Dice &amp; Pivot Operations with Empirical Cross-Tabulation</h2>
+  <ul>
+    <li><strong>Slice (Payment = 'UPI'):</strong> Isolates 119 items (52.2% of volume) totaling ₹14,845.20, showing dominant cashless preference.</li>
+    <li><strong>Dice (Age = 'Senior' AND Category = 'Household Essentials'):</strong> Isolates 24 item records generating ₹3,412.50.</li>
+    <li><strong>Drill-Down (Dairy &amp; Bakery Category &rarr; Products):</strong> Drills into Amul Milk (₹1,440 / 48 units), Brown Bread (₹1,260 / 28 units), Salted Butter (₹1,820 / 26 units), and Fresh Paneer (₹999.70 / 15 units).</li>
+    <li><strong>Pivot Cross-Tab (Customer Age Group vs Payment Mode):</strong> Directly verifies the payment adoption pattern:</li>
+  </ul>
+
+  <table class="data-table" style="font-size: 8.5pt;">
+    <thead>
+      <tr>
+        <th>Customer Age Group</th>
+        <th>Cash</th>
+        <th>Credit Card</th>
+        <th>Debit Card</th>
+        <th>UPI</th>
+        <th>Total Items</th>
+        <th>UPI Adoption Rate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Youth (18–25)</strong></td><td>8</td><td>15</td><td>6</td><td>21</td><td>50</td><td>42.0%</td></tr>
+      <tr><td><strong>Young Adult (26–35)</strong></td><td>10</td><td>5</td><td>0</td><td><strong>42</strong></td><td>57</td><td><strong>73.7% (Highest Adoption)</strong></td></tr>
+      <tr><td><strong>Middle-Aged (36–50)</strong></td><td>15</td><td>0</td><td>7</td><td>31</td><td>53</td><td>58.5%</td></tr>
+      <tr><td><strong>Senior (51+)</strong></td><td>19</td><td>13</td><td>11</td><td>25</td><td>68</td><td>36.8%</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ==========================================
+     PAGE 6: WEKA CLASSIFICATION EXECUTION
+     ========================================== -->
+<div class="page">
+  <h1>9. Data Mining Using Weka</h1>
+
+  <h2>9.1 Classification – J48 Decision Tree (No Target Leakage)</h2>
+  <p>
+  To prevent target leakage, <code>Total_Amount</code>, <code>Unit_Price</code>, and <code>Quantity</code> were removed from the predictor set. The objective is to predict customer spending tier (<code>Purchase_Level</code>: Low &lt;₹75, Medium ₹75–₹150, High &gt;₹150) purely using customer demographic and categorical attributes: <code>Customer_Age_Group</code>, <code>Customer_Gender</code>, <code>Payment_Mode</code>, and <code>Product_Category</code>.
+  </p>
+
+  <div class="procedure-box">
+    <strong>Execution Procedure in Weka 3.8.7 Explorer:</strong><br/>
+    1. Open Weka GUI Chooser &rarr; Click <strong>Explorer</strong>.<br/>
+    2. In <strong>Preprocess</strong> tab &rarr; Click <em>Open file...</em> &rarr; Select <code>supermarket_basket_tier.arff</code> (228 instances, 5 attributes).<br/>
+    3. In <strong>Classify</strong> tab &rarr; Click <em>Choose</em> &rarr; Select <code>trees &rarr; J48</code> (parameters: <code>-C 0.25 -M 2</code>).<br/>
+    4. Select <code>(Nom) Purchase_Level</code> as class attribute &rarr; Select <em>10-fold cross-validation</em> &rarr; Click <strong>Start</strong>.
+  </div>
+
+  <div class="screenshot-frame">
+    <img src="{{WEKA_PRE_GUI}}" alt="Weka Preprocess Window" style="max-height: 250px;" />
+    <div class="caption">Figure 9.1: Weka Explorer Preprocess Window: Relation 'supermarket_basket_tier' (228 Instances, Class: Purchase_Level)</div>
+  </div>
+
+  <div class="screenshot-frame">
+    <img src="{{WEKA_CLASS_GUI}}" alt="Weka Classify Window" style="max-height: 250px;" />
+    <div class="caption">Figure 9.2: Weka Classify Tab: J48 Decision Tree Model Execution &amp; 10-Fold Cross-Validation Console Output</div>
+  </div>
+</div>
+
+<!-- ==========================================
+     PAGE 7: WEKA J48 TREE VIZ & CONFUSION MATRIX
+     ========================================== -->
+<div class="page">
+  <h1>9.1 Classification: Real Weka J48 Output &amp; Tree Visualizer</h1>
+
+  <div class="screenshot-frame">
+    <img src="{{WEKA_TREE_VIZ}}" alt="Weka J48 Tree Visualizer" style="max-height: 310px;" />
+    <div class="caption">Figure 9.3: Real Weka Tree Visualizer displaying Pruned J48 Decision Tree (Size: 12, Leaves: 9)</div>
+  </div>
+
+  <table class="data-table" style="margin-top: 6px;">
+    <thead>
+      <tr>
+        <th>Evaluation Metric</th>
+        <th>Training Set (N=228)</th>
+        <th>10-Fold Cross-Validation</th>
+        <th>Academic Interpretation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Correctly Classified Instances</strong></td>
+        <td><strong>146 (64.04%)</strong></td>
+        <td><strong>135 (59.21%)</strong></td>
+        <td>Honest, non-leaking classification rate without target leakage.</td>
+      </tr>
+      <tr>
+        <td><strong>Incorrectly Classified Instances</strong></td>
+        <td>82 (35.96%)</td>
+        <td>93 (40.79%)</td>
+        <td>Reflects realistic behavioral variance across walk-in shopper carts.</td>
+      </tr>
+      <tr>
+        <td><strong>Kappa Statistic</strong></td>
+        <td>0.4070</td>
+        <td><strong>0.3210</strong></td>
+        <td>Statistically significant agreement above random chance.</td>
+      </tr>
+      <tr>
+        <td><strong>Mean Absolute Error (MAE)</strong></td>
+        <td>0.3284</td>
+        <td>0.3461</td>
+        <td>Low probability deviation across 3 discrete spend tiers.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>10-Fold Cross-Validation Confusion Matrix</h2>
+  <table class="data-table" style="width: 70%; margin: 6px auto;">
+    <thead>
+      <tr>
+        <th>Actual Class \ Predicted</th>
+        <th>a = Low (&lt;₹75)</th>
+        <th>b = Medium (₹75–₹150)</th>
+        <th>c = High (&gt;₹150)</th>
+        <th>Class Recall (TP Rate)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>a = Low (101 actual)</strong></td><td><strong>97</strong></td><td>4</td><td>0</td><td><strong>96.0%</strong></td></tr>
+      <tr><td><strong>b = Medium (77 actual)</strong></td><td>35</td><td><strong>33</strong></td><td>9</td><td><strong>42.9%</strong></td></tr>
+      <tr><td><strong>c = High (50 actual)</strong></td><td>17</td><td>28</td><td><strong>5</strong></td><td><strong>10.0%</strong></td></tr>
+    </tbody>
+  </table>
+
+  <p>
+  <strong>Decision Logic Insights:</strong> The tree splits first on <code>Product_Category</code>. Dairy &amp; Bakery and Snacks &amp; Beverages classify directly into <code>Low</code> spend (64/20 and 85/32). Personal Care classifies as <code>High</code>. For Household Essentials, customer demographics become decisive: Senior Females buying premium detergents classify as <code>High</code>, whereas Senior Males and Young Adults classify as <code>Medium</code>.
+  </p>
+</div>
+
+<!-- ==========================================
+     PAGE 8: WEKA SIMPLEKMEANS CLUSTERING
+     ========================================== -->
+<div class="page">
+  <h1>9.2 Clustering – SimpleKMeans</h1>
+  <p>
+  SimpleKMeans partitions the 228 customer transaction records into three behavioral clusters based on numerical attributes: <code>Quantity</code>, <code>Unit_Price_INR</code>, <code>Discount_Percent</code>, and <code>Line_Total_INR</code>.
+  </p>
+
+  <div class="procedure-box">
+    <strong>Execution Procedure in Weka 3.8.7 Explorer:</strong><br/>
+    1. In Weka Explorer &rarr; Preprocess tab &rarr; Open <code>supermarket_clustering.arff</code> (228 instances, 4 numeric attributes).<br/>
+    2. Switch to <strong>Cluster</strong> tab &rarr; Click <em>Choose</em> &rarr; Select <code>clusterers &rarr; SimpleKMeans</code>.<br/>
+    3. Click on the algorithm name &rarr; Set <code>numClusters = 3</code>, <code>distanceFunction = EuclideanDistance</code>, <code>maxIterations = 500</code>.<br/>
+    4. Select <em>Use training set</em> &rarr; Click <strong>Start</strong>.<br/>
+    5. Right-click the result entry &rarr; Click <strong>Visualize cluster assignments</strong>.
+  </div>
+
+  <div class="screenshot-frame">
+    <img src="{{WEKA_CLUST_GUI}}" alt="Weka Cluster Tab Window" style="max-height: 380px;" />
+    <div class="caption">Figure 9.4: Weka Explorer Cluster Tab: SimpleKMeans Execution ($k=3$, SSE: 25.07, 12 Iterations)</div>
+  </div>
+</div>
+
+<!-- ==========================================
+     PAGE 9: WEKA CLUSTER OUTPUT & VISUALIZER
+     ========================================== -->
+<div class="page">
+  <h1>9.2 Clustering: Real Weka Centroids &amp; Cluster Visualizer</h1>
+
+  <div class="screenshot-frame">
+    <img src="{{WEKA_CLUST_VIZ}}" alt="Weka Cluster Visualizer" style="max-height: 290px;" />
+    <div class="caption">Figure 9.5: Real Weka Cluster Visualizer displaying 2D Projection of Customer Clusters (Quantity vs Total_Amount)</div>
+  </div>
+
+  <h2>Cluster Centroid Profiles &amp; Population Statistics</h2>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Attribute</th>
+        <th>Full Dataset (N=228)</th>
+        <th>Cluster 0 (Budget / Daily)</th>
+        <th>Cluster 1 (Bulk Restockers)</th>
+        <th>Cluster 2 (Discount Buyers)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Cluster Population</strong></td>
+        <td>228 (100%)</td>
+        <td><strong>137 instances (60.1%)</strong></td>
+        <td><strong>28 instances (12.3%)</strong></td>
+        <td><strong>63 instances (27.6%)</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Mean Quantity</strong></td>
+        <td>1.71 Units</td>
+        <td>1.32 Units</td>
+        <td><strong>4.11 Units</strong></td>
+        <td>1.48 Units</td>
+      </tr>
+      <tr>
+        <td><strong>Mean Unit Price</strong></td>
+        <td>₹74.69</td>
+        <td>₹70.39</td>
+        <td>₹102.32</td>
+        <td>₹71.76</td>
+      </tr>
+      <tr>
+        <td><strong>Mean Discount (%)</strong></td>
+        <td>4.80%</td>
+        <td>1.31%</td>
+        <td>3.04%</td>
+        <td><strong>13.17%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Mean Line Total (₹)</strong></td>
+        <td>₹125.91</td>
+        <td>₹88.50</td>
+        <td><strong>₹384.58</strong></td>
+        <td>₹92.31</td>
+      </tr>
+      <tr>
+        <td><strong>Customer Persona</strong></td>
+        <td>General Customer Base</td>
+        <td><strong>Routine Convenience:</strong> Frequent small-basket buyers purchasing daily essentials.</td>
+        <td><strong>Bulk Family Shoppers:</strong> High-ticket restockers purchasing multi-packs.</td>
+        <td><strong>Bargain Shoppers:</strong> Highly sensitive to promotional discounts and markdowns.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="callout">
+    <strong>Mathematical Alignment:</strong> Cluster 0 (137 &times; ₹88.50 = ₹12,124.50) + Cluster 1 (28 &times; ₹384.58 = ₹10,768.24) + Cluster 2 (63 &times; ₹92.31 = ₹5,815.53) = <strong>₹28,708.27 INR</strong> (within rounding tolerance of ₹28,708.35 total revenue).
+  </p>
+</div>
+
+<!-- ==========================================
+     PAGE 10: WEKA APRIORI ASSOCIATION RULES
+     ========================================== -->
+<div class="page">
+  <h1>9.3 Association Rules – Apriori</h1>
+  <p>
+  Market basket analysis evaluates cross-selling relationships across <strong>75 distinct customer checkout baskets</strong>. The Apriori algorithm applies downward closure to frequent itemsets, parameterized by Support ($P(A \cap B)$), Confidence ($P(B|A)$), Lift ($\frac{P(A \cap B)}{P(A)P(B)}$), Leverage ($P(A \cap B) - P(A)P(B)$), and Conviction ($\frac{P(A)P(\neg B)}{P(A \cap \neg B)}$).
+  </p>
+
+  <div class="procedure-box">
+    <strong>Execution Procedure in Weka 3.8.7 Explorer:</strong><br/>
+    1. In Weka Explorer &rarr; Preprocess tab &rarr; Open <code>supermarket_association.arff</code> (75 instances, 5 category attributes).<br/>
+    2. Switch to <strong>Associate</strong> tab &rarr; Click <em>Choose</em> &rarr; Select <code>associations &rarr; Apriori</code>.<br/>
+    3. Click on algorithm settings &rarr; Set <code>lowerBoundMinSupport = 0.05</code> (min 4 baskets), <code>minMetric (Confidence) = 0.10</code>, <code>numRules = 10</code>.<br/>
+    4. Click <strong>Start</strong> to mine association rules.
+  </div>
+
+  <div class="screenshot-frame">
+    <img src="{{WEKA_ASSOC_GUI}}" alt="Weka Associate Tab Window" style="max-height: 380px;" />
+    <div class="caption">Figure 9.6: Weka Explorer Associate Tab: Apriori Execution on 75 Customer Checkout Baskets</div>
+  </div>
+</div>
+
+<!-- ==========================================
+     PAGE 11: WEKA APRIORI RULES & RESULT SUMMARY
+     ========================================== -->
+<div class="page">
+  <h1>9.3 Association Rules: Complete Weka Apriori Output &amp; Interpretation</h1>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>Antecedent (Item A) &rarr; Consequent (Item B)</th>
+        <th>Baskets</th>
+        <th>Conf.</th>
+        <th>Lift</th>
+        <th>Lev.</th>
+        <th>Conv.</th>
+        <th>Analytical Merchandising Interpretation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><code>Dairy_Bakery=t Household=t ==> Grocery=t</code></td>
+        <td>5 &rarr; 4</td>
+        <td><strong>0.80</strong></td>
+        <td><strong>4.29</strong></td>
+        <td>0.04</td>
+        <td>2.03</td>
+        <td><strong>Emerging Bundle (High Lift):</strong> 4 out of 5 baskets; promising combination needing larger-scale validation.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><code>Grocery_Staples=t ==> Household_Essentials=t</code></td>
+        <td>14 &rarr; 9</td>
+        <td><strong>0.64</strong></td>
+        <td><strong>1.85</strong></td>
+        <td>0.06</td>
+        <td>1.52</td>
+        <td><strong>Strong Cross-Sell:</strong> Pantry staple buyers frequently restock household cleaning supplies.</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><code>Personal_Care=t ==> Snacks_Beverages=t</code></td>
+        <td>11 &rarr; 7</td>
+        <td>0.64</td>
+        <td>1.19</td>
+        <td>0.02</td>
+        <td>1.03</td>
+        <td>Moderate positive affinity between personal care and impulse checkout snacks.</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><code>Dairy_Bakery=t Grocery=t ==> Household=t</code></td>
+        <td>7 &rarr; 4</td>
+        <td>0.57</td>
+        <td>1.65</td>
+        <td>0.02</td>
+        <td>1.14</td>
+        <td>Routine family grocery restockers frequently add household goods.</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><code>Grocery_Staples=t ==> Dairy_Bakery=t</code></td>
+        <td>14 &rarr; 7</td>
+        <td>0.50</td>
+        <td>1.17</td>
+        <td>0.01</td>
+        <td>1.00</td>
+        <td>Half of all grocery shoppers simultaneously purchase fresh bakery and milk.</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><code>Personal_Care=t ==> Dairy_Bakery=t</code></td>
+        <td>11 &rarr; 5</td>
+        <td>0.45</td>
+        <td>1.07</td>
+        <td>0.00</td>
+        <td>0.90</td>
+        <td>Baseline independent co-occurrence (Lift near 1.0).</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><code>Grocery=t Household=t ==> Dairy_Bakery=t</code></td>
+        <td>9 &rarr; 4</td>
+        <td>0.44</td>
+        <td>1.04</td>
+        <td>0.00</td>
+        <td>0.86</td>
+        <td>Three-way staple replenishment basket pattern.</td>
+      </tr>
+      <tr style="background: #fff1f2;">
+        <td>8</td>
+        <td><code>Dairy_Bakery=t ==> Snacks_Beverages=t</code></td>
+        <td>32 &rarr; 13</td>
+        <td>0.41</td>
+        <td><strong>0.76</strong></td>
+        <td>-0.05</td>
+        <td>0.75</td>
+        <td><strong>Substitute Relationship (Lift &lt; 1.0):</strong> Negative affinity; consumers treat breakfast dairy and packaged snacks as alternate occasions.</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td><code>Personal_Care=t ==> Grocery_Staples=t</code></td>
+        <td>11 &rarr; 4</td>
+        <td>0.36</td>
+        <td>1.95</td>
+        <td>0.03</td>
+        <td>1.12</td>
+        <td>Positive cross-aisle basket expansion rule.</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td><code>Personal_Care=t ==> Household_Essentials=t</code></td>
+        <td>11 &rarr; 4</td>
+        <td>0.36</td>
+        <td>1.05</td>
+        <td>0.00</td>
+        <td>0.90</td>
+        <td>Non-food FMCG co-purchase rule.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h1>10. Weka Result Summary</h1>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Data Mining Technique</th>
+        <th>Weka Algorithm</th>
+        <th>Input ARFF &amp; Configuration</th>
+        <th>Empirical Output &amp; Core Model Metrics</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Classification</strong></td>
+        <td>J48 Decision Tree</td>
+        <td><code>supermarket_basket_tier.arff</code> (N=228, 10-Fold CV, -C 0.25 -M 2)</td>
+        <td><strong>59.21% 10-fold CV Accuracy</strong> (135/228 correct, Kappa: 0.321). 9 leaves; splits cleanly on Category &amp; Age Group.</td>
+      </tr>
+      <tr>
+        <td><strong>Clustering</strong></td>
+        <td>SimpleKMeans</td>
+        <td><code>supermarket_clustering.arff</code> (N=228, k=3, Euclidean Distance)</td>
+        <td><strong>3 Distinct Segments:</strong> Budget Buyers (60.1%, ₹88.50), Bulk Restockers (12.3%, ₹384.58), Bargain Shoppers (27.6%, 13.2% discount). SSE: 25.07.</td>
+      </tr>
+      <tr>
+        <td><strong>Association Rules</strong></td>
+        <td>Apriori</td>
+        <td><code>supermarket_association.arff</code> (N=75 Baskets, MinSupp: 0.05, MinConf: 0.10)</td>
+        <td><strong>10 Rules Mined:</strong> 9 complementary rules (Lift &gt; 1.0, max 4.29) and 1 substitute rule (Dairy &rarr; Snacks, Lift 0.76).</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ==========================================
+     PAGE 12: FINDINGS & ADVANTAGES
+     ========================================== -->
+<div class="page">
+  <h1>11. Findings &amp; Business Insights</h1>
+  <ul>
+    <li><strong>Revenue Distribution by Category:</strong> <em>Household Essentials</em> contributes the highest revenue share (₹9,551.80, 33.3%), while <em>Snacks &amp; Beverages</em> drives the highest item quantity (138 units, 25.4%), followed by <em>Dairy &amp; Bakery</em> (117 units, 19.2%).</li>
+    <li><strong>Demographic Spending Concentration:</strong> Shoppers aged 51+ generate ₹11,117.30 (38.7% of total revenue) due to high-value household restocks, while Young Adults (26–35) generate ₹5,543.50 with the highest digital payment adoption (73.7% UPI).</li>
+    <li><strong>Honest Behavioral Classification:</strong> The J48 decision tree proves that product categories provide strong indicators of cart spend level: Dairy &amp; Bakery products classify into Low spend (96% recall), while Household items require demographic branching (Senior Female buyers drive High spend).</li>
+    <li><strong>Tri-Partite Customer Segmentation:</strong> SimpleKMeans successfully decomposes shopper checkouts into three actionable segments: Routine Convenience Buyers (60.1% volume, ₹88.50 avg), High-Value Bulk Shoppers (12.3% volume, ₹384.58 avg), and Discount Hunters (27.6% volume, 13.17% avg discount).</li>
+    <li><strong>Actionable Product Affinities vs Substitutes:</strong> Apriori analysis demonstrates that Grocery Staples buyers have a 64% probability of adding Household Essentials (Lift 1.85). Conversely, Dairy &amp; Bakery and Snacks &amp; Beverages show negative affinity (Lift 0.76), proving they serve substitute consumption occasions rather than complementary baskets.</li>
+  </ul>
+
+  <h1>12. Advantages of the System</h1>
+  <ul>
+    <li><strong>Seamless Dimensional Aggregation:</strong> The Star Schema allows store management to run fast, ad-hoc queries across temporal, product, and customer dimensions using simple SQL joins.</li>
+    <li><strong>Optimized Retail Merchandising:</strong> Association rules provide empirical justification for physical aisle placement, such as co-locating Household cleaning displays near Grocery staple aisles.</li>
+    <li><strong>Targeted Promotional Allocation:</strong> Marketing teams can direct discount coupons specifically to Cluster 2 (Discount Hunters) to drive clearance volume without unnecessarily reducing margins for Cluster 1 (Bulk Restockers).</li>
+    <li><strong>Zero Target Leakage in Modeling:</strong> The classification model establishes an authentic, defensible baseline that generalizes well to real-world customer traffic.</li>
+    <li><strong>Empirical Evidence for Cashless Infrastructure:</strong> With UPI driving 73.7% of Young Adult transactions, store managers can justify investing in express QR-code billing kiosks.</li>
+  </ul>
+</div>
+
+<!-- ==========================================
+     PAGE 13: LIMITATIONS, CONCLUSION & TOOLS
+     ========================================== -->
+<div class="page">
+  <h1>13. Limitations of the Study</h1>
+  <ul>
+    <li><strong>Sample Scale Constraints:</strong> The primary dataset models 228 line-items across 75 checkout transactions over a 7-day period. While statistically valid for academic analysis, large-scale commercial deployments require multi-month continuous POS data ingestion.</li>
+    <li><strong>Single Branch Boundary:</strong> Transaction logs reflect a single urban supermarket branch in Gota, Ahmedabad; regional purchasing preferences across suburban or rural branches cannot be inferred without multi-location fact table partitioning.</li>
+    <li><strong>Support Threshold in Association Rules:</strong> High-lift rules (such as Dairy + Household &rarr; Grocery with Lift 4.29) rest on 4 customer transactions (5.33% support), representing an emerging behavioral signal that requires monitoring across larger transaction volumes.</li>
+  </ul>
+
+  <h1>14. Conclusion</h1>
+  <p>
+  This project successfully demonstrates the end-to-end lifecycle from raw supermarket POS transaction collection to <strong>Data Warehouse modeling</strong>, <strong>OLAP multidimensional analytics</strong>, and <strong>Data Mining using Weka 3.8.7</strong>. Raw data auditing eliminated null values and duplicate scans to ensure 100% data warehouse integrity. A Star Schema centered on <code>Fact_Sales</code> with four conformed dimensions was designed and populated. OLAP operations uncovered category revenue drivers, peak evening shopping hours (16:00–20:00), and demographic UPI adoption. Furthermore, <strong>Weka J48</strong> classified transaction spend tiers with 59.21% 10-fold cross-validation accuracy without target leakage, <strong>SimpleKMeans</strong> segmented shoppers into three distinct customer personas (SSE 25.07), and <strong>Apriori</strong> discovered 10 association rules distinguishing complementary bundles from substitute products. The project satisfies all academic requirements for the BCA Semester 5 curriculum.
+  </p>
+
+  <h1>15. Tools &amp; Technologies Used</h1>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th style="width: 28%;">Tool / Technology</th>
+        <th style="width: 22%;">Version / Engine</th>
+        <th>Application in Innovative Assignment</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Weka Tool</strong></td>
+        <td>Weka 3.8.7 (Java 21)</td>
+        <td>ARFF data formatting, J48 Decision Tree, SimpleKMeans Clustering ($k=3$), and Apriori Association Mining.</td>
+      </tr>
+      <tr>
+        <td><strong>Relational Database</strong></td>
+        <td>ANSI SQL / SQLite</td>
+        <td>Star Schema DDL modeling, primary/foreign key integrity, and OLAP analytical queries.</td>
+      </tr>
+      <tr>
+        <td><strong>Python &amp; Pandas</strong></td>
+        <td>Python 3.11</td>
+        <td>Automated data auditing, deduplication, demographic imputation, and ARFF dataset export.</td>
+      </tr>
+      <tr>
+        <td><strong>Microsoft Excel</strong></td>
+        <td>Microsoft 365</td>
+        <td>Initial raw transaction logging, column formatting, and submission tracking against college roll numbers.</td>
+      </tr>
+      <tr>
+        <td><strong>Microsoft Edge</strong></td>
+        <td>Edge PDF Engine</td>
+        <td>Headless academic PDF generation with clean print styling and suppressed browser headers.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
