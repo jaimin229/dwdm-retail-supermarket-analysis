@@ -19,6 +19,7 @@
 | :---: | :--- | :---: | :--- |
 | **1.** | **JAIMIN PRAJAPATI (Lead Student)** | `2404030100143` | Field Data Collection, ETL Pipeline & Data Warehouse Design |
 | **2.** | **KUSHAL SUTHAR** | `2404030100841` | Star Schema Modeling, OLAP Cube Analytics & Data Mining |
+| **3.** | **RAJGOR VIVEK** | `2404030100967` | Market Basket Analytics, Visualizations & Documentation |
 
 ---
 
@@ -62,6 +63,7 @@ is a bonafide record of authentic project work successfully carried out by the f
 
 1. **JAIMIN PRAJAPATI (Lead Student)** (Enrollment No: `2404030100143`)
 2. **KUSHAL SUTHAR** (Enrollment No: `2404030100841`)
+3. **RAJGOR VIVEK** (Enrollment No: `2404030100967`)
 
 This report represents original fieldwork, dimensional modeling, and algorithmic execution submitted for the course **Data Warehouse and Data Mining (Course Code: 4040233302)** in partial fulfillment of the requirements prescribed by Silver Oak University.
 
@@ -97,6 +99,7 @@ We affirm that:
 
 1. ___________________________ (JAIMIN PRAJAPATI - `2404030100143`)  
 2. ___________________________ (KUSHAL SUTHAR - `2404030100841`)  
+3. ___________________________ (RAJGOR VIVEK - `2404030100967`)  
 
 **Date**: 30th September, 2026  
 **Place**: Ahmedabad, Gujarat  

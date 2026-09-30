@@ -14,9 +14,10 @@
 - **Team Members**:
   1. **JAIMIN PRAJAPATI (Lead Student)** (Enrollment No: `2404030100143`)
   2. **KUSHAL SUTHAR** (Enrollment No: `2404030100841`)
+  3. **RAJGOR VIVEK** (Enrollment No: `2404030100967`)
 - **Faculty Guide**: **Prof. Manika Tomar**, Department of Computer Application
 - **Speaker Note (Jaimin Prajapati)**:  
-  *"Good morning respected faculty guide Prof. Manika Tomar and examiners. Today, our team (Jaimin Prajapati & Kushal Suthar) presents our end-to-end innovative assignment in Data Warehouse and Data Mining. We conducted on-site field data collection at FreshMart Supermarket in Gota, designed a production-grade 3-Tier Data Warehouse, modeled a Star Schema, executed 5 core OLAP operations, and applied three fundamental data mining algorithms: Apriori, Decision Trees, and K-Means clustering."*
+  *"Good morning respected faculty guide Prof. Manika Tomar and examiners. Today, our team (Jaimin Prajapati, Kushal Suthar & Vivek Rajgor) presents our end-to-end innovative assignment in Data Warehouse and Data Mining. We conducted on-site field data collection at FreshMart Supermarket in Gota, designed a production-grade 3-Tier Data Warehouse, modeled a Star Schema, executed 5 core OLAP operations, and applied three fundamental data mining algorithms: Apriori, Decision Trees, and K-Means clustering."*
 
 ---
 
